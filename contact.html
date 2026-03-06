@@ -172,47 +172,57 @@
             <form action="https://formspree.io/f/xlgpeojz" method="POST">
                 
                 <div class="form-group">
-                    <label for="part_number">Part Number / Model / BOM (零件编号或型号):</label>
+                    <label for="part_number">Part Number / Model / BOM:</label>
                     <input type="text" id="part_number" name="part_number" required placeholder="e.g., Intel Xeon Platinum 8480+">
                 </div>
                 
                 <div class="form-group">
-                    <label for="condition">Condition Preference (目标成色):</label>
+                    <label for="condition">Condition Preference:</label>
                     <select id="condition" name="condition" required>
-                        <option value="Any">Any Condition (Best Price) - 任意成色找最低价</option>
-                        <option value="Factory New">Factory New (NIB) - 全新原盒</option>
-                        <option value="Refurbished / Used">Refurbished / Working Pulls - 二手/拆机良品</option>
+                        <option value="Any">Any Condition (Best Price)</option>
+                        <option value="Factory New">Factory New (NIB)</option>
+                        <option value="Refurbished / Used">Refurbished / Working Pulls</option>
                     </select>
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                     <div class="form-group">
-                        <label for="quantity">Target Quantity (数量):</label>
+                        <label for="quantity">Target Quantity:</label>
                         <input type="number" id="quantity" name="quantity" required placeholder="e.g., 50">
                     </div>
                     <div class="form-group">
-                        <label for="target_price">Target Price (目标单价):</label>
+                        <label for="target_price">Target Price:</label>
                         <input type="text" id="target_price" name="target_price" placeholder="e.g., $500 USD">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Contact Email (您的联系邮箱):</label>
+                    <label for="email">Contact Email:</label>
                     <input type="email" id="email" name="email" required placeholder="sales@yourcompany.com">
                 </div>
 
                 <div class="form-group">
-                    <label for="notes">Additional Requirements (备注要求 - Optional):</label>
+                    <label for="notes">Additional Requirements (Optional):</label>
                     <textarea id="notes" name="notes" placeholder="e.g., Lead time requirements, specific stepping, or destination country..."></textarea>
                 </div>
-
+                
+                <div style="background: #F8FAFC; border: 1px solid #CBD5E1; padding: 20px; border-radius: 6px; margin-bottom: 25px;">
+                    <h4 style="margin: 0 0 10px 0; color: #0A192F; font-size: 0.95rem;">Export Control & EUS Acknowledgment</h4>
+                    <p style="margin: 0 0 15px 0; font-size: 0.85rem; color: #64748B;">Quotes for high-performance AI hardware and restricted components are subject to BIS (Bureau of Industry and Security) regulations. A formal End-User Statement (EUS) detailing the final destination and application will be required prior to order fulfillment.</p>
+                    
+                    <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; font-weight: 400; color: #334155; cursor: pointer;">
+                        <input type="checkbox" required style="width: auto; margin-top: 3px;">
+                        <span>I acknowledge that all requested items are subject to export control laws. I agree to provide a valid End-User Statement (EUS) and certify that these components will not be diverted to sanctioned entities or used for restricted military applications.</span>
+                    </label>
+                </div>
+                
                 <button type="submit">Submit Request</button>
             </form>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 MICA Supply LTD. All rights reserved. | Surrey, BC, Canada
+        &copy; 2026 MICA Supply LTD. All rights reserved. | Vancouver, BC, Canada
     </footer>
 
 </body>
