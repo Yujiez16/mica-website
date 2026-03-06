@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MICA Supply LTD.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A192F; 
+            --accent: #0070F3;  
+            --bg: #F8FAFC;
+            --text: #334155;
+            --card-bg: #FFFFFF;
+            --border: #E2E8F0;
+        }
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        /* 全局导航栏 */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-cta { background: var(--accent); color: white !important; padding: 0.5rem 1.2rem; border-radius: 6px; }
 
+        /* 页面头部 */
+        .page-header {
+            background: var(--primary);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .page-header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
+        .page-header p { color: #94A3B8; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* 公司简介主体 */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        .mission-statement {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
+        /* 核心优势三栏网格 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        .feature-card h3 { margin-top: 0; color: var(--primary); font-size: 1.3rem; }
+        .feature-card p { color: #64748B; margin-bottom: 0; }
+
+        /* 底部 CTA */
+        .cta-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 40px;
+            background: linear-gradient(to right, #ffffff, #f0f7ff);
+            border-radius: 8px;
+            border: 1px solid #cce3ff;
+            border-left: 5px solid var(--accent);
+        }
+        .btn-large {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+        .btn-large:hover { background: #005bb5; }
+        
+        footer { text-align: center; padding: 40px 20px; color: #64748B; font-size: 0.9rem; margin-top: 40px; border-top: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">MICA Supply.</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="nav-cta">Request Quote</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>About MICA Supply LTD.</h1>
+        <p>Bridging the hardware gap between North America and Asia.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="mission-statement">
+            "We operate as an independent hardware broker and sourcing agent, dedicated to securing critical electronic components, high-performance computing (HPC) hardware, and AI accelerators for enterprise clients navigating highly volatile global supply chains."
+        </div>
+
+        <div class="features-grid">
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏢</div>
+                <h3>Corporate Compliance</h3>
+                <p>Formally incorporated and headquartered in Surrey, British Columbia, Canada. We operate under strict North American B2B trade compliance standards, ensuring transparent transactions, verifiable sourcing channels, and full legal accountability for our upstream and downstream partners.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Data-Driven Sourcing</h3>
+                <p>Hardware pricing is highly dynamic. Backed by advanced academic expertise in Business Analytics and behavioral modeling, our sourcing framework isn't based on guesswork. We utilize quantitative data analysis to track silicon market fluctuations, securing optimal entry points for high-value components.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">✈️</div>
+                <h3>Cross-Border Logistics</h3>
+                <p>Hardware delivery requires precision. We maintain established relationships with reliable international freight partners, including UUCargo and direct cross-border air lines. From customs clearance to final-mile delivery, we minimize lead times and ensure the secure transport of sensitive electronics.</p>
+            </div>
+
+        </div>
+
+        <div class="cta-section">
+            <h2>Partner with MICA Supply</h2>
+            <p style="color: #64748B;">Whether you are liquidating enterprise IT assets or sourcing specific AI hardware, our channels are open.</p>
+            <a href="contact.html" class="btn-large">Start a Sourcing Request</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 MICA Supply LTD. All rights reserved. | Surrey, BC, Canada
+    </footer>
+
+</body>
+</html>
