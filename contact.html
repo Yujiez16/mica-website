@@ -58,7 +58,7 @@
         button { background-color: var(--accent); color: white; padding: 16px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 1.1rem; font-weight: 700; width: 100%; transition: all 0.3s; }
         button:hover:not(:disabled) { background-color: #005bb5; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 112, 243, 0.3); }
         
-        /* 按钮被禁用时的置灰状态变量 */
+        /* 按钮被禁用时的置灰状态样式表变量 */
         button:disabled { background-color: #94A3B8; cursor: not-allowed; opacity: 0.7; }
         
         footer { text-align: center; padding: 40px 20px; color: #64748B; font-size: 0.9rem; margin-top: 40px; border-top: 1px solid var(--border); }
@@ -103,12 +103,12 @@
             <form action="https://formspree.io/f/xlgpeojz" method="POST">
                 
                 <div class="form-group">
-                    <label for="part_number">Part Number / Model / BOM:</label>
+                    <label for="part_number">Part Number / Model / BOM :</label>
                     <input type="text" id="part_number" name="part_number" required placeholder="e.g., Intel Xeon Platinum 8480+">
                 </div>
                 
                 <div class="form-group">
-                    <label for="condition">Condition Preference:</label>
+                    <label for="condition">Condition Preference :</label>
                     <select id="condition" name="condition" required>
                         <option value="Any">Any Condition (Best Price) </option>
                         <option value="Factory New">Factory New (NIB) </option>
@@ -118,17 +118,17 @@
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                     <div class="form-group">
-                        <label for="quantity">Target Quantity:</label>
+                        <label for="quantity">Target Quantity :</label>
                         <input type="number" id="quantity" name="quantity" required placeholder="e.g., 50">
                     </div>
                     <div class="form-group">
-                        <label for="target_price">Target Price:</label>
+                        <label for="target_price">Target Price :</label>
                         <input type="text" id="target_price" name="target_price" placeholder="e.g., $500 USD">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Contact Email:</label>
+                    <label for="email">Contact Email :</label>
                     <input type="email" id="email" name="email" required placeholder="sales@yourcompany.com">
                 </div>
 
@@ -137,12 +137,12 @@
                     <textarea id="notes" name="notes" placeholder="e.g., Lead time requirements, specific stepping, or destination country..."></textarea>
                 </div>
 
-                <div style="background: #FEF2F2; border: 1px solid #FCA5A5; padding: 20px; border-radius: 6px; margin-bottom: 25px;">
-                    <h4 style="margin: 0 0 10px 0; color: #991B1B; font-size: 0.95rem;">Export Control & EUS Acknowledgment</h4>
-                    <p style="margin: 0 0 15px 0; font-size: 0.85rem; color: #7F1D1D;">Quotes for high-performance AI hardware and restricted components are subject to BIS (Bureau of Industry and Security) regulations. A formal End-User Statement (EUS) detailing the final destination and application will be required prior to order fulfillment.</p>
+                <div id="compliance_box" style="background: #FEF2F2; border: 1px solid #FCA5A5; padding: 20px; border-radius: 6px; margin-bottom: 25px;">
+                    <h4 id="compliance_title" style="margin: 0 0 10px 0; color: #991B1B; font-size: 0.95rem;">Export Control & EUS Acknowledgment</h4>
+                    <p id="compliance_text" style="margin: 0 0 15px 0; font-size: 0.85rem; color: #7F1D1D;">Quotes for high-performance AI hardware and restricted components are subject to BIS (Bureau of Industry and Security) regulations. A formal End-User Statement (EUS) detailing the final destination and application will be required prior to order fulfillment.</p>
                     
-                    <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; font-weight: 600; color: #991B1B; cursor: pointer;">
-                        <input type="checkbox" id="eus_check" onchange="toggleSubmitBtn()" style="width: auto; margin-top: 3px; cursor: pointer;">
+                    <label id="compliance_label" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; font-weight: 600; color: #991B1B; cursor: pointer;">
+                        <input type="checkbox" id="eus_check" onchange="toggleComplianceState()" style="width: auto; margin-top: 3px; cursor: pointer;">
                         <span>I acknowledge the export control laws and agree to provide a valid End-User Statement (EUS) upon request.</span>
                     </label>
                 </div>
@@ -158,15 +158,53 @@
     </footer>
 
     <script>
-        function toggleSubmitBtn() {
+        function toggleComplianceState() {
+            // 获取所有需要的 DOM 元素变量
             const checkbox = document.getElementById('eus_check');
             const submitBtn = document.getElementById('submit_btn');
+            const complianceBox = document.getElementById('compliance_box');
+            const complianceTitle = document.getElementById('compliance_title');
+            const complianceText = document.getElementById('compliance_text');
+            const complianceLabel = document.getElementById('compliance_label');
             
-            // 变量判断：如果勾选，解除 disabled 锁定；如果取消勾选，重新上锁。
+            // 绿色状态样式变量
+            const greenBg = '#DCFCE7'; // 浅绿
+            const greenBorder = '#86EFAC'; // 较深绿
+            const greenText = '#15803D'; // 文本绿
+            const greenTitleText = '#166534'; // 标题深绿
+
+            // 红色状态样式变量（还原用）
+            const redBg = '#FEF2F2';
+            const redBorder = '#FCA5A5';
+            const redText = '#7F1D1D';
+            const redTitleText = '#991B1B';
+
+            // 变量判断：如果勾选
             if (checkbox.checked) {
+                // 1. 激活提交按钮变量
                 submitBtn.disabled = false;
+                
+                // 2. 将合规框的内联样式变量从红变绿
+                complianceBox.style.backgroundColor = greenBg;
+                complianceBox.style.borderColor = greenBorder;
+                
+                // 3. 修改标题和文本颜色
+                complianceTitle.style.color = greenTitleText;
+                complianceText.style.color = greenText;
+                complianceLabel.style.color = greenText;
             } else {
+                // 变量判断：如果不勾选
+                // 1. 禁用提交按钮变量
                 submitBtn.disabled = true;
+                
+                // 2. 将合规框的内联样式变量还原为红
+                complianceBox.style.backgroundColor = redBg;
+                complianceBox.style.borderColor = redBorder;
+                
+                // 3. 将标题和文本颜色还原
+                complianceTitle.style.color = redTitleText;
+                complianceText.style.color = redText;
+                complianceLabel.style.color = redTitleText;
             }
         }
     </script>
