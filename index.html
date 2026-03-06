@@ -3,231 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MICA Supply LTD. | Electronic Components & AI Hardware</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <title>MICA Supply LTD. | Global Sourcing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* 全局变量与基础设定 */
         :root {
-            --primary-color: #003366;
-            --secondary-color: #0055A4;
-            --bg-color: #F4F7F9;
-            --text-main: #1A1A1A;
-            --text-light: #555555;
-            --white: #FFFFFF;
-            --border-radius: 12px;
-            --transition: all 0.3s ease;
+            --primary: #0A192F; /* 深色科技蓝 */
+            --accent: #0070F3;  /* 现代亮蓝 */
+            --bg: #F8FAFC;
+            --text: #334155;
         }
-
-        body { 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6; 
-            color: var(--text-main); 
-            margin: 0; 
-            padding: 0; 
-            background-color: var(--bg-color); 
-        }
-
-        /* 顶部导航 */
-        header { 
-            background: linear-gradient(135deg, var(--primary-color) 0%, #001f3f 100%); 
-            color: var(--white); 
-            padding: 2rem 0; 
-            text-align: center; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        header h2 { 
-            margin: 0; 
-            font-size: 2.2rem; 
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        /* 主体容器 */
-        .container { 
-            max-width: 1100px; 
-            margin: -30px auto 40px; /* 负边距让内容微微嵌合在头部下方 */
-            padding: 0 20px; 
-            position: relative;
-            z-index: 10;
-        }
-
-        /* 模块通用卡片样式 */
-        .card-panel {
-            background: var(--white); 
-            padding: 40px; 
-            border-radius: var(--border-radius); 
-            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-            margin-bottom: 30px;
-            border: 1px solid rgba(0,0,0,0.02);
-        }
-
-        h1, h2, h3 { color: var(--primary-color); }
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); }
         
-        .hero h1 { margin-top: 0; font-size: 2rem; }
-        .hero p { color: var(--text-light); font-size: 1.1rem; }
-
-        /* 产品目录网格与悬浮动画 */
-        .products { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 24px; 
-            margin-bottom: 30px; 
+        /* 核心变量：全局导航栏 */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #E2E8F0;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .product-card { 
-            background: var(--white); 
-            padding: 30px; 
-            border-radius: var(--border-radius); 
-            box-shadow: 0 4px 16px rgba(0,0,0,0.04); 
-            border: 1px solid #EBEBEB;
-            transition: var(--transition);
-        }
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 85, 164, 0.15);
-            border-color: #D2E3FC;
-        }
-        .product-card h3 {
-            margin-top: 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #F0F0F0;
-        }
-        .product-card ul {
-            padding-left: 20px;
-            color: var(--text-light);
-        }
-        .product-card li { margin-bottom: 8px; }
-
-        /* 表单美化 */
-        .form-group { margin-bottom: 20px; }
-        label { 
-            display: block; 
-            margin-bottom: 8px; 
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--text); 
             font-weight: 600; 
-            font-size: 0.95rem;
-            color: #333;
+            transition: color 0.3s; 
         }
-        input[type="text"], input[type="email"], input[type="number"] { 
-            width: 100%; 
-            padding: 14px; 
-            border: 1px solid #D1D5DB; 
-            border-radius: 8px; 
-            box-sizing: border-box; 
-            font-family: inherit;
-            font-size: 1rem;
-            transition: var(--transition);
-            background-color: #FAFAFA;
-        }
-        input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            background-color: var(--white);
-            box-shadow: 0 0 0 3px rgba(0, 85, 164, 0.1);
-        }
-        
-        button { 
-            background-color: var(--primary-color); 
-            color: white; 
-            padding: 16px 24px; 
-            border: none; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            font-size: 1.1rem; 
-            font-weight: 700; 
-            width: 100%;
-            transition: var(--transition);
-            letter-spacing: 0.5px;
-        }
-        button:hover { 
-            background-color: var(--secondary-color); 
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 85, 164, 0.3);
+        .nav-links a:hover { color: var(--accent); }
+        .nav-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
         }
 
-        /* 底部信息 */
-        footer { 
-            text-align: center; 
-            padding: 30px; 
-            margin-top: 20px; 
-            font-size: 0.9em; 
-            color: var(--text-light); 
+        /* 首页大图区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #112240 100%);
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; color: #94A3B8; max-width: 600px; margin: 0 auto 2rem; }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            font-size: 1.1rem;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h2>MICA Supply LTD.</h2>
-</header>
-
-<div class="container">
-    <div class="card-panel hero">
-        <h1>Global Sourcing for Electronic Components & AI Hardware</h1>
-        <p>Registered in British Columbia, Canada. We specialize in the import and export of high-performance PC components, server hardware, and AI computing products between North America and China.</p>
-        <p><strong>Logistics Partner:</strong> Supported by established cross-border lines to ensure reliable lead times.</p>
-    </div>
-
-    <div class="products">
-        <div class="product-card">
-            <h3>Processors (CPU)</h3>
-            <p>High-end desktop and server processors.</p>
-            <ul>
-                <li>Intel Core Ultra 9 Series (e.g., Ultra 9 285)</li>
-                <li>AMD Ryzen 9 & EPYC Series</li>
-                <li>Intel Xeon Scalable Processors</li>
-            </ul>
+    <nav class="navbar">
+        <a href="index.html" class="logo">MICA Supply.</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="nav-cta">Request Quote</a>
         </div>
-        <div class="product-card">
-            <h3>Graphics Cards (GPU)</h3>
-            <p>Compute GPUs and high-performance gaming cards.</p>
-            <ul>
-                <li>NVIDIA RTX 4090 / 5090 Series</li>
-                <li>Data Center AI Accelerators (H100/A100)</li>
-                <li>Workstation Graphics (RTX Ada)</li>
-            </ul>
-        </div>
-        <div class="product-card">
-            <h3>Server Components</h3>
-            <p>Bulk supply for enterprise infrastructure.</p>
-            <ul>
-                <li>High-capacity Server RAM (DDR5/ECC)</li>
-                <li>Enterprise NVMe SSDs</li>
-                <li>High-wattage Power Supplies</li>
-            </ul>
-        </div>
-    </div>
+    </nav>
 
-    <div class="card-panel quote-form">
-        <h2>Request a Quote (RFQ)</h2>
-        <p style="color: #555; margin-bottom: 25px;">Submit your component requirements to check current inventory and pricing.</p>
-        
-        <form action="https://formspree.io/f/xlgpeojz" method="POST">
-            <div class="form-group">
-                <label for="part_number">Part Number / Model (零件编号/型号):</label>
-                <input type="text" id="part_number" name="part_number" required placeholder="e.g., Intel Core Ultra 9 285">
-            </div>
-            <div class="form-group">
-                <label for="quantity">Target Quantity (目标数量):</label>
-                <input type="number" id="quantity" name="quantity" required placeholder="e.g., 50">
-            </div>
-            <div class="form-group">
-                <label for="target_price">Target Price (目标单价 USD/CAD - Optional):</label>
-                <input type="text" id="target_price" name="target_price" placeholder="e.g., $500 USD">
-            </div>
-            <div class="form-group">
-                <label for="email">Contact Email (您的联系邮箱):</label>
-                <input type="email" id="email" name="email" required placeholder="sales@yourcompany.com">
-            </div>
-            <button type="submit">Submit Request</button>
-        </form>
-    </div>
-
-    <footer>
-        &copy; 2026 MICA Supply LTD. All rights reserved. | Surrey, BC, Canada
-    </footer>
-</div>
+    <section class="hero">
+        <h1>High-Performance Hardware Sourcing</h1>
+        <p>Connecting North America and China with enterprise-grade electronic components, AI accelerators, and server infrastructure.</p>
+        <a href="products.html" class="btn">View Product Catalog</a>
+    </section>
 
 </body>
 </html>
