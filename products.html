@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Sourcing | MICA Supply LTD.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A192F; 
+            --accent: #0070F3;  
+            --bg: #F8FAFC;
+            --text: #334155;
+            --card-bg: #FFFFFF;
+        }
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        /* 全局导航栏 (必须与首页保持完全一致) */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #E2E8F0;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-cta { background: var(--accent); color: white !important; padding: 0.5rem 1.2rem; border-radius: 6px; }
 
+        /* 页面头部定义 */
+        .page-header {
+            background: var(--primary);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .page-header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
+        .page-header p { color: #94A3B8; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* 内容容器与卡片网格 */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        /* 核心业务：寻源服务横幅 */
+        .sourcing-banner {
+            background: linear-gradient(to right, #ffffff, #f0f7ff);
+            border: 1px solid #cce3ff;
+            border-left: 5px solid var(--accent);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .sourcing-banner h2 { margin-top: 0; color: var(--primary); }
+        .sourcing-banner p { margin-bottom: 0; font-size: 1.05rem; }
+
+        /* 产品分类网格 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E2E8F0;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #E2E8F0;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .card-header h3 { margin: 0; color: var(--primary); font-size: 1.3rem; }
+        
+        /* 状态标签 (New vs Used) */
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .badge-used { background: #FDE68A; color: #92400E; }
+        .badge-new { background: #D1FAE5; color: #065F46; }
+
+        .card ul { padding-left: 20px; color: #475569; }
+        .card li { margin-bottom: 10px; }
+
+        /* 行动呼吁区 */
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+        }
+        .btn-large {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+        .btn-large:hover { background: #005bb5; }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">MICA Supply.</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="nav-cta">Request Quote</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Hardware Catalog & Sourcing</h1>
+        <p>A comprehensive supply network for both factory-new components and cost-effective, fully tested pre-owned hardware.</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="sourcing-banner">
+            <h2>Hardware Brokerage & BOM Fulfillment</h2>
+            <p><strong>You name it, we find it.</strong> Don't see what you need below? Send us your specific Part Numbers (P/N) or Bill of Materials. We leverage our cross-border supply chain between North America and China to locate EOL (End of Life), hard-to-find, or highly allocated components at target pricing.</p>
+        </section>
+
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Pre-Owned & Working Pulls</h3>
+                    <span class="badge badge-used">Refurbished & Tested</span>
+                </div>
+                <p>Cost-effective components sourced from decommissioned enterprise infrastructure. 100% tested for functionality.</p>
+                <ul>
+                    <li><strong>Server RAM:</strong> High-capacity DDR4/DDR5 ECC modules from major data centers.</li>
+                    <li><strong>Enterprise CPUs:</strong> Previous generation Intel Xeon and AMD EPYC processors.</li>
+                    <li><strong>Storage:</strong> Data center NVMe SSDs and high-capacity HDDs.</li>
+                    <li><strong>Networking:</strong> NICs, switches, and transceivers.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Factory New Hardware</h3>
+                    <span class="badge badge-new">New In Box (NIB)</span>
+                </div>
+                <p>Current generation, brand-new components sourced through authorized distribution channels.</p>
+                <ul>
+                    <li><strong>Consumer GPUs:</strong> NVIDIA RTX 40 & 50 Series for high-end retail or workstation builds.</li>
+                    <li><strong>AI Accelerators:</strong> Data center compute cards for AI/ML workloads.</li>
+                    <li><strong>Desktop CPUs:</strong> Latest generation Intel Core Ultra and AMD Ryzen processors.</li>
+                    <li><strong>Motherboards & Power Supplies:</strong> High-wattage ATX 3.0 PSUs and flagship boards.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to source your components?</h2>
+            <p>Specify the condition (New/Used), exact P/N, and target price. We will return with availability and lead time.</p>
+            <a href="contact.html" class="btn-large">Submit an RFQ</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
