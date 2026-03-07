@@ -842,6 +842,262 @@
   </div>
 </section>
 
+<!-- ── P/N QUICK SEARCH ── -->
+<section class="pn-section">
+  <div class="pn-inner">
+    <div class="pn-tag">// Instant RFQ</div>
+    <h2 class="pn-title">Have a Part Number?</h2>
+    <p class="pn-sub">Enter one or more part numbers and we'll prepare a quote within 24 hours.</p>
+    <div class="pn-form">
+      <div class="pn-input-wrap">
+        <svg class="pn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input
+          id="pnInput"
+          class="pn-input"
+          type="text"
+          placeholder="e.g. H100 SXM5, RTX 5090, EPYC 9654 ..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button class="pn-clear" id="pnClear" aria-label="Clear" style="display:none">✕</button>
+      </div>
+      <button class="pn-btn" id="pnSubmit">
+        Get Quote
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <div class="pn-hints">
+      <span class="pn-hint-label">Popular:</span>
+      <button class="pn-chip" onclick="fillPN('NVIDIA H100 SXM5 80GB')">H100 SXM5</button>
+      <button class="pn-chip" onclick="fillPN('RTX 5090')">RTX 5090</button>
+      <button class="pn-chip" onclick="fillPN('RTX 5080')">RTX 5080</button>
+      <button class="pn-chip" onclick="fillPN('AMD EPYC 9654')">EPYC 9654</button>
+      <button class="pn-chip" onclick="fillPN('NVIDIA A100 80GB')">A100 80GB</button>
+    </div>
+  </div>
+</section>
+
+<style>
+.pn-section {
+  padding: 7rem 3rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(14,165,233,0.07);
+}
+.pn-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(14,165,233,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.pn-section::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(14,165,233,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,165,233,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.pn-inner {
+  position: relative; z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pn-tag {
+  display: inline-flex;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: #0ea5e9;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(14,165,233,0.3);
+  border-radius: 2px;
+}
+.pn-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #f0f6ff;
+  margin-bottom: 0.7rem;
+  line-height: 1.1;
+}
+.pn-sub {
+  font-size: 0.92rem;
+  color: rgba(240,246,255,0.4);
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
+}
+.pn-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+.pn-input-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.pn-icon {
+  position: absolute;
+  left: 1rem;
+  color: #64748b;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+.pn-input {
+  width: 100%;
+  background: rgba(10,21,32,0.8);
+  border: 1px solid rgba(14,165,233,0.2);
+  border-radius: 6px;
+  padding: 0.95rem 3rem 0.95rem 2.8rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  color: #f0f6ff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.02em;
+}
+.pn-input::placeholder {
+  color: #475569;
+}
+.pn-input:focus {
+  border-color: rgba(14,165,233,0.5);
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.08);
+}
+.pn-clear {
+  position: absolute;
+  right: 0.8rem;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0.3rem;
+  border-radius: 3px;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.pn-clear:hover { color: #94a3b8; }
+.pn-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  padding: 0.95rem 1.8rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 0 25px rgba(14,165,233,0.25);
+  flex-shrink: 0;
+}
+.pn-btn:hover {
+  background: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px rgba(14,165,233,0.4);
+}
+.pn-btn svg { transition: transform 0.2s; }
+.pn-btn:hover svg { transform: translateX(3px); }
+.pn-hints {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.pn-hint-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-right: 0.3rem;
+}
+.pn-chip {
+  background: transparent;
+  border: 1px solid rgba(14,165,233,0.15);
+  color: #64748b;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  letter-spacing: 0.04em;
+}
+.pn-chip:hover {
+  color: #0ea5e9;
+  border-color: rgba(14,165,233,0.4);
+  background: rgba(14,165,233,0.05);
+}
+/* Shake animation for empty submit */
+@keyframes pnShake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+.pn-input.shake { animation: pnShake 0.35s ease; border-color: rgba(239,68,68,0.5) !important; }
+
+@media (max-width: 640px) {
+  .pn-section { padding: 5rem 1.5rem; }
+  .pn-form { flex-direction: column; }
+  .pn-btn { width: 100%; justify-content: center; }
+  .pn-input-wrap { width: 100%; }
+}
+</style>
+
+<script>
+(function() {
+  var input = document.getElementById('pnInput');
+  var clearBtn = document.getElementById('pnClear');
+  var submitBtn = document.getElementById('pnSubmit');
+
+  input.addEventListener('input', function() {
+    clearBtn.style.display = this.value.length ? 'block' : 'none';
+  });
+  clearBtn.addEventListener('click', function() {
+    input.value = '';
+    clearBtn.style.display = 'none';
+    input.focus();
+  });
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') goToQuote();
+  });
+  submitBtn.addEventListener('click', goToQuote);
+
+  function goToQuote() {
+    var val = input.value.trim();
+    if (!val) {
+      input.classList.add('shake');
+      input.focus();
+      setTimeout(function() { input.classList.remove('shake'); }, 400);
+      return;
+    }
+    window.location.href = 'contact.html?pn=' + encodeURIComponent(val);
+  }
+
+  window.fillPN = function(val) {
+    input.value = val;
+    clearBtn.style.display = 'block';
+    input.focus();
+  };
+})();
+</script>
+  
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-brand">MICA <span>Supply</span> LTD.</div>
