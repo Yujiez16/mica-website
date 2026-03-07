@@ -4,872 +4,240 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MICA Supply LTD. | Enterprise Hardware Broker — AI Accelerators & Server Components</title>
-  <meta name="description" content="MICA Supply is a BC-registered independent hardware broker specializing in AI accelerators, enterprise GPUs, server CPUs, and electronic components. BIS compliant. RFQ response within 24 hours. Serving Hong Kong, Southeast Asia, and global markets." />
+  <meta name="description" content="MICA Supply is a BC-registered independent hardware broker specializing in AI accelerators, enterprise GPUs, server CPUs, and electronic components. BIS compliant. RFQ response within 24 hours." />
   <meta name="keywords" content="hardware broker, AI accelerator, H100, RTX 5090, enterprise GPU, server components, EPYC, Xeon, hardware sourcing, BIS compliant, Vancouver, Canada" />
   <link rel="canonical" href="https://www.micasupply.ca/" />
-  <!-- Open Graph (LinkedIn / WeChat 分享时显示) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.micasupply.ca/" />
   <meta property="og:title" content="MICA Supply LTD. | Enterprise Hardware Broker" />
   <meta property="og:description" content="BC-registered hardware broker. AI accelerators, server components, enterprise silicon. BIS compliant. 24h RFQ response." />
   <meta property="og:image" content="https://www.micasupply.ca/images/LOGO2.png" />
-  <meta property="og:locale" content="en_CA" />
-  <!-- JSON-LD 结构化数据（只在首页加）-->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MICA Supply LTD.",
-    "url": "https://www.micasupply.ca",
-    "LOGO": "https://www.micasupply.ca/images/LOGO2.png",
-    "description": "BC-registered independent hardware broker specializing in AI accelerators, enterprise GPUs, server CPUs, and electronic components. BIS compliant cross-border hardware sourcing.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vancouver",
-      "addressRegion": "BC",
-      "addressCountry": "CA"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "sales@micasupply.ca",
-      "contactType": "sales",
-      "availableLanguage": ["English", "Chinese"]
-    },
-    "sameAs": [],
-    "areaServed": ["CA", "HK", "SG", "MY", "TH", "AE", "US", "GB"],
-    "knowsAbout": ["AI accelerators", "NVIDIA H100", "enterprise hardware", "hardware brokerage", "export compliance"]
-  }
-  </script>
-  
-  <!-- Google Analytics -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"MICA Supply LTD.","url":"https://www.micasupply.ca","logo":"https://www.micasupply.ca/images/LOGO2.png","description":"BC-registered independent hardware broker.","address":{"@type":"PostalAddress","addressLocality":"Vancouver","addressRegion":"BC","addressCountry":"CA"},"contactPoint":{"@type":"ContactPoint","email":"sales@micasupply.ca","contactType":"sales"}}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-95048H8LK1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-95048H8LK1');
-  </script>
-
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-95048H8LK1');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #050a0f;
-      --surface: #0a1520;
-      --surface2: #0f1e2e;
-      --blue: #0ea5e9;
-      --blue-dim: #0369a1;
-      --teal: #14b8a6;
-      --white: #f0f6ff;
-      --muted: #64748b;
-      --muted2: #94a3b8;
-      --border: rgba(14,165,233,0.15);
-      --border-subtle: rgba(14,165,233,0.07);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      font-family: 'Inter', sans-serif;
-      color: var(--white);
-      overflow-x: hidden;
-    }
-
-    /* ══════════════════════════════
-       NAVBAR
-    ══════════════════════════════ */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 200;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 3rem;
-      height: 64px;
-      background: rgba(5,10,15,0.88);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-LOGO {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-    }
-    .nav-LOGO img {
-      height: 32px;
-      width: auto;
-      object-fit: contain;
-    }
-    .nav-LOGO-text {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--white);
-    }
-    .nav-LOGO-text span { color: var(--blue); }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2.2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta {
-      background: var(--blue) !important;
-      color: #fff !important;
-      padding: 0.5rem 1.3rem;
-      border-radius: 4px;
-      letter-spacing: 0.04em !important;
-      transition: background 0.2s, box-shadow 0.2s !important;
-      box-shadow: 0 0 20px rgba(14,165,233,0.2);
-    }
-    .nav-cta:hover {
-      background: #38bdf8 !important;
-      box-shadow: 0 0 30px rgba(14,165,233,0.35) !important;
-    }
-
-    /* ══════════════════════════════
-       HERO
-    ══════════════════════════════ */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 100px 3rem 120px;
-      overflow: hidden;
-    }
-    #hero-canvas {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      opacity: 0.45;
-      pointer-events: none;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 70% 60% at 60% 40%, rgba(14,165,233,0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 50% at 10% 80%, rgba(20,184,166,0.05) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; right: 15%;
-      width: 1px; height: 100%;
-      background: linear-gradient(to bottom, transparent, rgba(14,165,233,0.25), transparent);
-      pointer-events: none;
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 820px;
-    }
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--blue);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 1.8rem;
-      padding: 0.4rem 0.9rem;
-      border: 1px solid rgba(14,165,233,0.3);
-      border-radius: 2px;
-      animation: fadeSlideUp 0.6s ease both;
-    }
-    .hero-tag::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--blue);
-      border-radius: 50%;
-      animation: blink 2s infinite;
-    }
-    .hero-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2.8rem, 5.5vw, 5rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.6rem;
-      animation: fadeSlideUp 0.6s 0.1s ease both;
-    }
-    .hero-title .accent { color: var(--blue); }
-    .hero-title .dim    { color: rgba(240,246,255,0.4); }
-    .hero-subtitle {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: rgba(240,246,255,0.55);
-      max-width: 540px;
-      margin-bottom: 2.8rem;
-      font-weight: 300;
-      animation: fadeSlideUp 0.6s 0.2s ease both;
-    }
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-      animation: fadeSlideUp 0.6s 0.3s ease both;
-    }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: var(--blue);
-      color: #fff;
-      padding: 0.85rem 2rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 0 30px rgba(14,165,233,0.25);
-    }
-    .btn-primary:hover {
-      background: #38bdf8;
-      transform: translateY(-2px);
-      box-shadow: 0 0 45px rgba(14,165,233,0.4);
-    }
-    .btn-primary svg { transition: transform 0.2s; }
-    .btn-primary:hover svg { transform: translateX(3px); }
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--muted);
-      font-size: 0.87rem;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 1px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .btn-ghost:hover { color: var(--white); border-color: rgba(240,246,255,0.4); }
-    .trust-row {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      gap: 2rem;
-      margin-top: 3.5rem;
-      flex-wrap: wrap;
-      animation: fadeSlideUp 0.6s 0.4s ease both;
-    }
-    .trust-badge {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.75rem;
-      color: var(--muted);
-      font-family: 'DM Mono', monospace;
-      letter-spacing: 0.03em;
-    }
-    .trust-badge .dot {
-      width: 5px; height: 5px;
-      background: var(--teal);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    /* Floating Spec Card */
-    .spec-card {
-      position: absolute;
-      right: 4rem;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 5;
-      background: rgba(10,21,32,0.92);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
-      width: 255px;
-      backdrop-filter: blur(14px);
-      animation: fadeSlideLeft 0.7s 0.5s ease both;
-    }
-    .spec-card-title {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.66rem;
-      color: var(--blue);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 1rem;
-      padding-bottom: 0.7rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .spec-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.45rem 0;
-      border-bottom: 1px solid var(--border-subtle);
-      font-size: 0.78rem;
-    }
-    .spec-row:last-child { border-bottom: none; }
-    .spec-key { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.7rem; }
-    .spec-val { color: var(--white); font-weight: 500; }
-    .spec-val.green { color: #4ade80; }
-    .spec-val.blue  { color: var(--blue); }
-
-    /* Stats Bar */
-    .stats-bar {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      z-index: 10;
-      display: flex;
-      border-top: 1px solid var(--border);
-      background: rgba(5,10,15,0.75);
-      backdrop-filter: blur(8px);
-    }
-    .stat-item {
-      flex: 1;
-      padding: 1.3rem 2rem;
-      border-right: 1px solid var(--border);
-      animation: fadeSlideUp 0.6s 0.5s ease both;
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.03em;
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-    .stat-num span.hi { color: var(--blue); }
-    .stat-label {
-      font-size: 0.68rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-family: 'DM Mono', monospace;
-    }
-
-    /* ══════════════════════════════
-       SECTION SHARED
-    ══════════════════════════════ */
-    section { padding: 7rem 3rem; }
-    .section-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--blue);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-      color: var(--white);
-    }
-    .section-subtitle {
-      font-size: 0.97rem;
-      color: rgba(240,246,255,0.5);
-      line-height: 1.7;
-      max-width: 520px;
-      font-weight: 300;
-    }
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: var(--border-subtle);
-    }
-
-    /* ══════════════════════════════
-       CAPABILITIES
-    ══════════════════════════════ */
-    .capabilities { background: var(--bg); }
-    .caps-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 4rem;
-      gap: 2rem;
-    }
-    .caps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5px;
-      background: var(--border-subtle);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .cap-card {
-      background: var(--surface);
-      padding: 2.5rem 2rem;
-      transition: background 0.25s;
-      position: relative;
-      overflow: hidden;
-    }
-    .cap-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--blue), transparent);
-      transform: scaleX(0);
-      transition: transform 0.3s;
-    }
-    .cap-card:hover { background: var(--surface2); }
-    .cap-card:hover::before { transform: scaleX(1); }
-    .cap-icon {
-      width: 44px; height: 44px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.3rem;
-      background: rgba(14,165,233,0.05);
-    }
-    .cap-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.7rem;
-      color: var(--white);
-    }
-    .cap-desc {
-      font-size: 0.84rem;
-      color: var(--muted2);
-      line-height: 1.65;
-      margin-bottom: 1.5rem;
-    }
-    .cap-link {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--blue);
-      text-decoration: none;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: gap 0.2s;
-    }
-    .cap-link:hover { gap: 0.7rem; }
-
-    /* ══════════════════════════════
-       PRODUCT LINES
-    ══════════════════════════════ */
-    .products { background: var(--surface); }
-    .products-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 3.5rem;
-    }
-    .prod-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 2.5rem;
-      background: var(--bg);
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.25s, transform 0.2s;
-    }
-    .prod-card:hover {
-      border-color: rgba(14,165,233,0.4);
-      transform: translateY(-3px);
-    }
-    .prod-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--blue), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .prod-card:hover::after { opacity: 1; }
-    .prod-badge {
-      display: inline-block;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.7rem;
-      border-radius: 2px;
-      margin-bottom: 1.5rem;
-    }
-    .prod-badge.nib {
-      background: rgba(14,165,233,0.12);
-      color: var(--blue);
-      border: 1px solid rgba(14,165,233,0.25);
-    }
-    .prod-badge.pull {
-      background: rgba(20,184,166,0.1);
-      color: var(--teal);
-      border: 1px solid rgba(20,184,166,0.25);
-    }
-    .prod-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin-bottom: 0.8rem;
-      letter-spacing: -0.02em;
-    }
-    .prod-desc {
-      font-size: 0.85rem;
-      color: var(--muted2);
-      line-height: 1.7;
-      margin-bottom: 1.8rem;
-    }
-    .prod-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      color: var(--white);
-      border: 1px solid var(--border);
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .prod-link:hover { border-color: var(--blue); color: var(--blue); }
-
-    /* ══════════════════════════════
-       CTA BANNER
-    ══════════════════════════════ */
-    .cta-section {
-      background: var(--bg);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      text-align: center;
-      padding: 6rem 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(14,165,233,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .cta-section .section-title { max-width: 600px; margin: 0 auto 1rem; }
-    .cta-section .section-subtitle { margin: 0 auto 2.5rem; text-align: center; }
-    .cta-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-
-    /* ══════════════════════════════
-       FOOTER
-    ══════════════════════════════ */
-    footer {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      padding: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .footer-brand {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--muted);
-    }
-    .footer-brand span { color: var(--blue); }
-    .footer-copy {
-      font-size: 0.78rem;
-      color: var(--muted);
-      font-family: 'DM Mono', monospace;
-    }
-    .footer-links {
-      display: flex;
-      gap: 1.8rem;
-      list-style: none;
-    }
-    .footer-links a {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-decoration: none;
-      font-family: 'DM Mono', monospace;
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--blue); }
-
-    /* ══════════════════════════════
-       ANIMATIONS
-    ══════════════════════════════ */
-    @keyframes fadeSlideUp {
-      from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeSlideLeft {
-      from { opacity: 0; transform: translate(22px, -50%); }
-      to   { opacity: 1; transform: translate(0, -50%); }
-    }
-    @keyframes blink {
-      0%,100% { opacity: 1; transform: scale(1); }
-      50%      { opacity: 0.3; transform: scale(0.7); }
-    }
-
-    /* ══════════════════════════════
-       RESPONSIVE
-    ══════════════════════════════ */
-    @media (max-width: 1024px) {
-      .spec-card { display: none; }
-      .caps-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      nav { padding: 0 1.5rem; }
-      .nav-links { display: none; }
-      .hero { padding: 90px 1.5rem 120px; }
-      .hero::after { display: none; }
-      section { padding: 5rem 1.5rem; }
-      .caps-header { flex-direction: column; align-items: flex-start; }
-      .caps-grid { grid-template-columns: 1fr; }
-      .products-grid { grid-template-columns: 1fr; }
-      .stats-bar { flex-wrap: wrap; }
-      .stat-item { min-width: 50%; }
-      footer { flex-direction: column; align-items: flex-start; }
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#050a0f;--surface:#0a1520;--surface2:#0f1e2e;--blue:#0ea5e9;--teal:#14b8a6;--white:#f0f6ff;--muted:#64748b;--muted2:#94a3b8;--border:rgba(14,165,233,0.15);--border-subtle:rgba(14,165,233,0.07)}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--white);overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(5,10,15,0.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-LOGO{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+    .nav-LOGO img{height:32px;width:auto;object-fit:contain}
+    .nav-LOGO-text{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-0.02em;color:var(--white)}
+    .nav-LOGO-text span{color:var(--blue)}
+    .nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--white)}
+    .nav-cta{background:var(--blue)!important;color:#fff!important;padding:0.5rem 1.3rem;border-radius:4px;letter-spacing:0.04em!important;transition:background .2s,box-shadow .2s!important;box-shadow:0 0 20px rgba(14,165,233,0.2)}
+    .nav-cta:hover{background:#38bdf8!important;box-shadow:0 0 30px rgba(14,165,233,0.35)!important}
+    .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 3rem 120px;overflow:hidden}
+    #hero-canvas{position:absolute;top:0;left:0;width:100%;height:100%;opacity:.45;pointer-events:none}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 60% 40%,rgba(14,165,233,.08) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 10% 80%,rgba(20,184,166,.05) 0%,transparent 60%);pointer-events:none}
+    .hero::after{content:'';position:absolute;top:0;right:15%;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(14,165,233,.25),transparent);pointer-events:none}
+    .hero-inner{position:relative;z-index:2;max-width:820px}
+    .hero-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--blue);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.8rem;padding:.4rem .9rem;border:1px solid rgba(14,165,233,.3);border-radius:2px;animation:fadeSlideUp .6s ease both}
+    .hero-tag::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;animation:blink 2s infinite}
+    .hero-title{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:1.6rem;animation:fadeSlideUp .6s .1s ease both}
+    .hero-title .accent{color:var(--blue)}
+    .hero-title .dim{color:rgba(240,246,255,.4)}
+    .hero-subtitle{font-size:1rem;line-height:1.75;color:rgba(240,246,255,.55);max-width:540px;margin-bottom:2.8rem;font-weight:300;animation:fadeSlideUp .6s .2s ease both}
+    .hero-actions{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;animation:fadeSlideUp .6s .3s ease both}
+    .btn-primary{display:inline-flex;align-items:center;gap:.6rem;background:var(--blue);color:#fff;padding:.85rem 2rem;border-radius:4px;font-size:.9rem;font-weight:600;text-decoration:none;letter-spacing:.02em;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 0 30px rgba(14,165,233,.25)}
+    .btn-primary:hover{background:#38bdf8;transform:translateY(-2px);box-shadow:0 0 45px rgba(14,165,233,.4)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.87rem;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:1px;transition:color .2s,border-color .2s}
+    .btn-ghost:hover{color:var(--white);border-color:rgba(240,246,255,.4)}
+    .trust-row{position:relative;z-index:2;display:flex;gap:2rem;margin-top:3.5rem;flex-wrap:wrap;animation:fadeSlideUp .6s .4s ease both}
+    .trust-badge{display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:.03em}
+    .trust-badge .dot{width:5px;height:5px;background:var(--teal);border-radius:50%;flex-shrink:0}
+    .spec-card{position:absolute;right:4rem;left:auto;top:50%;transform:translateY(-50%);z-index:5;background:rgba(10,21,32,.92);border:1px solid var(--border);border-radius:8px;padding:1.5rem;width:255px;backdrop-filter:blur(14px);animation:fadeSlideLeft .7s .5s ease both}
+    .spec-card-title{font-family:'DM Mono',monospace;font-size:.66rem;color:var(--blue);text-transform:uppercase;letter-spacing:.12em;margin-bottom:1rem;padding-bottom:.7rem;border-bottom:1px solid var(--border)}
+    .spec-row{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--border-subtle);font-size:.78rem}
+    .spec-row:last-child{border-bottom:none}
+    .spec-key{color:var(--muted);font-family:'DM Mono',monospace;font-size:.7rem}
+    .spec-val{color:var(--white);font-weight:500}
+    .spec-val.green{color:#4ade80}
+    .spec-val.blue{color:var(--blue)}
+    .stats-bar{position:absolute;bottom:0;left:0;right:0;z-index:10;display:flex;border-top:1px solid var(--border);background:rgba(5,10,15,.75);backdrop-filter:blur(8px)}
+    .stat-item{flex:1;padding:1.3rem 2rem;border-right:1px solid var(--border);animation:fadeSlideUp .6s .5s ease both}
+    .stat-item:last-child{border-right:none}
+    .stat-num{font-family:'Syne',sans-serif;font-size:1.7rem;font-weight:800;color:var(--white);letter-spacing:-.03em;line-height:1;margin-bottom:.25rem}
+    .stat-num span.hi{color:var(--blue)}
+    .stat-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-family:'DM Mono',monospace}
+    section{padding:7rem 3rem}
+    .section-tag{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--blue);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1rem}
+    .section-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin-bottom:1rem;color:var(--white)}
+    .section-subtitle{font-size:.97rem;color:rgba(240,246,255,.5);line-height:1.7;max-width:520px;font-weight:300}
+    .divider{width:100%;height:1px;background:var(--border-subtle)}
+    .capabilities{background:var(--bg)}
+    .caps-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;gap:2rem}
+    .caps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border-subtle);border:1px solid var(--border-subtle);border-radius:8px;overflow:hidden}
+    .cap-card{background:var(--surface);padding:2.5rem 2rem;transition:background .25s;position:relative;overflow:hidden}
+    .cap-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent);transform:scaleX(0);transition:transform .3s}
+    .cap-card:hover{background:var(--surface2)}
+    .cap-card:hover::before{transform:scaleX(1)}
+    .cap-icon{width:44px;height:44px;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;font-size:1.3rem;background:rgba(14,165,233,.05)}
+    .cap-title{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:.7rem;color:var(--white)}
+    .cap-desc{font-size:.84rem;color:var(--muted2);line-height:1.65;margin-bottom:1.5rem}
+    .cap-link{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--blue);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.4rem;transition:gap .2s}
+    .cap-link:hover{gap:.7rem}
+    .products{background:var(--surface)}
+    .products-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3.5rem}
+    .prod-card{border:1px solid var(--border);border-radius:8px;padding:2.5rem;background:var(--bg);position:relative;overflow:hidden;transition:border-color .25s,transform .2s}
+    .prod-card:hover{border-color:rgba(14,165,233,.4);transform:translateY(-3px)}
+    .prod-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:0;transition:opacity .3s}
+    .prod-card:hover::after{opacity:1}
+    .prod-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .7rem;border-radius:2px;margin-bottom:1.5rem}
+    .prod-badge.nib{background:rgba(14,165,233,.12);color:var(--blue);border:1px solid rgba(14,165,233,.25)}
+    .prod-badge.pull{background:rgba(20,184,166,.1);color:var(--teal);border:1px solid rgba(20,184,166,.25)}
+    .prod-title{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:.8rem;letter-spacing:-.02em}
+    .prod-desc{font-size:.85rem;color:var(--muted2);line-height:1.7;margin-bottom:1.8rem}
+    .prod-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;text-decoration:none;color:var(--white);border:1px solid var(--border);padding:.6rem 1.2rem;border-radius:4px;transition:border-color .2s,color .2s}
+    .prod-link:hover{border-color:var(--blue);color:var(--blue)}
+    .cta-section{background:var(--bg);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);text-align:center;padding:6rem 3rem;position:relative;overflow:hidden}
+    .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(14,165,233,.06) 0%,transparent 70%);pointer-events:none}
+    .cta-section .section-title{max-width:600px;margin:0 auto 1rem}
+    .cta-section .section-subtitle{margin:0 auto 2.5rem;text-align:center}
+    .cta-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+    .footer-brand{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--muted)}
+    .footer-brand span{color:var(--blue)}
+    .footer-copy{font-size:.78rem;color:var(--muted);font-family:'DM Mono',monospace}
+    .footer-links{display:flex;gap:1.8rem;list-style:none}
+    .footer-links a{font-size:.75rem;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;letter-spacing:.05em;transition:color .2s}
+    .footer-links a:hover{color:var(--blue)}
+    @keyframes fadeSlideUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeSlideLeft{from{opacity:0;transform:translate(22px,-50%)}to{opacity:1;transform:translate(0,-50%)}}
+    @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.7)}}
+    @media(max-width:1024px){.spec-card{display:none}.caps-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){nav{padding:0 1.5rem}.nav-links{display:none}.hero{padding:90px 1.5rem 120px}.hero::after{display:none}section{padding:5rem 1.5rem}.caps-header{flex-direction:column;align-items:flex-start}.caps-grid{grid-template-columns:1fr}.products-grid{grid-template-columns:1fr}.stats-bar{flex-wrap:wrap}.stat-item{min-width:50%}footer{flex-direction:column;align-items:flex-start}}
   </style>
 </head>
-  <script src="lang.js"></script>
 <body>
 
-<!-- ── NAVBAR ── -->
 <nav>
   <a href="index.html" class="nav-LOGO">
     <img src="images/LOGO2.png" alt="MICA Supply LTD." onerror="this.style.display='none'">
     <span class="nav-LOGO-text">MICA <span>Supply</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="compliance.html">Compliance</a></li>
-    <li><a href="contact.html" class="nav-cta">Request Quote</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+    <li><a href="compliance.html" data-i18n="nav.compliance">Compliance</a></li>
+    <li><a href="contact.html" class="nav-cta" data-i18n="nav.rfq">Request Quote</a></li>
   </ul>
 </nav>
 
-<!-- ── HERO ── -->
 <section class="hero">
   <canvas id="hero-canvas"></canvas>
-
   <div class="hero-inner">
-    <div class="hero-tag">BC Registered · BIS Compliant · Global Hardware Broker</div>
-
+    <div class="hero-tag" data-i18n="index.tag">BC Registered · BIS Compliant · Global Hardware Broker</div>
     <h1 class="hero-title">
-      Enterprise Hardware<br>
-      <span class="accent">Sourced.</span> <span class="dim">Verified.</span><br>
-      Delivered.
+      <span data-i18n="index.h1a">Enterprise Hardware</span><br>
+      <span class="accent" data-i18n="index.h1b">Sourced.</span> <span class="dim" data-i18n="index.h1c-mid">Verified.</span><br>
+      <span data-i18n="index.h1c">Delivered.</span>
     </h1>
-
-    <p class="hero-subtitle">
-      Your strategic broker for AI accelerators, server components, and enterprise silicon.
-      Connecting North America, the UAE, and Europe with Asia's supply chain —
-      with full BIS export compliance.
-    </p>
-
+    <p class="hero-subtitle" data-i18n="index.sub">Your strategic broker for AI accelerators, server components, and enterprise silicon. Connecting North America, the UAE, and Europe with Asia's supply chain — with full BIS export compliance.</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn-primary">
-        Submit an RFQ
+        <span data-i18n="index.btn.rfq">Submit an RFQ</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
       <a href="products.html" class="btn-ghost">
-        Browse Inventory
+        <span data-i18n="index.btn.inv">Browse Inventory</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
-
     <div class="trust-row">
-      <div class="trust-badge"><span class="dot"></span> Factory New (NIB)</div>
-      <div class="trust-badge"><span class="dot"></span> Working Pulls — Tested</div>
-      <div class="trust-badge"><span class="dot"></span> Cross-Border Logistics</div>
-      <div class="trust-badge"><span class="dot"></span> EAR / BIS Compliant</div>
+      <div class="trust-badge"><span class="dot"></span><span data-i18n="index.trust1">Factory New (NIB)</span></div>
+      <div class="trust-badge"><span class="dot"></span><span data-i18n="index.trust2">Working Pulls — Tested</span></div>
+      <div class="trust-badge"><span class="dot"></span><span data-i18n="index.trust3">Cross-Border Logistics</span></div>
+      <div class="trust-badge"><span class="dot"></span><span data-i18n="index.trust4">EAR / BIS Compliant</span></div>
     </div>
   </div>
 
-  <!-- Floating Spec Card -->
-  <div class="spec-card">
-    <div class="spec-card-title">// Live Inventory Signal</div>
-    <div class="spec-row">
-      <span class="spec-key">GPU Accelerators</span>
-      <span class="spec-val green">● Available</span>
-    </div>
-    <div class="spec-row">
-      <span class="spec-key">Server CPUs</span>
-      <span class="spec-val green">● Available</span>
-    </div>
-    <div class="spec-row">
-      <span class="spec-key">Network Cards</span>
-      <span class="spec-val blue">● On Request</span>
-    </div>
-    <div class="spec-row">
-      <span class="spec-key">DRAM / Flash</span>
-      <span class="spec-val green">● Available</span>
-    </div>
-    <div class="spec-row">
-      <span class="spec-key">Lead Time</span>
-      <span class="spec-val">3–7 Business Days</span>
-    </div>
-    <div class="spec-row">
-      <span class="spec-key">RFQ Response</span>
-      <span class="spec-val">&lt; 24 Hours</span>
-    </div>
+  <div class="spec-card" id="specCard">
+    <div class="spec-card-title" data-i18n="index.spec.title">// Live Inventory Signal</div>
+    <div class="spec-row"><span class="spec-key" data-i18n="index.spec.gpu">GPU Accelerators</span><span class="spec-val green" data-i18n="index.spec.avail">● Available</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="index.spec.cpu">Server CPUs</span><span class="spec-val green" data-i18n="index.spec.avail2">● Available</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="index.spec.net">Network Cards</span><span class="spec-val blue" data-i18n="index.spec.onreq">● On Request</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="index.spec.dram">DRAM / Flash</span><span class="spec-val green" data-i18n="index.spec.avail3">● Available</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="index.spec.lead">Lead Time</span><span class="spec-val" data-i18n="index.spec.leadval">3–7 Business Days</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="index.spec.rfq">RFQ Response</span><span class="spec-val" data-i18n="index.spec.rfqval">&lt; 24 Hours</span></div>
   </div>
 
-  <!-- Stats Bar -->
   <div class="stats-bar">
-    <div class="stat-item">
-      <div class="stat-num"><span id="cnt1">0</span><span class="hi">+</span></div>
-      <div class="stat-label">Transactions Completed</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num"><span id="cnt2">0</span></div>
-      <div class="stat-label">Countries Served</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num"><span id="cnt3">0</span><span class="hi">h</span></div>
-      <div class="stat-label">RFQ Response Time</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">100<span class="hi">%</span></div>
-      <div class="stat-label">BIS Compliant Exports</div>
-    </div>
+    <div class="stat-item"><div class="stat-num"><span id="cnt1">0</span><span class="hi">+</span></div><div class="stat-label" data-i18n="index.stat1">Transactions Completed</div></div>
+    <div class="stat-item"><div class="stat-num"><span id="cnt2">0</span></div><div class="stat-label" data-i18n="index.stat2">Countries Served</div></div>
+    <div class="stat-item"><div class="stat-num"><span id="cnt3">0</span><span class="hi">h</span></div><div class="stat-label" data-i18n="index.stat3">RFQ Response Time</div></div>
+    <div class="stat-item"><div class="stat-num">100<span class="hi">%</span></div><div class="stat-label" data-i18n="index.stat4">BIS Compliant Exports</div></div>
   </div>
 </section>
 
-<!-- ── CAPABILITIES ── -->
 <section class="capabilities">
   <div class="caps-header">
     <div>
-      <div class="section-tag">// What We Do</div>
-      <h2 class="section-title">Our Brokerage<br>Capabilities</h2>
+      <div class="section-tag" data-i18n="index.caps.tag">// What We Do</div>
+      <h2 class="section-title" data-i18n="index.caps.title">Our Brokerage Capabilities</h2>
     </div>
-    <p class="section-subtitle">From single-component sourcing to full BOM fulfillment — we operate where the open market falls short.</p>
+    <p class="section-subtitle" data-i18n="index.caps.sub">From single-component sourcing to full BOM fulfillment — we operate where the open market falls short.</p>
   </div>
-
   <div class="caps-grid">
-    <div class="cap-card">
-      <div class="cap-icon">🎯</div>
-      <div class="cap-title">Hardware Sourcing</div>
-      <p class="cap-desc">Submit your Part Numbers (P/N) or BOM. We locate hard-to-find, EOL, or highly allocated silicon components across global networks.</p>
-      <a href="contact.html" class="cap-link">Send Requirements →</a>
-    </div>
-    <div class="cap-card">
-      <div class="cap-icon">♻️</div>
-      <div class="cap-title">Asset Liquidation</div>
-      <p class="cap-desc">We supply high-volume, cost-effective pre-owned IT assets including server memory, Xeon/EPYC CPUs, and data center GPUs.</p>
-      <a href="products.html" class="cap-link">View Categories →</a>
-    </div>
-    <div class="cap-card">
-      <div class="cap-icon">🚢</div>
-      <div class="cap-title">Global Fulfillment</div>
-      <p class="cap-desc">Seamless cross-border transactions between North America and Asia, backed by established freight channels and full customs compliance.</p>
-      <a href="about.html" class="cap-link">Learn About Us →</a>
-    </div>
+    <div class="cap-card"><div class="cap-icon">🎯</div><div class="cap-title" data-i18n="index.cap1.title">Hardware Sourcing</div><p class="cap-desc" data-i18n="index.cap1.desc">Submit your Part Numbers (P/N) or BOM. We locate hard-to-find, EOL, or highly allocated silicon components across global networks.</p><a href="contact.html" class="cap-link" data-i18n="index.cap1.link">Send Requirements →</a></div>
+    <div class="cap-card"><div class="cap-icon">♻️</div><div class="cap-title" data-i18n="index.cap2.title">Asset Liquidation</div><p class="cap-desc" data-i18n="index.cap2.desc">We supply high-volume, cost-effective pre-owned IT assets including server memory, Xeon/EPYC CPUs, and data center GPUs.</p><a href="products.html" class="cap-link" data-i18n="index.cap2.link">View Categories →</a></div>
+    <div class="cap-card"><div class="cap-icon">🚢</div><div class="cap-title" data-i18n="index.cap3.title">Global Fulfillment</div><p class="cap-desc" data-i18n="index.cap3.desc">Seamless cross-border transactions between North America and Asia, backed by established freight channels and full customs compliance.</p><a href="about.html" class="cap-link" data-i18n="index.cap3.link">Learn About Us →</a></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ── PRODUCT LINES ── -->
 <section class="products">
-  <div class="section-tag">// Inventory Categories</div>
-  <h2 class="section-title">Two Core<br>Product Lines</h2>
-
+  <div class="section-tag" data-i18n="index.prods.tag">// Inventory Categories</div>
+  <h2 class="section-title" data-i18n="index.prods.title">Two Core Product Lines</h2>
   <div class="products-grid">
     <div class="prod-card">
-      <span class="prod-badge nib">Factory New — NIB</span>
-      <div class="prod-title">New In Box Hardware</div>
-      <p class="prod-desc">Latest generation consumer GPUs (RTX 5090), AI accelerators, and high-end desktop processors direct from distribution channels. Sealed, factory-fresh condition.</p>
-      <a href="products.html" class="prod-link">
-        Explore New Hardware
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <span class="prod-badge nib" data-i18n="index.nib.badge">Factory New — NIB</span>
+      <div class="prod-title" data-i18n="index.nib.title">New In Box Hardware</div>
+      <p class="prod-desc" data-i18n="index.nib.desc">Latest generation consumer GPUs (RTX 5090), AI accelerators, and high-end desktop processors direct from distribution channels.</p>
+      <a href="products.html" class="prod-link"><span data-i18n="index.nib.link">Explore New Hardware</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="prod-card">
-      <span class="prod-badge pull">Working Pulls</span>
-      <div class="prod-title">Refurbished & Tested</div>
-      <p class="prod-desc">Maximize your IT budget with strictly graded and tested working pulls from decommissioned enterprise environments. Every unit verified before shipment.</p>
-      <a href="products.html" class="prod-link">
-        Explore Pre-Owned
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <span class="prod-badge pull" data-i18n="index.pull.badge">Working Pulls</span>
+      <div class="prod-title" data-i18n="index.pull.title">Refurbished &amp; Tested</div>
+      <p class="prod-desc" data-i18n="index.pull.desc">Maximize your IT budget with strictly graded and tested working pulls from decommissioned enterprise environments.</p>
+      <a href="products.html" class="prod-link"><span data-i18n="index.pull.link">Explore Pre-Owned</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ── CTA ── -->
 <section class="cta-section">
-  <div class="section-tag">// Ready to Source?</div>
-  <h2 class="section-title">Skip the Open Market Volatility</h2>
-  <p class="section-subtitle">Let us find your target pricing and lead time. Most RFQs receive a response within 24 hours.</p>
+  <div class="section-tag" data-i18n="index.cta.tag">// Ready to Source?</div>
+  <h2 class="section-title" data-i18n="index.cta.title">Skip the Open Market Volatility</h2>
+  <p class="section-subtitle" data-i18n="index.cta.sub">Let us find your target pricing and lead time. Most RFQs receive a response within 24 hours.</p>
   <div class="cta-actions">
-    <a href="contact.html" class="btn-primary">
-      Request a Quote Now
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <a href="compliance.html" class="btn-ghost">
-      View Export Compliance
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a href="contact.html" class="btn-primary"><span data-i18n="index.cta.btn1">Request a Quote Now</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="compliance.html" class="btn-ghost"><span data-i18n="index.cta.btn2">View Export Compliance</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
 </section>
 
-<!-- ── P/N QUICK SEARCH ── -->
 <section class="pn-section">
   <div class="pn-inner">
-    <div class="pn-tag">// Instant RFQ</div>
-    <h2 class="pn-title">Have a Part Number?</h2>
-    <p class="pn-sub">Enter one or more part numbers and we'll prepare a quote within 24 hours.</p>
+    <div class="pn-tag" data-i18n="index.pn.tag">// Instant RFQ</div>
+    <h2 class="pn-title" data-i18n="index.pn.title">Have a Part Number?</h2>
+    <p class="pn-sub" data-i18n="index.pn.sub">Enter one or more part numbers and we'll prepare a quote within 24 hours.</p>
     <div class="pn-form">
       <div class="pn-input-wrap">
         <svg class="pn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input
-          id="pnInput"
-          class="pn-input"
-          type="text"
-          placeholder="e.g. H100 SXM5, RTX 5090, EPYC 9654 ..."
-          autocomplete="off"
-          spellcheck="false"
-        />
+        <input id="pnInput" class="pn-input" type="text" placeholder="e.g. H100 SXM5, RTX 5090, EPYC 9654 ..." data-i18n="index.pn.placeholder" autocomplete="off" spellcheck="false"/>
         <button class="pn-clear" id="pnClear" aria-label="Clear" style="display:none">✕</button>
       </div>
-      <button class="pn-btn" id="pnSubmit">
-        Get Quote
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
+      <button class="pn-btn" id="pnSubmit"><span data-i18n="index.pn.btn">Get Quote</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
     </div>
     <div class="pn-hints">
-      <span class="pn-hint-label">Popular:</span>
+      <span class="pn-hint-label" data-i18n="index.pn.popular">Popular:</span>
       <button class="pn-chip" onclick="fillPN('NVIDIA H100 SXM5 80GB')">H100 SXM5</button>
       <button class="pn-chip" onclick="fillPN('RTX 5090')">RTX 5090</button>
       <button class="pn-chip" onclick="fillPN('RTX 5080')">RTX 5080</button>
@@ -880,312 +248,73 @@
 </section>
 
 <style>
-.pn-section {
-  padding: 7rem 3rem;
-  position: relative;
-  overflow: hidden;
-  border-top: 1px solid rgba(14,165,233,0.07);
-}
-.pn-section::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(14,165,233,0.05) 0%, transparent 70%);
-  pointer-events: none;
-}
-.pn-section::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(14,165,233,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(14,165,233,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-}
-.pn-inner {
-  position: relative; z-index: 2;
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: center;
-}
-.pn-tag {
-  display: inline-flex;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  color: #0ea5e9;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
-  padding: 0.4rem 0.9rem;
-  border: 1px solid rgba(14,165,233,0.3);
-  border-radius: 2px;
-}
-.pn-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: #f0f6ff;
-  margin-bottom: 0.7rem;
-  line-height: 1.1;
-}
-.pn-sub {
-  font-size: 0.92rem;
-  color: rgba(240,246,255,0.4);
-  margin-bottom: 2.2rem;
-  line-height: 1.6;
-}
-.pn-form {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-  margin-bottom: 1.3rem;
-}
-.pn-input-wrap {
-  flex: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.pn-icon {
-  position: absolute;
-  left: 1rem;
-  color: #64748b;
-  pointer-events: none;
-  flex-shrink: 0;
-}
-.pn-input {
-  width: 100%;
-  background: rgba(10,21,32,0.8);
-  border: 1px solid rgba(14,165,233,0.2);
-  border-radius: 6px;
-  padding: 0.95rem 3rem 0.95rem 2.8rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.85rem;
-  color: #f0f6ff;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  letter-spacing: 0.02em;
-}
-.pn-input::placeholder {
-  color: #475569;
-}
-.pn-input:focus {
-  border-color: rgba(14,165,233,0.5);
-  box-shadow: 0 0 0 3px rgba(14,165,233,0.08);
-}
-.pn-clear {
-  position: absolute;
-  right: 0.8rem;
-  background: transparent;
-  border: none;
-  color: #64748b;
-  cursor: pointer;
-  font-size: 0.75rem;
-  padding: 0.3rem;
-  border-radius: 3px;
-  transition: color 0.2s;
-  line-height: 1;
-}
-.pn-clear:hover { color: #94a3b8; }
-.pn-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #0ea5e9;
-  color: #fff;
-  border: none;
-  padding: 0.95rem 1.8rem;
-  border-radius: 6px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 0 25px rgba(14,165,233,0.25);
-  flex-shrink: 0;
-}
-.pn-btn:hover {
-  background: #38bdf8;
-  transform: translateY(-2px);
-  box-shadow: 0 0 40px rgba(14,165,233,0.4);
-}
-.pn-btn svg { transition: transform 0.2s; }
-.pn-btn:hover svg { transform: translateX(3px); }
-.pn-hints {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.pn-hint-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-right: 0.3rem;
-}
-.pn-chip {
-  background: transparent;
-  border: 1px solid rgba(14,165,233,0.15);
-  color: #64748b;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  padding: 0.35rem 0.8rem;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
-  letter-spacing: 0.04em;
-}
-.pn-chip:hover {
-  color: #0ea5e9;
-  border-color: rgba(14,165,233,0.4);
-  background: rgba(14,165,233,0.05);
-}
-/* Shake animation for empty submit */
-@keyframes pnShake {
-  0%,100% { transform: translateX(0); }
-  20% { transform: translateX(-6px); }
-  40% { transform: translateX(6px); }
-  60% { transform: translateX(-4px); }
-  80% { transform: translateX(4px); }
-}
-.pn-input.shake { animation: pnShake 0.35s ease; border-color: rgba(239,68,68,0.5) !important; }
-
-@media (max-width: 640px) {
-  .pn-section { padding: 5rem 1.5rem; }
-  .pn-form { flex-direction: column; }
-  .pn-btn { width: 100%; justify-content: center; }
-  .pn-input-wrap { width: 100%; }
-}
+.pn-section{padding:7rem 3rem;position:relative;overflow:hidden;border-top:1px solid rgba(14,165,233,0.07)}
+.pn-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(14,165,233,.05) 0%,transparent 70%);pointer-events:none}
+.pn-section::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(14,165,233,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.pn-inner{position:relative;z-index:2;max-width:680px;margin:0 auto;text-align:center}
+.pn-tag{display:inline-flex;font-family:'DM Mono',monospace;font-size:.7rem;color:#0ea5e9;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.2rem;padding:.4rem .9rem;border:1px solid rgba(14,165,233,.3);border-radius:2px}
+.pn-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:#f0f6ff;margin-bottom:.7rem;line-height:1.1}
+.pn-sub{font-size:.92rem;color:rgba(240,246,255,.4);margin-bottom:2.2rem;line-height:1.6}
+.pn-form{display:flex;gap:.75rem;align-items:center;margin-bottom:1.3rem}
+.pn-input-wrap{flex:1;position:relative;display:flex;align-items:center}
+.pn-icon{position:absolute;left:1rem;color:#64748b;pointer-events:none;flex-shrink:0}
+.pn-input{width:100%;background:rgba(10,21,32,.8);border:1px solid rgba(14,165,233,.2);border-radius:6px;padding:.95rem 3rem .95rem 2.8rem;font-family:'DM Mono',monospace;font-size:.85rem;color:#f0f6ff;outline:none;transition:border-color .2s,box-shadow .2s;letter-spacing:.02em}
+.pn-input::placeholder{color:#475569}
+.pn-input:focus{border-color:rgba(14,165,233,.5);box-shadow:0 0 0 3px rgba(14,165,233,.08)}
+.pn-clear{position:absolute;right:.8rem;background:transparent;border:none;color:#64748b;cursor:pointer;font-size:.75rem;padding:.3rem;border-radius:3px;transition:color .2s;line-height:1}
+.pn-btn{display:inline-flex;align-items:center;gap:.5rem;background:#0ea5e9;color:#fff;border:none;padding:.95rem 1.8rem;border-radius:6px;font-size:.88rem;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;white-space:nowrap;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 0 25px rgba(14,165,233,.25);flex-shrink:0}
+.pn-btn:hover{background:#38bdf8;transform:translateY(-2px);box-shadow:0 0 40px rgba(14,165,233,.4)}
+.pn-hints{display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap}
+.pn-hint-label{font-family:'DM Mono',monospace;font-size:.65rem;color:#64748b;text-transform:uppercase;letter-spacing:.1em;margin-right:.3rem}
+.pn-chip{background:transparent;border:1px solid rgba(14,165,233,.15);color:#64748b;font-family:'DM Mono',monospace;font-size:.68rem;padding:.35rem .8rem;border-radius:3px;cursor:pointer;transition:color .2s,border-color .2s,background .2s;letter-spacing:.04em}
+.pn-chip:hover{color:#0ea5e9;border-color:rgba(14,165,233,.4);background:rgba(14,165,233,.05)}
+@keyframes pnShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.pn-input.shake{animation:pnShake .35s ease;border-color:rgba(239,68,68,.5)!important}
+@media(max-width:640px){.pn-section{padding:5rem 1.5rem}.pn-form{flex-direction:column}.pn-btn{width:100%;justify-content:center}.pn-input-wrap{width:100%}}
 </style>
 
 <script>
-(function() {
-  var input = document.getElementById('pnInput');
-  var clearBtn = document.getElementById('pnClear');
-  var submitBtn = document.getElementById('pnSubmit');
-
-  input.addEventListener('input', function() {
-    clearBtn.style.display = this.value.length ? 'block' : 'none';
-  });
-  clearBtn.addEventListener('click', function() {
-    input.value = '';
-    clearBtn.style.display = 'none';
-    input.focus();
-  });
-  input.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') goToQuote();
-  });
-  submitBtn.addEventListener('click', goToQuote);
-
-  function goToQuote() {
-    var val = input.value.trim();
-    if (!val) {
-      input.classList.add('shake');
-      input.focus();
-      setTimeout(function() { input.classList.remove('shake'); }, 400);
-      return;
-    }
-    window.location.href = 'contact.html?pn=' + encodeURIComponent(val);
-  }
-
-  window.fillPN = function(val) {
-    input.value = val;
-    clearBtn.style.display = 'block';
-    input.focus();
-  };
+(function(){
+  var input=document.getElementById('pnInput'),clearBtn=document.getElementById('pnClear'),submitBtn=document.getElementById('pnSubmit');
+  input.addEventListener('input',function(){clearBtn.style.display=this.value.length?'block':'none'});
+  clearBtn.addEventListener('click',function(){input.value='';clearBtn.style.display='none';input.focus()});
+  input.addEventListener('keydown',function(e){if(e.key==='Enter')goToQuote()});
+  submitBtn.addEventListener('click',goToQuote);
+  function goToQuote(){var val=input.value.trim();if(!val){input.classList.add('shake');input.focus();setTimeout(function(){input.classList.remove('shake')},400);return}window.location.href='contact.html?pn='+encodeURIComponent(val)}
+  window.fillPN=function(val){input.value=val;clearBtn.style.display='block';input.focus()};
 })();
 </script>
-  
-<!-- ── FOOTER ── -->
+
 <footer>
   <div class="footer-brand">MICA <span>Supply</span> LTD.</div>
-  <div class="footer-copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
+  <div class="footer-copy" data-i18n="footer.copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
   <ul class="footer-links">
-    <li><a href="compliance.html">Export Compliance</a></li>
+    <li><a href="compliance.html" data-i18n="nav.compliance">Export Compliance</a></li>
     <li><a href="privacy.html">Privacy Policy</a></li>
     <li><a href="terms.html">Terms of Service</a></li>
   </ul>
 </footer>
 
 <script>
-// ── PARTICLE CANVAS ──
-(function() {
-  const canvas = document.getElementById('hero-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H, nodes = [];
-
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
-  function initNodes(n = 65) {
-    nodes = [];
-    for (let i = 0; i < n; i++) {
-      nodes.push({
-        x: Math.random() * W,
-        y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.28,
-        vy: (Math.random() - 0.5) * 0.28,
-        r: Math.random() * 1.4 + 0.4
-      });
-    }
-  }
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    const maxDist = 145;
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const d  = Math.sqrt(dx*dx + dy*dy);
-        if (d < maxDist) {
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(14,165,233,${0.14 * (1 - d/maxDist)})`;
-          ctx.lineWidth = 0.5;
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-    nodes.forEach(n => {
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(14,165,233,0.55)';
-      ctx.fill();
-      n.x += n.vx; n.y += n.vy;
-      if (n.x < 0 || n.x > W) n.vx *= -1;
-      if (n.y < 0 || n.y > H) n.vy *= -1;
-    });
+(function(){
+  var canvas=document.getElementById('hero-canvas');if(!canvas)return;
+  var ctx=canvas.getContext('2d');var W,H,nodes=[];
+  function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight}
+  function initNodes(n){n=n||65;nodes=[];for(var i=0;i<n;i++){nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.4+.4})}}
+  function draw(){
+    ctx.clearRect(0,0,W,H);var maxDist=145;
+    for(var i=0;i<nodes.length;i++){for(var j=i+1;j<nodes.length;j++){var dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<maxDist){ctx.beginPath();ctx.strokeStyle='rgba(14,165,233,'+(0.14*(1-d/maxDist))+')';ctx.lineWidth=.5;ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke()}}}
+    nodes.forEach(function(n){ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fillStyle='rgba(14,165,233,0.55)';ctx.fill();n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1});
     requestAnimationFrame(draw);
   }
-  window.addEventListener('resize', () => { resize(); initNodes(); });
-  resize(); initNodes(); draw();
+  window.addEventListener('resize',function(){resize();initNodes()});
+  resize();initNodes();draw();
 })();
-
-// ── COUNTER ANIMATION ──
-function countUp(id, target, duration) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  let start = null;
-  (function step(ts) {
-    if (!start) start = ts;
-    const p = Math.min((ts - start) / duration, 1);
-    el.textContent = Math.floor(p * target);
-    if (p < 1) requestAnimationFrame(step);
-  })(performance.now());
-}
-setTimeout(function() {
-  countUp('cnt1', 200, 1800);
-  countUp('cnt2', 12,  1400);
-  countUp('cnt3', 24,  1200);
-}, 700);
+function countUp(id,target,duration){var el=document.getElementById(id);if(!el)return;var start=null;(function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/duration,1);el.textContent=Math.floor(p*target);if(p<1)requestAnimationFrame(step)})(performance.now())}
+setTimeout(function(){countUp('cnt1',200,1800);countUp('cnt2',12,1400);countUp('cnt3',24,1200)},700);
 </script>
+
+<script src="lang.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>
