@@ -371,6 +371,30 @@
   }
 })();
 </script>
+
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var pn = params.get('pn');
+  if (!pn) return;
+  var fields = [
+    document.getElementById('partNumbers'),
+    document.querySelector('textarea[name="partNumbers"]'),
+    document.querySelector('textarea[name="pn"]'),
+    document.querySelector('textarea[placeholder*="Part"]'),
+    document.querySelector('textarea[placeholder*="part"]'),
+    document.querySelector('textarea[placeholder*="P/N"]')
+  ];
+  for (var i = 0; i < fields.length; i++) {
+    if (fields[i]) {
+      fields[i].value = pn;
+      fields[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      fields[i].focus();
+      break;
+    }
+  }
+})();
+</script>
   
 <body>
 
