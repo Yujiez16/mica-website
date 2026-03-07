@@ -42,14 +42,14 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 3rem; height: 64px;
+      padding: 0 5rem; height: 96px;
       background: rgba(5,10,15,0.88); backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-LOGO { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .nav-LOGO img { height: 32px; width: auto; object-fit: contain; }
-    .nav-LOGO-text { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800; letter-spacing: -0.02em; color: var(--white); }
-    .nav-LOGO-text span { color: var(--blue); }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 62px; width: auto; object-fit: contain; }
+    .nav-logo-text { font-family: 'Syne', sans-serif; font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; color: var(--white); }
+    .nav-logo-text span { color: var(--blue); }
     .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--white); }
@@ -58,7 +58,7 @@
 
     /* ── PAGE HERO ── */
     .page-hero {
-      padding: 140px 3rem 80px;
+      padding: 172px 3rem 80px;
       position: relative; overflow: hidden;
       border-bottom: 1px solid var(--border-subtle);
     }
@@ -153,6 +153,23 @@
     }
     .eus-block.accepted .eus-status { color: var(--green); }
 
+    /* BOM Upload */
+    .bom-upload-block {
+      background: var(--surface); border: 2px dashed rgba(14,165,233,0.25);
+      border-radius: 6px; padding: 1.4rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .bom-upload-block.has-file { border-style: solid; border-color: var(--teal); background: rgba(20,184,166,0.04); }
+    .bom-upload-label { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.8rem; display: block; }
+    .bom-upload-inner { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .bom-upload-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--blue); background: rgba(14,165,233,0.08); border: 1px solid rgba(14,165,233,0.25); border-radius: 3px; padding: 0.55rem 1rem; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+    .bom-upload-btn:hover { background: rgba(14,165,233,0.15); border-color: rgba(14,165,233,0.45); }
+    .bom-file-status { font-size: 0.78rem; color: var(--muted); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .bom-file-status.ready { color: var(--teal); }
+    .bom-hint { font-size: 0.72rem; color: var(--muted); margin-top: 0.6rem; line-height: 1.5; }
+    .bom-remove { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--red); background: none; border: none; cursor: pointer; padding: 0; opacity: 0.7; transition: opacity 0.2s; display: none; }
+    .bom-remove:hover { opacity: 1; }
+
     /* Submit Button */
     .submit-btn {
       display: flex; align-items: center; justify-content: center; gap: 0.6rem;
@@ -233,7 +250,7 @@
     @media (max-width: 768px) {
       nav { padding: 0 1.5rem; }
       .nav-links { display: none; }
-      .page-hero { padding: 110px 1.5rem 60px; }
+      .page-hero { padding: 130px 1.5rem 60px; }
       .form-side, .info-side { padding: 4rem 1.5rem; }
       .form-row { grid-template-columns: 1fr; }
       footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
@@ -244,9 +261,9 @@
 
 <!-- ── NAVBAR ── -->
 <nav>
-  <a href="index.html" class="nav-LOGO">
+  <a href="index.html" class="nav-logo">
     <img src="images/LOGO2.png" alt="MICA Supply LTD." onerror="this.style.display='none'">
-    <span class="nav-LOGO-text">MICA <span>Supply</span></span>
+    <span class="nav-logo-text">MICA <span>Supply</span></span>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -362,6 +379,26 @@
         <textarea name="notes" placeholder="Required lead time, condition preference (NIB / pulls), certifications needed, etc." style="min-height:80px;"></textarea>
       </div>
 
+      <!-- BOM FILE UPLOAD -->
+      <div class="bom-upload-block" id="bomBlock">
+        <span class="bom-upload-label">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:0.4rem"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          BOM File Upload <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(optional)</span>
+        </span>
+        <div class="bom-upload-inner">
+          <button type="button" class="bom-upload-btn" id="bomUploadBtn" onclick="document.getElementById('bomFileInput').click()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Choose File
+          </button>
+          <span class="bom-file-status" id="bomFileStatus">No file selected</span>
+          <button type="button" class="bom-remove" id="bomRemove" onclick="removeBomFile()">✕ Remove</button>
+        </div>
+        <div class="bom-hint">Accepted: <span>.xlsx, .csv, .pdf, .xls</span> — Max 20MB. Your file will be securely uploaded and linked to this RFQ.</div>
+        <input type="file" id="bomFileInput" accept=".xlsx,.csv,.pdf,.xls" style="display:none" onchange="handleBomFile(this)">
+        <input type="hidden" id="bomFileUrl" name="bom_file_url" value="">
+        <input type="hidden" id="bomFileName" name="bom_file_name" value="">
+      </div>
+
       <!-- EUS -->
       <div class="eus-block" id="eusBlock">
         <label class="eus-check-row">
@@ -390,7 +427,7 @@
     <div class="success-overlay" id="successMsg">
       <div class="success-icon">✅</div>
       <div class="success-title">RFQ Received</div>
-      <p class="success-msg">Thank you. Your request has been submitted to <strong>sales@micasupply.ca</strong>.<br>We will respond with pricing and availability within <strong>24 hours</strong>.</p>
+      <p class="success-msg">Thank you. Your request has been submitted to <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="04776568617744696d676577717474687d2a6765">[email&#160;protected]</a></strong>.<br>We will respond with pricing and availability within <strong>24 hours</strong>.</p>
     </div>
   </div>
 
@@ -399,13 +436,13 @@
 
     <div class="info-block">
       <div class="info-block-title">// Direct Contact</div>
-      <a href="mailto:sales@micasupply.ca" class="contact-method">
+      <a href="/cdn-cgi/l/email-protection#7102101d1402311c181210020401011d085f1210" class="contact-method">
         <div class="method-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
         <div>
           <div class="method-label">Email</div>
-          <div class="method-value">sales@micasupply.ca</div>
+          <div class="method-value"><span class="__cf_email__" data-cfemail="93e0f2fff6e0d3fefaf0f2e0e6e3e3ffeabdf0f2">[email&#160;protected]</span></div>
           <div class="method-note">Primary inquiry channel</div>
         </div>
       </a>
@@ -466,7 +503,7 @@
 </footer>
 
 <!-- ── EUS CHECKBOX LOGIC ── -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const checkbox  = document.getElementById('eusCheckbox');
   const eusBlock  = document.getElementById('eusBlock');
   const eusStatus = document.getElementById('eusStatus');
@@ -495,21 +532,76 @@
   }
 </script>
 
+<!-- ── BOM FILE UPLOAD (Uploadcare) ── -->
+<script>
+// Uploadcare public key — free tier, 500 uploads/month
+var UPLOADCARE_PUB_KEY = 'cedee7f20fa6f185945c';
+
+function handleBomFile(input) {
+  var file = input.files[0];
+  if (!file) return;
+
+  var allowed = ['xlsx','csv','pdf','xls'];
+  var ext = file.name.split('.').pop().toLowerCase();
+  if (allowed.indexOf(ext) === -1) {
+    alert('Please upload a .xlsx, .csv, .pdf, or .xls file.');
+    input.value = '';
+    return;
+  }
+  if (file.size > 20 * 1024 * 1024) {
+    alert('File is too large. Maximum size is 20MB.');
+    input.value = '';
+    return;
+  }
+
+  // Show uploading state
+  document.getElementById('bomFileStatus').textContent = 'Uploading…';
+  document.getElementById('bomFileStatus').className = 'bom-file-status';
+  document.getElementById('bomUploadBtn').disabled = true;
+
+  // Upload to Uploadcare
+  var formData = new FormData();
+  formData.append('UPLOADCARE_PUB_KEY', UPLOADCARE_PUB_KEY);
+  formData.append('UPLOADCARE_STORE', '1');
+  formData.append('file', file);
+
+  fetch('https://upload.uploadcare.com/base/', {
+    method: 'POST',
+    body: formData
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    if (!data.file) throw new Error('Upload failed');
+    var fileUrl = 'https://ucarecdn.com/' + data.file + '/' + encodeURIComponent(file.name);
+    document.getElementById('bomFileUrl').value = fileUrl;
+    document.getElementById('bomFileName').value = file.name;
+    document.getElementById('bomFileStatus').textContent = '✓ ' + file.name;
+    document.getElementById('bomFileStatus').className = 'bom-file-status ready';
+    document.getElementById('bomBlock').classList.add('has-file');
+    document.getElementById('bomRemove').style.display = 'inline';
+    document.getElementById('bomUploadBtn').disabled = false;
+    document.getElementById('bomUploadBtn').textContent = 'Change File';
+  })
+  .catch(function(err) {
+    console.error(err);
+    document.getElementById('bomFileStatus').textContent = 'Upload failed — please try again';
+    document.getElementById('bomUploadBtn').disabled = false;
+    input.value = '';
+  });
+}
+
+function removeBomFile() {
+  document.getElementById('bomFileUrl').value = '';
+  document.getElementById('bomFileName').value = '';
+  document.getElementById('bomFileInput').value = '';
+  document.getElementById('bomFileStatus').textContent = 'No file selected';
+  document.getElementById('bomFileStatus').className = 'bom-file-status';
+  document.getElementById('bomBlock').classList.remove('has-file');
+  document.getElementById('bomRemove').style.display = 'none';
+  document.getElementById('bomUploadBtn').textContent = 'Choose File';
+}
+</script>
+
 <!-- ── P/N AUTOFILL FROM URL ── -->
 <script>
 (function() {
-  var params = new URLSearchParams(window.location.search);
-  var pn = params.get('pn');
-  if (!pn) return;
-  var field = document.getElementById('partNumbers');
-  if (field) {
-    field.value = pn;
-    field.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    field.focus();
-  }
-})();
-</script>
-
-<script src="cookie-consent.js"></script>
-</body>
-</html>
