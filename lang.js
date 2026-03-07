@@ -127,9 +127,54 @@
       btns[j].style.borderColor = isActive ? 'rgba(14,165,233,0.4)' : 'rgba(14,165,233,0.15)';
     }
 
-    // RTL nav fix
+    // RTL / LTR layout fix
+    var isRtl = cfg.dir === 'rtl';
+
+    // Nav links direction
     var navLinks = document.querySelector('.nav-links');
-    if (navLinks) navLinks.style.flexDirection = cfg.dir === 'rtl' ? 'row-reverse' : '';
+    if (navLinks) navLinks.style.flexDirection = isRtl ? 'row-reverse' : '';
+
+    // Move lang switcher to correct side of nav
+    var langWrap = document.querySelector('.mica-lang-wrap');
+    var nav = document.querySelector('nav');
+    if (langWrap && nav) {
+      langWrap.style.marginLeft  = isRtl ? '0' : '1.2rem';
+      langWrap.style.marginRight = isRtl ? '1.2rem' : '0';
+    }
+
+    // Fix any elements that use right-side absolute/fixed positioning
+    // e.g. the live inventory widget on index page
+    var rtlFlipEls = document.querySelectorAll('[data-rtl-flip]');
+    for (var k = 0; k < rtlFlipEls.length; k++) {
+      var fel = rtlFlipEls[k];
+      var origRight = fel.getAttribute('data-rtl-flip');   // original right value e.g. "2rem"
+      if (isRtl) {
+        fel.style.right = 'auto';
+        fel.style.left  = origRight;
+      } else {
+        fel.style.left  = 'auto';
+        fel.style.right = origRight;
+      }
+    }
+
+    // Generic: for fixed/absolute elements with inline right style, flip them
+    var fixedEls = document.querySelectorAll('.hero-widget, .stats-widget, .inventory-signal, [class*="widget"], [class*="signal"]');
+    for (var m = 0; m < fixedEls.length; m++) {
+      var wel = fixedEls[m];
+      var cs = window.getComputedStyle(wel);
+      if (cs.position === 'absolute' || cs.position === 'fixed') {
+        if (isRtl) {
+          if (cs.right !== 'auto' && cs.right !== '') {
+            wel.style.left = cs.right;
+            wel.style.right = 'auto';
+          }
+        } else {
+          // restore — remove inline overrides so CSS takes over
+          wel.style.left = '';
+          wel.style.right = '';
+        }
+      }
+    }
   }
 
   function injectSwitcher() {
