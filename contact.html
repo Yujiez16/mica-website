@@ -7,7 +7,8 @@
   <meta name="description" content="Submit your hardware RFQ to MICA Supply. Provide part numbers, quantities, and destination — we respond within 24 hours. AI accelerators, server CPUs, enterprise GPUs, and BOM fulfillment." />
   <meta name="keywords" content="hardware RFQ, request for quote, buy H100, buy RTX 5090, enterprise hardware quote, BOM fulfillment, server components quote" />
   <link rel="canonical" href="https://www.micasupply.ca/contact.html" />
-  
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.micasupply.ca/contact.html" />
   <meta property="og:title" content="Request a Quote | MICA Supply LTD." />
@@ -28,18 +29,11 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #050a0f;
-      --surface: #0a1520;
-      --surface2: #0f1e2e;
-      --blue: #0ea5e9;
-      --teal: #14b8a6;
-      --red: #ef4444;
-      --green: #22c55e;
-      --white: #f0f6ff;
-      --muted: #64748b;
-      --muted2: #94a3b8;
-      --border: rgba(14,165,233,0.15);
-      --border-subtle: rgba(14,165,233,0.07);
+      --bg: #050a0f; --surface: #0a1520; --surface2: #0f1e2e;
+      --blue: #0ea5e9; --teal: #14b8a6;
+      --red: #ef4444; --green: #22c55e;
+      --white: #f0f6ff; --muted: #64748b; --muted2: #94a3b8;
+      --border: rgba(14,165,233,0.15); --border-subtle: rgba(14,165,233,0.07);
     }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--white); overflow-x: hidden; }
@@ -69,14 +63,12 @@
       border-bottom: 1px solid var(--border-subtle);
     }
     .page-hero::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: radial-gradient(ellipse 55% 80% at 75% 50%, rgba(14,165,233,0.07) 0%, transparent 65%);
       pointer-events: none;
     }
     .page-hero::after {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background-image: linear-gradient(var(--border-subtle) 1px, transparent 1px), linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
       background-size: 60px 60px;
       mask-image: radial-gradient(ellipse 80% 100% at 75% 50%, black 10%, transparent 75%);
@@ -105,204 +97,123 @@
     /* ── MAIN LAYOUT ── */
     .contact-layout {
       display: grid; grid-template-columns: 1fr 420px;
-      gap: 0; min-height: calc(100vh - 200px);
-      border-bottom: 1px solid var(--border-subtle);
+      gap: 0; border-bottom: 1px solid var(--border-subtle);
     }
 
     /* ── FORM SIDE ── */
-    .form-side {
-      padding: 5rem 3rem;
-      border-right: 1px solid var(--border-subtle);
-    }
+    .form-side { padding: 5rem 3rem; border-right: 1px solid var(--border-subtle); }
 
     .section-tag {
       font-family: 'DM Mono', monospace; font-size: 0.68rem;
       color: var(--blue); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.6rem;
     }
-    .form-title {
-      font-family: 'Syne', sans-serif; font-size: 1.6rem;
-      font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.5rem;
-    }
+    .form-title { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.5rem; }
     .form-subtitle { font-size: 0.85rem; color: var(--muted2); margin-bottom: 2.5rem; line-height: 1.6; }
 
-    /* Form */
     .rfq-form { display: flex; flex-direction: column; gap: 1.4rem; }
-
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
 
     .field { display: flex; flex-direction: column; gap: 0.45rem; }
-    .field label {
-      font-family: 'DM Mono', monospace; font-size: 0.68rem;
-      color: var(--muted2); text-transform: uppercase; letter-spacing: 0.1em;
-    }
+    .field label { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--muted2); text-transform: uppercase; letter-spacing: 0.1em; }
     .field label .req { color: var(--blue); margin-left: 2px; }
 
-    .field input,
-    .field select,
-    .field textarea {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 0.75rem 1rem;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      color: var(--white);
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      width: 100%;
+    .field input, .field select, .field textarea {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+      padding: 0.75rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.88rem;
+      color: var(--white); outline: none; transition: border-color 0.2s, box-shadow 0.2s; width: 100%;
     }
-    .field input::placeholder,
-    .field textarea::placeholder { color: var(--muted); }
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(14,165,233,0.1);
+    .field input::placeholder, .field textarea::placeholder { color: var(--muted); }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      border-color: var(--blue); box-shadow: 0 0 0 3px rgba(14,165,233,0.1);
     }
-    .field select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; }
+    .field select {
+      cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 1rem center;
+    }
     .field select option { background: #0a1520; }
     .field textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
 
-    /* EUS Checkbox */
+    /* EUS Block */
     .eus-block {
-      background: var(--surface);
-      border: 2px solid var(--red);
-      border-radius: 6px;
-      padding: 1.2rem 1.4rem;
-      transition: border-color 0.3s, background 0.3s;
+      background: var(--surface); border: 2px solid var(--red); border-radius: 6px;
+      padding: 1.2rem 1.4rem; transition: border-color 0.3s, background 0.3s;
     }
-    .eus-block.accepted {
-      border-color: var(--green);
-      background: rgba(34,197,94,0.04);
-    }
-    .eus-check-row {
-      display: flex; align-items: flex-start; gap: 0.9rem; cursor: pointer;
-    }
-    .eus-check-row input[type="checkbox"] {
-      width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px;
-      accent-color: var(--green); cursor: pointer;
-    }
+    .eus-block.accepted { border-color: var(--green); background: rgba(34,197,94,0.04); }
+    .eus-check-row { display: flex; align-items: flex-start; gap: 0.9rem; cursor: pointer; }
+    .eus-check-row input[type="checkbox"] { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; accent-color: var(--green); cursor: pointer; }
     .eus-text { font-size: 0.8rem; color: var(--muted2); line-height: 1.6; }
     .eus-text strong { color: var(--white); font-weight: 600; }
     .eus-text a { color: var(--blue); text-decoration: none; }
     .eus-text a:hover { text-decoration: underline; }
     .eus-status {
-      font-family: 'DM Mono', monospace; font-size: 0.66rem;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      margin-top: 0.7rem; padding-top: 0.7rem;
-      border-top: 1px solid var(--border-subtle);
-      color: var(--red); transition: color 0.3s;
+      font-family: 'DM Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-top: 0.7rem; padding-top: 0.7rem;
+      border-top: 1px solid var(--border-subtle); color: var(--red); transition: color 0.3s;
     }
     .eus-block.accepted .eus-status { color: var(--green); }
 
     /* Submit Button */
     .submit-btn {
       display: flex; align-items: center; justify-content: center; gap: 0.6rem;
-      background: var(--muted);
-      color: rgba(240,246,255,0.4);
-      padding: 1rem 2rem; border-radius: 4px;
-      font-size: 0.92rem; font-weight: 600; letter-spacing: 0.02em;
-      border: none; cursor: not-allowed;
+      background: var(--muted); color: rgba(240,246,255,0.4);
+      padding: 1rem 2rem; border-radius: 4px; font-size: 0.92rem; font-weight: 600;
+      border: none; cursor: not-allowed; width: 100%;
       transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.15s;
-      width: 100%;
     }
     .submit-btn.unlocked {
       background: var(--blue); color: #fff; cursor: pointer;
-      box-shadow: 0 0 30px rgba(14,165,233,0.3);
+      box-shadow: 0 0 30px rgba(14,165,233,0.25);
     }
-    .submit-btn.unlocked:hover {
-      background: #38bdf8; transform: translateY(-2px);
-      box-shadow: 0 0 45px rgba(14,165,233,0.45);
-    }
-    .submit-btn svg { transition: transform 0.2s; }
-    .submit-btn.unlocked:hover svg { transform: translateX(3px); }
+    .submit-btn.unlocked:hover { background: #38bdf8; transform: translateY(-2px); box-shadow: 0 0 45px rgba(14,165,233,0.4); }
+
+    /* Success State */
+    .success-overlay { display: none; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 3rem 2rem; text-align: center; margin-top: 2rem; }
+    .success-overlay.show { display: block; }
+    .success-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .success-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .success-msg { font-size: 0.85rem; color: var(--muted2); line-height: 1.6; }
 
     /* ── INFO SIDE ── */
-    .info-side {
-      padding: 5rem 2.5rem;
-      background: var(--surface);
-      display: flex; flex-direction: column; gap: 2.5rem;
-    }
-
+    .info-side { padding: 5rem 2.5rem; background: var(--surface); display: flex; flex-direction: column; gap: 2.5rem; }
     .info-block { display: flex; flex-direction: column; gap: 1rem; }
     .info-block-title {
-      font-family: 'DM Mono', monospace; font-size: 0.68rem;
+      font-family: 'DM Mono', monospace; font-size: 0.67rem;
       color: var(--blue); text-transform: uppercase; letter-spacing: 0.12em;
       padding-bottom: 0.7rem; border-bottom: 1px solid var(--border-subtle);
     }
-
-    /* Contact Methods */
     .contact-method {
-      display: flex; align-items: flex-start; gap: 0.9rem;
-      padding: 1rem; border: 1px solid var(--border-subtle);
-      border-radius: 6px; background: var(--bg);
-      transition: border-color 0.2s;
-      text-decoration: none;
+      display: flex; align-items: flex-start; gap: 0.9rem; padding: 1rem;
+      border: 1px solid var(--border-subtle); border-radius: 6px; background: var(--bg);
+      transition: border-color 0.2s; text-decoration: none;
     }
     .contact-method:hover { border-color: rgba(14,165,233,0.3); }
-    .method-icon {
-      width: 36px; height: 36px; border-radius: 6px;
-      background: rgba(14,165,233,0.08); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
+    .method-icon { width: 36px; height: 36px; border-radius: 6px; background: rgba(14,165,233,0.08); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .method-icon svg { color: var(--blue); }
-    .method-label {
-      font-family: 'DM Mono', monospace; font-size: 0.65rem;
-      color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em;
-      margin-bottom: 0.2rem;
-    }
+    .method-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2rem; }
     .method-value { font-size: 0.85rem; color: var(--white); font-weight: 500; }
     .method-note { font-size: 0.74rem; color: var(--muted); margin-top: 0.15rem; }
 
-    /* SLA Card */
-    .sla-card {
-      background: var(--bg); border: 1px solid var(--border-subtle);
-      border-radius: 6px; overflow: hidden;
-    }
-    .sla-row {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0.8rem 1rem; border-bottom: 1px solid var(--border-subtle);
-      font-size: 0.8rem;
-    }
+    .sla-card { background: var(--bg); border: 1px solid var(--border-subtle); border-radius: 6px; overflow: hidden; }
+    .sla-row { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; border-bottom: 1px solid var(--border-subtle); font-size: 0.8rem; }
     .sla-row:last-child { border-bottom: none; }
     .sla-key { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.7rem; }
     .sla-val { color: var(--white); font-weight: 500; }
     .sla-val.green { color: #4ade80; }
-    .sla-val.blue  { color: var(--blue); }
+    .sla-val.blue { color: var(--blue); }
 
-    /* Process Steps */
-    .process-steps { display: flex; flex-direction: column; gap: 0; }
-    .process-step {
-      display: flex; gap: 1rem; align-items: flex-start;
-      padding: 0.9rem 0; border-bottom: 1px solid var(--border-subtle);
-    }
+    .process-steps { display: flex; flex-direction: column; }
+    .process-step { display: flex; gap: 1rem; align-items: flex-start; padding: 0.9rem 0; border-bottom: 1px solid var(--border-subtle); }
     .process-step:last-child { border-bottom: none; }
-    .step-num {
-      font-family: 'DM Mono', monospace; font-size: 0.65rem;
-      color: var(--blue); background: rgba(14,165,233,0.1);
-      border: 1px solid rgba(14,165,233,0.2);
-      border-radius: 3px; padding: 0.2rem 0.45rem;
-      flex-shrink: 0; margin-top: 1px;
-    }
+    .step-num { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--blue); background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.2); border-radius: 3px; padding: 0.2rem 0.45rem; flex-shrink: 0; margin-top: 1px; }
     .step-text { font-size: 0.8rem; color: var(--muted2); line-height: 1.5; }
     .step-text strong { color: var(--white); display: block; margin-bottom: 0.1rem; font-size: 0.82rem; }
 
-    /* Compliance note */
-    .compliance-note {
-      background: rgba(14,165,233,0.04);
-      border: 1px solid var(--border);
-      border-radius: 6px; padding: 1rem;
-      font-size: 0.77rem; color: var(--muted2); line-height: 1.6;
-    }
+    .compliance-note { background: rgba(14,165,233,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; font-size: 0.77rem; color: var(--muted2); line-height: 1.6; }
     .compliance-note strong { color: var(--blue); }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--surface); border-top: 1px solid var(--border);
-      padding: 3rem; display: flex; align-items: center;
-      justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
-    }
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
     .footer-brand { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--muted); }
     .footer-brand span { color: var(--blue); }
     .footer-copy { font-size: 0.78rem; color: var(--muted); font-family: 'DM Mono', monospace; }
@@ -310,23 +221,8 @@
     .footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; font-family: 'DM Mono', monospace; letter-spacing: 0.05em; transition: color 0.2s; }
     .footer-links a:hover { color: var(--blue); }
 
-    /* ── SUCCESS STATE ── */
-    .success-overlay {
-      display: none;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 8px; padding: 3rem 2rem; text-align: center;
-      margin-top: 2rem;
-    }
-    .success-overlay.show { display: block; }
-    .success-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-    .success-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .success-msg { font-size: 0.85rem; color: var(--muted2); line-height: 1.6; }
-
     /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
@@ -344,58 +240,6 @@
     }
   </style>
 </head>
-
-<script>
-// Auto-fill P/N from URL parameter
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var pn = params.get('pn');
-  if (!pn) return;
-  // Try to fill the part number / BOM textarea
-  // Works with both id="partNumbers" and name="partNumbers"
-  var fields = [
-    document.getElementById('partNumbers'),
-    document.querySelector('textarea[name="partNumbers"]'),
-    document.querySelector('textarea[name="pn"]'),
-    document.querySelector('textarea[placeholder*="Part"]'),
-    document.querySelector('textarea[placeholder*="part"]'),
-    document.querySelector('textarea[placeholder*="P/N"]')
-  ];
-  for (var i = 0; i < fields.length; i++) {
-    if (fields[i]) {
-      fields[i].value = pn;
-      fields[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
-      fields[i].focus();
-      break;
-    }
-  }
-})();
-</script>
-
-<script>
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var pn = params.get('pn');
-  if (!pn) return;
-  var fields = [
-    document.getElementById('partNumbers'),
-    document.querySelector('textarea[name="partNumbers"]'),
-    document.querySelector('textarea[name="pn"]'),
-    document.querySelector('textarea[placeholder*="Part"]'),
-    document.querySelector('textarea[placeholder*="part"]'),
-    document.querySelector('textarea[placeholder*="P/N"]')
-  ];
-  for (var i = 0; i < fields.length; i++) {
-    if (fields[i]) {
-      fields[i].value = pn;
-      fields[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
-      fields[i].focus();
-      break;
-    }
-  }
-})();
-</script>
-  
 <body>
 
 <!-- ── NAVBAR ── -->
@@ -436,7 +280,6 @@
 
     <form class="rfq-form" id="rfqForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-      <!-- Row 1: Name + Company -->
       <div class="form-row">
         <div class="field">
           <label>Full Name <span class="req">*</span></label>
@@ -448,7 +291,6 @@
         </div>
       </div>
 
-      <!-- Row 2: Email + Phone -->
       <div class="form-row">
         <div class="field">
           <label>Business Email <span class="req">*</span></label>
@@ -460,7 +302,6 @@
         </div>
       </div>
 
-      <!-- Row 3: Country + Inquiry Type -->
       <div class="form-row">
         <div class="field">
           <label>Country / Region <span class="req">*</span></label>
@@ -495,13 +336,11 @@
         </div>
       </div>
 
-      <!-- Part Numbers / BOM -->
       <div class="field">
         <label>Part Number(s) / BOM Description <span class="req">*</span></label>
-        <textarea name="part_numbers" placeholder="e.g. RTX 5090 × 10 units&#10;Intel Xeon Gold 6338 × 4 units&#10;Samsung 32GB DDR5 ECC RDIMM × 48 units" required></textarea>
+        <textarea id="partNumbers" name="part_numbers" placeholder="e.g. RTX 5090 × 10 units&#10;Intel Xeon Gold 6338 × 4 units&#10;Samsung 32GB DDR5 ECC RDIMM × 48 units" required></textarea>
       </div>
 
-      <!-- Row 4: Quantity + Target Price -->
       <div class="form-row">
         <div class="field">
           <label>Estimated Quantity</label>
@@ -513,19 +352,17 @@
         </div>
       </div>
 
-      <!-- Destination -->
       <div class="field">
         <label>Delivery Destination</label>
         <input type="text" name="destination" placeholder="e.g. Vancouver, BC  /  Dubai, UAE  /  Hong Kong">
       </div>
 
-      <!-- Additional Notes -->
       <div class="field">
         <label>Additional Notes</label>
         <textarea name="notes" placeholder="Required lead time, condition preference (NIB / pulls), certifications needed, etc." style="min-height:80px;"></textarea>
       </div>
 
-      <!-- EUS COMPLIANCE BLOCK -->
+      <!-- EUS -->
       <div class="eus-block" id="eusBlock">
         <label class="eus-check-row">
           <input type="checkbox" id="eusCheckbox" name="eus_acknowledged" value="YES — End-User Statement Acknowledged">
@@ -540,11 +377,9 @@
         <div class="eus-status" id="eusStatus">● EUS Not Acknowledged — Submit Locked</div>
       </div>
 
-      <!-- HIDDEN FIELD -->
       <input type="hidden" name="_subject" value="New RFQ — MICA Supply LTD.">
       <input type="hidden" name="_next" value="https://www.micasupply.ca/contact.html?submitted=true">
 
-      <!-- SUBMIT -->
       <button type="submit" class="submit-btn" id="submitBtn" disabled>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19l-7-7 7-7M19 12H5"/></svg>
         Acknowledge EUS to Submit
@@ -552,7 +387,6 @@
 
     </form>
 
-    <!-- SUCCESS MESSAGE -->
     <div class="success-overlay" id="successMsg">
       <div class="success-icon">✅</div>
       <div class="success-title">RFQ Received</div>
@@ -563,7 +397,6 @@
   <!-- INFO SIDE -->
   <div class="info-side">
 
-    <!-- Contact Methods -->
     <div class="info-block">
       <div class="info-block-title">// Direct Contact</div>
       <a href="mailto:sales@micasupply.ca" class="contact-method">
@@ -588,74 +421,34 @@
       </div>
     </div>
 
-    <!-- SLA -->
     <div class="info-block">
       <div class="info-block-title">// Response Commitment</div>
       <div class="sla-card">
-        <div class="sla-row">
-          <span class="sla-key">Initial Response</span>
-          <span class="sla-val green">Within 24 Hours</span>
-        </div>
-        <div class="sla-row">
-          <span class="sla-key">Pricing Quote</span>
-          <span class="sla-val green">1–3 Business Days</span>
-        </div>
-        <div class="sla-row">
-          <span class="sla-key">Compliance Review</span>
-          <span class="sla-val blue">Concurrent with Quote</span>
-        </div>
-        <div class="sla-row">
-          <span class="sla-key">Min. Order Qty</span>
-          <span class="sla-val">1 Unit</span>
-        </div>
-        <div class="sla-row">
-          <span class="sla-key">Currency</span>
-          <span class="sla-val">USD (default) / CAD</span>
-        </div>
+        <div class="sla-row"><span class="sla-key">Initial Response</span><span class="sla-val green">Within 24 Hours</span></div>
+        <div class="sla-row"><span class="sla-key">Pricing + Availability</span><span class="sla-val blue">1–2 Business Days</span></div>
+        <div class="sla-row"><span class="sla-key">BIS Screening</span><span class="sla-val">All Orders</span></div>
+        <div class="sla-row"><span class="sla-key">Trade Corridors</span><span class="sla-val">4+ Regions</span></div>
       </div>
     </div>
 
-    <!-- Process -->
     <div class="info-block">
       <div class="info-block-title">// How It Works</div>
       <div class="process-steps">
-        <div class="process-step">
-          <span class="step-num">01</span>
-          <div class="step-text">
-            <strong>Submit RFQ</strong>
-            Provide your P/N, quantity, and destination. BOM uploads welcome in notes.
-          </div>
-        </div>
-        <div class="process-step">
-          <span class="step-num">02</span>
-          <div class="step-text">
-            <strong>Compliance Screening</strong>
-            We run BIS / Entity List checks before confirming availability.
-          </div>
-        </div>
-        <div class="process-step">
-          <span class="step-num">03</span>
-          <div class="step-text">
-            <strong>Quote Delivered</strong>
-            Pricing, lead time, and logistics options sent to your email.
-          </div>
-        </div>
-        <div class="process-step">
-          <span class="step-num">04</span>
-          <div class="step-text">
-            <strong>Fulfillment</strong>
-            Upon PO confirmation, we coordinate sourcing and cross-border shipment.
-          </div>
-        </div>
+        <div class="process-step"><span class="step-num">01</span><div class="step-text"><strong>Submit RFQ</strong>Provide part numbers, quantity, and delivery destination.</div></div>
+        <div class="process-step"><span class="step-num">02</span><div class="step-text"><strong>Compliance Check</strong>We screen all parties against BIS/OFAC lists before proceeding.</div></div>
+        <div class="process-step"><span class="step-num">03</span><div class="step-text"><strong>Quote Delivery</strong>You receive pricing, lead time, and availability within 24 hours.</div></div>
+        <div class="process-step"><span class="step-num">04</span><div class="step-text"><strong>Order & Ship</strong>Confirm PO and we handle sourcing, documentation, and logistics.</div></div>
       </div>
     </div>
 
-    <!-- Compliance Note -->
-    <div class="compliance-note">
-      <strong>⚠ Export Control Notice</strong><br>
-      All transactions involving U.S.-origin technology are subject to EAR review. MICA Supply LTD. will not
-      facilitate transfers to sanctioned entities or embargoed destinations.
-      <a href="compliance.html" style="color:var(--blue); text-decoration:none;"> Full policy →</a>
+    <div class="info-block">
+      <div class="info-block-title">// Compliance Notice</div>
+      <div class="compliance-note">
+        <strong>⚠ Export Control Notice</strong><br>
+        All transactions involving U.S.-origin technology are subject to EAR review. MICA Supply LTD. will not
+        facilitate transfers to sanctioned entities or embargoed destinations.
+        <a href="compliance.html" style="color:var(--blue); text-decoration:none;"> Full policy →</a>
+      </div>
     </div>
 
   </div>
@@ -672,12 +465,12 @@
   </ul>
 </footer>
 
+<!-- ── EUS CHECKBOX LOGIC ── -->
 <script>
-  // ── EUS CHECKBOX LOGIC ──
-  const checkbox   = document.getElementById('eusCheckbox');
-  const eusBlock   = document.getElementById('eusBlock');
-  const eusStatus  = document.getElementById('eusStatus');
-  const submitBtn  = document.getElementById('submitBtn');
+  const checkbox  = document.getElementById('eusCheckbox');
+  const eusBlock  = document.getElementById('eusBlock');
+  const eusStatus = document.getElementById('eusStatus');
+  const submitBtn = document.getElementById('submitBtn');
 
   checkbox.addEventListener('change', function() {
     if (this.checked) {
@@ -695,11 +488,26 @@
     }
   });
 
-  // ── SUCCESS REDIRECT DETECTION ──
+  // Success redirect detection
   if (window.location.search.includes('submitted=true')) {
     document.getElementById('rfqForm').style.display = 'none';
     document.getElementById('successMsg').classList.add('show');
   }
+</script>
+
+<!-- ── P/N AUTOFILL FROM URL ── -->
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var pn = params.get('pn');
+  if (!pn) return;
+  var field = document.getElementById('partNumbers');
+  if (field) {
+    field.value = pn;
+    field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    field.focus();
+  }
+})();
 </script>
 
 <script src="cookie-consent.js"></script>
