@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://www.micasupply.ca/contact.html" />
   <meta property="og:title" content="Request a Quote | MICA Supply LTD." />
   <meta property="og:description" content="Submit your RFQ for enterprise hardware. Part numbers, BOM lists, or general inquiries — 24-hour response guaranteed." />
-  <meta property="og:image" content="https://www.micasupply.ca/images/LOGO2.png" />
+  <meta property="og:image" content="https://www.micasupply.ca/images/LOGO.jpg" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-95048H8LK1"></script>
@@ -266,21 +266,21 @@
     <span class="nav-logo-text">MICA <span>Supply</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="compliance.html">Compliance</a></li>
-    <li><a href="contact.html" class="nav-cta active">Request Quote</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+    <li><a href="compliance.html" data-i18n="nav.compliance">Compliance</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta active" data-i18n="nav.rfq">Request Quote</a></li>
   </ul>
 </nav>
 
 <!-- ── PAGE HERO ── -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <div class="page-tag">// Request for Quote</div>
-    <h1 class="page-title">Tell Us What<br>You <span>Need.</span></h1>
-    <p class="page-subtitle">
+    <div class="page-tag" data-i18n="contact.tag">// Request for Quote</div>
+    <h1 class="page-title"><span data-i18n="contact.h1.line1">Tell Us What</span><br>You <span data-i18n="contact.h1.span">Need.</span></h1>
+    <p class="page-subtitle" data-i18n="contact.sub">
       Submit your Part Number, BOM, or general hardware requirement.
       We respond with pricing, availability, and lead time within 24 hours.
     </p>
@@ -292,37 +292,37 @@
 
   <!-- FORM SIDE -->
   <div class="form-side">
-    <div class="section-tag">// RFQ Submission</div>
-    <h2 class="form-title">Request for Quotation</h2>
-    <p class="form-subtitle">All fields marked <span style="color:var(--blue)">*</span> are required. The End-User Statement must be acknowledged before submission.</p>
+    <div class="section-tag" data-i18n="contact.form.tag">// RFQ Submission</div>
+    <h2 class="form-title" data-i18n="contact.form.title">Request for Quotation</h2>
+    <p class="form-subtitle" data-i18n="contact.form.sub">All fields marked <span style="color:var(--blue)">*</span> are required. The End-User Statement must be acknowledged before submission.</p>
 
     <form class="rfq-form" id="rfqForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
       <div class="form-row">
         <div class="field">
-          <label>Full Name <span class="req">*</span></label>
+          <label><span data-i18n="contact.field.name">Full Name</span> <span class="req">*</span></label>
           <input type="text" name="name" placeholder="John Smith" required>
         </div>
         <div class="field">
-          <label>Company / Organization <span class="req">*</span></label>
+          <label><span data-i18n="contact.field.company">Company / Organization</span> <span class="req">*</span></label>
           <input type="text" name="company" placeholder="Acme Corp Ltd." required>
         </div>
       </div>
 
       <div class="form-row">
         <div class="field">
-          <label>Business Email <span class="req">*</span></label>
+          <label><span data-i18n="contact.field.email">Business Email</span> <span class="req">*</span></label>
           <input type="email" name="email" placeholder="you@company.com" required>
         </div>
         <div class="field">
-          <label>Phone / WhatsApp</label>
+          <label data-i18n="contact.field.phone">Phone / WhatsApp</label>
           <input type="tel" name="phone" placeholder="+1 604 000 0000">
         </div>
       </div>
 
       <div class="form-row">
         <div class="field">
-          <label>Country / Region <span class="req">*</span></label>
+          <label><span data-i18n="contact.field.country">Country / Region</span> <span class="req">*</span></label>
           <select name="country" required>
             <option value="" disabled selected>Select region…</option>
             <option>Canada</option>
@@ -342,7 +342,7 @@
           </select>
         </div>
         <div class="field">
-          <label>Inquiry Type <span class="req">*</span></label>
+          <label><span data-i18n="contact.field.type">Inquiry Type</span> <span class="req">*</span></label>
           <select name="inquiry_type" required>
             <option value="" disabled selected>Select type…</option>
             <option>Sourcing — Factory New (NIB)</option>
@@ -355,28 +355,28 @@
       </div>
 
       <div class="field">
-        <label>Part Number(s) / BOM Description <span class="req">*</span></label>
+        <label><span data-i18n="contact.field.pn">Part Number(s) / BOM Description</span> <span class="req">*</span></label>
         <textarea id="partNumbers" name="part_numbers" placeholder="e.g. RTX 5090 × 10 units&#10;Intel Xeon Gold 6338 × 4 units&#10;Samsung 32GB DDR5 ECC RDIMM × 48 units" required></textarea>
       </div>
 
       <div class="form-row">
         <div class="field">
-          <label>Estimated Quantity</label>
+          <label data-i18n="contact.field.qty">Estimated Quantity</label>
           <input type="text" name="quantity" placeholder="e.g. 10 units / 1 pallet">
         </div>
         <div class="field">
-          <label>Target Price (USD)</label>
+          <label data-i18n="contact.field.price">Target Price (USD)</label>
           <input type="text" name="target_price" placeholder="e.g. $2,500 / unit or Open">
         </div>
       </div>
 
       <div class="field">
-        <label>Delivery Destination</label>
+        <label data-i18n="contact.field.dest">Delivery Destination</label>
         <input type="text" name="destination" placeholder="e.g. Vancouver, BC  /  Dubai, UAE  /  Hong Kong">
       </div>
 
       <div class="field">
-        <label>Additional Notes</label>
+        <label data-i18n="contact.field.notes">Additional Notes</label>
         <textarea name="notes" placeholder="Required lead time, condition preference (NIB / pulls), certifications needed, etc." style="min-height:80px;"></textarea>
       </div>
 
@@ -495,7 +495,7 @@
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-brand">MICA <span>Supply</span> LTD.</div>
-  <div class="footer-copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
+  <div class="footer-copy" data-i18n="footer.copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
   <ul class="footer-links">
     <li><a href="compliance.html">Export Compliance</a></li>
     <li><a href="privacy.html">Privacy Policy</a></li>
@@ -536,7 +536,7 @@
 <!-- ── BOM FILE UPLOAD (Uploadcare) ── -->
 <script>
 // Uploadcare public key — free tier, 500 uploads/month
-var UPLOADCARE_PUB_KEY = 'cedee7f20fa6f185945c';
+var UPLOADCARE_PUB_KEY = 'demopublickey';
 
 function handleBomFile(input) {
   var file = input.files[0];
@@ -605,4 +605,19 @@ function removeBomFile() {
 
 <!-- ── P/N AUTOFILL FROM URL ── -->
 <script>
-(function() {
+(function() {  var params = new URLSearchParams(window.location.search);
+  var pn = params.get('pn');
+  if (!pn) return;
+  var field = document.getElementById('partNumbers');
+  if (field) {
+    field.value = pn;
+    field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    field.focus();
+  }
+})();
+</script>
+
+<script src="lang.js"></script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>
