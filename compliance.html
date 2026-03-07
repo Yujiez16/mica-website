@@ -4,372 +4,154 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Export Compliance | MICA Supply LTD.</title>
-  <meta name="description" content="MICA Supply LTD. export compliance policy. BIS, EAR, and Entity List screening procedures for all cross-border hardware transactions." />
+  <meta name="description" content="MICA Supply LTD. export compliance framework — BIS, EAR, Entity List screening for all cross-border hardware transactions." />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-95048H8LK1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date()); gtag('config', 'G-95048H8LK1');
-  </script>
-
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-95048H8LK1');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #050a0f;
-      --surface: #0a1520;
-      --surface2: #0f1e2e;
-      --blue: #0ea5e9;
-      --teal: #14b8a6;
-      --amber: #f59e0b;
-      --red: #ef4444;
-      --green: #22c55e;
-      --white: #f0f6ff;
-      --muted: #64748b;
-      --muted2: #94a3b8;
-      --border: rgba(14,165,233,0.15);
-      --border-subtle: rgba(14,165,233,0.07);
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --bg:#050a0f;--surface:#0a1520;--surface2:#0f1e2e;
+      --blue:#0ea5e9;--teal:#14b8a6;--amber:#f59e0b;--red:#ef4444;--green:#22c55e;
+      --white:#f0f6ff;--muted:#64748b;--muted2:#94a3b8;
+      --border:rgba(14,165,233,0.15);--border-s:rgba(14,165,233,0.07);
     }
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--white); overflow-x: hidden; }
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--white);overflow-x:hidden;}
 
-    /* ── NAVBAR ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 3rem; height: 64px;
-      background: rgba(5,10,15,0.88); backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .nav-logo img { height: 32px; width: auto; object-fit: contain; }
-    .nav-logo-text { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800; letter-spacing: -0.02em; color: var(--white); }
-    .nav-logo-text span { color: var(--blue); }
-    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--white); }
-    .nav-cta { background: var(--blue) !important; color: #fff !important; padding: 0.5rem 1.3rem; border-radius: 4px; box-shadow: 0 0 20px rgba(14,165,233,0.2); transition: background 0.2s, box-shadow 0.2s !important; }
-    .nav-cta:hover { background: #38bdf8 !important; box-shadow: 0 0 30px rgba(14,165,233,0.35) !important; }
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(5,10,15,0.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+    .nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none;}
+    .nav-logo img{height:32px;object-fit:contain;}
+    .nav-logo-text{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:var(--white);}
+    .nav-logo-text span{color:var(--blue);}
+    .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-cta{background:var(--blue)!important;color:#fff!important;padding:0.5rem 1.3rem;border-radius:4px;}
 
-    /* ── PAGE HERO ── */
-    .page-hero {
-      padding: 140px 3rem 90px;
-      position: relative; overflow: hidden;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 50% 80% at 85% 40%, rgba(245,158,11,0.06) 0%, transparent 60%),
-                  radial-gradient(ellipse 40% 60% at 10% 60%, rgba(14,165,233,0.05) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .page-hero::after {
-      content: '';
-      position: absolute; inset: 0;
-      background-image: linear-gradient(var(--border-subtle) 1px, transparent 1px), linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 70% 100% at 85% 40%, black 10%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-hero-inner { position: relative; z-index: 2; max-width: 700px; }
-    .page-tag {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-family: 'DM Mono', monospace; font-size: 0.7rem;
-      color: var(--amber); letter-spacing: 0.15em; text-transform: uppercase;
-      margin-bottom: 1.5rem; padding: 0.4rem 0.9rem;
-      border: 1px solid rgba(245,158,11,0.3); border-radius: 2px;
-      animation: fadeUp 0.5s ease both;
-    }
-    .page-tag::before {
-      content: ''; width: 6px; height: 6px;
-      background: var(--amber); border-radius: 50%;
-      animation: blink 2s infinite;
-    }
-    .page-title {
-      font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 4.5vw, 4rem);
-      font-weight: 800; line-height: 1.05; letter-spacing: -0.03em;
-      margin-bottom: 1.2rem; animation: fadeUp 0.5s 0.1s ease both;
-    }
-    .page-title span { color: var(--amber); }
-    .page-subtitle {
-      font-size: 1rem; line-height: 1.75; color: rgba(240,246,255,0.5);
-      max-width: 540px; font-weight: 300; animation: fadeUp 0.5s 0.2s ease both;
-    }
+    /* HERO */
+    .page-hero{padding:140px 3rem 90px;position:relative;overflow:hidden;border-bottom:1px solid var(--border-s);}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 85% 40%,rgba(245,158,11,0.06) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 10% 60%,rgba(14,165,233,0.05) 0%,transparent 60%);pointer-events:none;}
+    .page-hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border-s) 1px,transparent 1px),linear-gradient(90deg,var(--border-s) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 100% at 85% 40%,black 10%,transparent 70%);pointer-events:none;}
+    .page-hero-inner{position:relative;z-index:2;max-width:720px;}
+    .page-tag{display:inline-flex;align-items:center;gap:0.5rem;font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--amber);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.5rem;padding:0.4rem 0.9rem;border:1px solid rgba(245,158,11,0.3);border-radius:2px;}
+    .page-tag::before{content:'';width:6px;height:6px;background:var(--amber);border-radius:50%;animation:blink 2s infinite;}
+    .page-title{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,4.5vw,4rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1.2rem;}
+    .page-title span{color:var(--amber);}
+    .page-subtitle{font-size:1rem;line-height:1.75;color:rgba(240,246,255,0.5);max-width:560px;font-weight:300;}
 
-    /* ── SHARED ── */
-    .section-tag {
-      font-family: 'DM Mono', monospace; font-size: 0.68rem;
-      color: var(--blue); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.6rem;
-    }
-    .section-title {
-      font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-      font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 1rem;
-    }
+    /* TOC BAR */
+    .toc-bar{position:sticky;top:64px;z-index:100;background:var(--surface);border-bottom:1px solid var(--border-s);display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none;}
+    .toc-bar::-webkit-scrollbar{display:none;}
+    .toc-bar-label{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;padding:0 1.5rem;display:flex;align-items:center;border-right:1px solid var(--border-s);white-space:nowrap;flex-shrink:0;}
+    .toc-bar a{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);text-decoration:none;padding:0.9rem 1.1rem;border-right:1px solid var(--border-s);white-space:nowrap;display:flex;align-items:center;transition:color 0.2s,background 0.2s;}
+    .toc-bar a:hover{color:var(--white);background:rgba(245,158,11,0.04);}
 
-    /* ── STATUS BAR ── */
-    .status-bar {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      border-bottom: 1px solid var(--border-subtle);
-      background: var(--surface);
-    }
-    .status-item {
-      padding: 2rem 2.5rem; border-right: 1px solid var(--border-subtle);
-      animation: fadeUp 0.5s ease both;
-    }
-    .status-item:last-child { border-right: none; }
-    .status-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      margin-bottom: 0.7rem;
-    }
-    .status-dot.green { background: var(--green); box-shadow: 0 0 8px rgba(34,197,94,0.5); }
-    .status-dot.amber { background: var(--amber); box-shadow: 0 0 8px rgba(245,158,11,0.5); }
-    .status-dot.blue  { background: var(--blue);  box-shadow: 0 0 8px rgba(14,165,233,0.5); }
-    .status-label {
-      font-family: 'DM Mono', monospace; font-size: 0.65rem;
-      color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem;
-    }
-    .status-value { font-size: 0.88rem; color: var(--white); font-weight: 500; }
+    /* STATUS BAR */
+    .status-bar{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border-s);background:var(--surface);}
+    .status-item{padding:2rem 2.5rem;border-right:1px solid var(--border-s);}
+    .status-item:last-child{border-right:none;}
+    .status-dot{width:8px;height:8px;border-radius:50%;margin-bottom:0.7rem;}
+    .status-dot.green{background:var(--green);box-shadow:0 0 8px rgba(34,197,94,0.5);}
+    .status-dot.amber{background:var(--amber);box-shadow:0 0 8px rgba(245,158,11,0.5);}
+    .status-dot.blue{background:var(--blue);box-shadow:0 0 8px rgba(14,165,233,0.5);}
+    .status-label{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem;}
+    .status-value{font-size:0.88rem;color:var(--white);font-weight:500;}
 
-    /* ── BODY LAYOUT ── */
-    .compliance-body {
-      display: grid; grid-template-columns: 1fr 360px;
-      gap: 0; border-bottom: 1px solid var(--border-subtle);
-    }
+    /* CONTENT */
+    .doc-body{padding:5rem 3rem;max-width:900px;margin:0 auto;}
+    .doc-section{margin-bottom:4rem;}
+    .doc-section:last-child{margin-bottom:0;}
+    .doc-section-header{display:flex;align-items:center;gap:0.9rem;margin-bottom:1.8rem;padding-bottom:1.2rem;border-bottom:1px solid var(--border-s);}
+    .doc-num{font-family:'DM Mono',monospace;font-size:0.63rem;color:var(--blue);background:rgba(14,165,233,0.08);border:1px solid rgba(14,165,233,0.2);border-radius:3px;padding:0.2rem 0.5rem;flex-shrink:0;}
+    .doc-section-title{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:-0.01em;}
+    .doc-text{font-size:0.88rem;color:rgba(240,246,255,0.5);line-height:1.85;margin-bottom:1rem;font-weight:300;}
+    .doc-text:last-child{margin-bottom:0;}
+    .doc-text strong{color:var(--white);font-weight:600;}
+    .doc-text a{color:var(--blue);text-decoration:none;}
+    .doc-text a:hover{text-decoration:underline;}
 
-    /* ── MAIN CONTENT ── */
-    .main-content { padding: 5rem 3rem; border-right: 1px solid var(--border-subtle); }
+    /* CHECK LISTS */
+    .check-list{display:flex;flex-direction:column;gap:0.7rem;margin:1.2rem 0;}
+    .check-item{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.85rem;color:rgba(240,246,255,0.55);line-height:1.55;}
+    .check-icon{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:0.65rem;font-weight:700;}
+    .check-icon.green{background:rgba(34,197,94,0.12);color:var(--green);border:1px solid rgba(34,197,94,0.25);}
+    .check-icon.red{background:rgba(239,68,68,0.12);color:var(--red);border:1px solid rgba(239,68,68,0.25);}
+    .check-icon.amber{background:rgba(245,158,11,0.12);color:var(--amber);border:1px solid rgba(245,158,11,0.25);}
 
-    .policy-section { margin-bottom: 4rem; }
-    .policy-section:last-child { margin-bottom: 0; }
+    /* BOXES */
+    .highlight-box{background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.2);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;margin:1.4rem 0;font-size:0.84rem;color:rgba(240,246,255,0.6);line-height:1.7;}
+    .highlight-box strong{color:var(--amber);}
+    .info-box{background:rgba(14,165,233,0.04);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;margin:1.4rem 0;font-size:0.84rem;color:rgba(240,246,255,0.6);line-height:1.7;}
+    .info-box strong{color:var(--blue);}
 
-    .policy-header {
-      display: flex; align-items: center; gap: 1rem;
-      margin-bottom: 1.8rem; padding-bottom: 1.2rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .policy-num {
-      font-family: 'DM Mono', monospace; font-size: 0.65rem;
-      color: var(--blue); background: rgba(14,165,233,0.08);
-      border: 1px solid rgba(14,165,233,0.2);
-      border-radius: 3px; padding: 0.25rem 0.55rem; flex-shrink: 0;
-    }
-    .policy-title {
-      font-family: 'Syne', sans-serif; font-size: 1.15rem;
-      font-weight: 700; letter-spacing: -0.01em;
-    }
+    /* ECCN TABLE */
+    .eccn-table{width:100%;border-collapse:collapse;margin:1.4rem 0;font-size:0.82rem;}
+    .eccn-table th{font-family:'DM Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-align:left;padding:0.7rem 1rem;background:var(--surface);border-bottom:1px solid var(--border);}
+    .eccn-table td{padding:0.75rem 1rem;border-bottom:1px solid var(--border-s);color:var(--muted2);vertical-align:top;}
+    .eccn-table tr:hover td{background:rgba(14,165,233,0.02);}
+    .eccn-table td:first-child{color:var(--white);font-weight:500;}
+    .badge-sm{display:inline-block;font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.2rem 0.5rem;border-radius:2px;}
+    .badge-sm.amber{background:rgba(245,158,11,0.12);color:var(--amber);border:1px solid rgba(245,158,11,0.25);}
+    .badge-sm.red{background:rgba(239,68,68,0.12);color:var(--red);border:1px solid rgba(239,68,68,0.25);}
+    .badge-sm.green{background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.2);}
+    .badge-sm.blue{background:rgba(14,165,233,0.1);color:var(--blue);border:1px solid rgba(14,165,233,0.2);}
 
-    .policy-text {
-      font-size: 0.88rem; color: rgba(240,246,255,0.55);
-      line-height: 1.85; margin-bottom: 1.2rem; font-weight: 300;
+    /* OFFICIAL LINKS GRID */
+    .gov-links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin:1.5rem 0;}
+    .gov-link-card{
+      background:var(--surface);border:1px solid var(--border-s);border-radius:6px;
+      padding:1.2rem;text-decoration:none;display:flex;flex-direction:column;gap:0.5rem;
+      transition:border-color 0.2s,background 0.2s;
     }
-    .policy-text strong { color: var(--white); font-weight: 600; }
-    .policy-text a { color: var(--blue); text-decoration: none; }
-    .policy-text a:hover { text-decoration: underline; }
+    .gov-link-card:hover{border-color:rgba(14,165,233,0.35);background:rgba(14,165,233,0.03);}
+    .gov-link-badge{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.2);padding:0.2rem 0.5rem;border-radius:2px;align-self:flex-start;}
+    .gov-link-title{font-size:0.85rem;color:var(--white);font-weight:600;line-height:1.3;}
+    .gov-link-desc{font-size:0.75rem;color:var(--muted);line-height:1.5;}
+    .gov-link-url{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--blue);margin-top:0.2rem;}
 
-    /* Highlight Box */
-    .highlight-box {
-      background: rgba(245,158,11,0.04);
-      border: 1px solid rgba(245,158,11,0.2);
-      border-left: 3px solid var(--amber);
-      border-radius: 0 6px 6px 0;
-      padding: 1.2rem 1.4rem;
-      margin: 1.4rem 0;
-    }
-    .highlight-box p { font-size: 0.84rem; color: rgba(240,246,255,0.6); line-height: 1.7; }
-    .highlight-box strong { color: var(--amber); }
+    /* CTA */
+    .cta-section{padding:6rem 3rem;text-align:center;position:relative;overflow:hidden;}
+    .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 50% 50%,rgba(14,165,233,0.05) 0%,transparent 70%);pointer-events:none;}
+    .cta-inner{position:relative;z-index:1;max-width:520px;margin:0 auto;}
+    .section-tag{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--blue);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.6rem;}
+    .cta-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:800;letter-spacing:-0.025em;margin-bottom:0.8rem;}
+    .cta-sub{font-size:0.92rem;color:rgba(240,246,255,0.45);line-height:1.7;margin-bottom:2.5rem;}
+    .cta-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+    .btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--blue);color:#fff;padding:0.85rem 2rem;border-radius:4px;font-size:0.9rem;font-weight:600;text-decoration:none;transition:background 0.2s,transform 0.15s,box-shadow 0.2s;box-shadow:0 0 30px rgba(14,165,233,0.25);}
+    .btn-primary:hover{background:#38bdf8;transform:translateY(-2px);box-shadow:0 0 45px rgba(14,165,233,0.4);}
+    .btn-primary svg{transition:transform 0.2s;}
+    .btn-primary:hover svg{transform:translateX(3px);}
+    .btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;color:var(--muted2);font-size:0.87rem;text-decoration:none;border:1px solid var(--border);padding:0.8rem 1.5rem;border-radius:4px;transition:color 0.2s,border-color 0.2s;}
+    .btn-ghost:hover{color:var(--white);border-color:rgba(14,165,233,0.4);}
 
-    .info-box {
-      background: rgba(14,165,233,0.04);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--blue);
-      border-radius: 0 6px 6px 0;
-      padding: 1.2rem 1.4rem;
-      margin: 1.4rem 0;
-    }
-    .info-box p { font-size: 0.84rem; color: rgba(240,246,255,0.6); line-height: 1.7; }
-    .info-box strong { color: var(--blue); }
+    /* FOOTER */
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+    .footer-brand{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:var(--muted);}
+    .footer-brand span{color:var(--blue);}
+    .footer-copy{font-size:0.78rem;color:var(--muted);font-family:'DM Mono',monospace;}
+    .footer-links{display:flex;gap:1.8rem;list-style:none;}
+    .footer-links a{font-size:0.75rem;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--blue);}
 
-    /* Check List */
-    .check-list { display: flex; flex-direction: column; gap: 0.7rem; margin: 1.2rem 0; }
-    .check-item {
-      display: flex; align-items: flex-start; gap: 0.8rem;
-      font-size: 0.85rem; color: rgba(240,246,255,0.55); line-height: 1.5;
-    }
-    .check-icon {
-      width: 18px; height: 18px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; margin-top: 1px; font-size: 0.65rem;
-    }
-    .check-icon.green { background: rgba(34,197,94,0.12); color: var(--green); border: 1px solid rgba(34,197,94,0.25); }
-    .check-icon.red   { background: rgba(239,68,68,0.12);  color: var(--red);   border: 1px solid rgba(239,68,68,0.25); }
-    .check-icon.amber { background: rgba(245,158,11,0.12); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+    @keyframes blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.3;transform:scale(0.7);}}
 
-    /* ECCN Table */
-    .eccn-table { width: 100%; border-collapse: collapse; margin: 1.4rem 0; font-size: 0.82rem; }
-    .eccn-table th {
-      font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase;
-      letter-spacing: 0.1em; color: var(--muted); text-align: left;
-      padding: 0.7rem 1rem; background: var(--surface);
-      border-bottom: 1px solid var(--border);
-    }
-    .eccn-table td {
-      padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-subtle);
-      color: var(--muted2); vertical-align: top;
-    }
-    .eccn-table tr:hover td { background: rgba(14,165,233,0.02); }
-    .eccn-table td:first-child { color: var(--white); font-weight: 500; }
-    .badge-sm {
-      display: inline-block; font-family: 'DM Mono', monospace;
-      font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 0.2rem 0.5rem; border-radius: 2px;
-    }
-    .badge-sm.amber { background: rgba(245,158,11,0.12); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
-    .badge-sm.red   { background: rgba(239,68,68,0.12); color: var(--red); border: 1px solid rgba(239,68,68,0.25); }
-    .badge-sm.green { background: rgba(34,197,94,0.1); color: var(--green); border: 1px solid rgba(34,197,94,0.2); }
-    .badge-sm.blue  { background: rgba(14,165,233,0.1); color: var(--blue); border: 1px solid rgba(14,165,233,0.2); }
-
-    /* ── SIDEBAR ── */
-    .sidebar {
-      padding: 5rem 2rem;
-      background: var(--surface);
-      display: flex; flex-direction: column; gap: 2rem;
-    }
-
-    .sidebar-block { display: flex; flex-direction: column; gap: 1rem; }
-    .sidebar-block-title {
-      font-family: 'DM Mono', monospace; font-size: 0.67rem;
-      color: var(--blue); text-transform: uppercase; letter-spacing: 0.12em;
-      padding-bottom: 0.7rem; border-bottom: 1px solid var(--border-subtle);
-    }
-
-    /* Quick Nav */
-    .quick-nav { display: flex; flex-direction: column; gap: 0; }
-    .quick-nav-item {
-      display: flex; align-items: center; gap: 0.7rem;
-      padding: 0.75rem 0; border-bottom: 1px solid var(--border-subtle);
-      font-size: 0.8rem; color: var(--muted2); text-decoration: none;
-      transition: color 0.2s; cursor: pointer;
-    }
-    .quick-nav-item:last-child { border-bottom: none; }
-    .quick-nav-item:hover { color: var(--white); }
-    .quick-nav-item::before {
-      content: '//'; font-family: 'DM Mono', monospace;
-      font-size: 0.65rem; color: var(--muted);
-    }
-
-    /* Key Regulations */
-    .reg-card {
-      background: var(--bg); border: 1px solid var(--border-subtle);
-      border-radius: 6px; overflow: hidden;
-    }
-    .reg-item {
-      padding: 0.9rem 1rem; border-bottom: 1px solid var(--border-subtle);
-    }
-    .reg-item:last-child { border-bottom: none; }
-    .reg-name { font-size: 0.82rem; color: var(--white); font-weight: 600; margin-bottom: 0.2rem; }
-    .reg-desc { font-size: 0.73rem; color: var(--muted); line-height: 1.4; }
-
-    /* Contact Card */
-    .contact-card {
-      background: var(--bg); border: 1px solid var(--border);
-      border-radius: 6px; padding: 1.3rem;
-      display: flex; flex-direction: column; gap: 0.8rem;
-    }
-    .contact-card-intro { font-size: 0.8rem; color: var(--muted2); line-height: 1.5; }
-    .contact-card-email {
-      font-family: 'DM Mono', monospace; font-size: 0.8rem;
-      color: var(--blue); text-decoration: none;
-      padding: 0.6rem 0.9rem; border: 1px solid rgba(14,165,233,0.25);
-      border-radius: 4px; text-align: center;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .contact-card-email:hover { background: rgba(14,165,233,0.06); border-color: rgba(14,165,233,0.4); }
-
-    /* Disclaimer */
-    .disclaimer {
-      background: rgba(239,68,68,0.04);
-      border: 1px solid rgba(239,68,68,0.15);
-      border-radius: 6px; padding: 1rem;
-      font-size: 0.74rem; color: var(--muted); line-height: 1.6;
-    }
-    .disclaimer strong { color: var(--red); }
-
-    /* ── CTA ── */
-    .cta-section {
-      padding: 6rem 3rem; text-align: center; position: relative; overflow: hidden;
-    }
-    .cta-section::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 50% 70% at 50% 50%, rgba(14,165,233,0.05) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .cta-inner { position: relative; z-index: 1; max-width: 520px; margin: 0 auto; }
-    .cta-inner .section-title { margin-bottom: 0.8rem; }
-    .cta-subtitle { font-size: 0.92rem; color: rgba(240,246,255,0.45); line-height: 1.7; margin-bottom: 2.5rem; }
-    .cta-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      background: var(--blue); color: #fff; padding: 0.85rem 2rem;
-      border-radius: 4px; font-size: 0.9rem; font-weight: 600;
-      text-decoration: none; letter-spacing: 0.02em;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 0 30px rgba(14,165,233,0.25);
-    }
-    .btn-primary:hover { background: #38bdf8; transform: translateY(-2px); box-shadow: 0 0 45px rgba(14,165,233,0.4); }
-    .btn-primary svg { transition: transform 0.2s; }
-    .btn-primary:hover svg { transform: translateX(3px); }
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      color: var(--muted2); font-size: 0.87rem; text-decoration: none;
-      border: 1px solid var(--border); padding: 0.8rem 1.5rem; border-radius: 4px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .btn-ghost:hover { color: var(--white); border-color: rgba(14,165,233,0.4); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--surface); border-top: 1px solid var(--border);
-      padding: 3rem; display: flex; align-items: center;
-      justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
-    }
-    .footer-brand { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--muted); }
-    .footer-brand span { color: var(--blue); }
-    .footer-copy { font-size: 0.78rem; color: var(--muted); font-family: 'DM Mono', monospace; }
-    .footer-links { display: flex; gap: 1.8rem; list-style: none; }
-    .footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; font-family: 'DM Mono', monospace; letter-spacing: 0.05em; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--blue); }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes blink { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.3; transform:scale(0.7); } }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .compliance-body { grid-template-columns: 1fr; }
-      .main-content { border-right: none; border-bottom: 1px solid var(--border-subtle); }
-      .sidebar { padding: 4rem 3rem; }
-      .status-bar { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-      nav { padding: 0 1.5rem; }
-      .nav-links { display: none; }
-      .page-hero { padding: 110px 1.5rem 70px; }
-      .main-content, .sidebar, .cta-section { padding-left: 1.5rem; padding-right: 1.5rem; }
-      .status-bar { grid-template-columns: repeat(2, 1fr); }
-      footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
+    @media(max-width:1024px){.status-bar{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:768px){
+      nav{padding:0 1.5rem;}.nav-links{display:none;}
+      .page-hero{padding:110px 1.5rem 70px;}
+      .toc-bar-label{display:none;}
+      .status-bar{grid-template-columns:repeat(2,1fr);}
+      .doc-body,.cta-section{padding-left:1.5rem;padding-right:1.5rem;}
+      footer{flex-direction:column;align-items:flex-start;padding:2rem 1.5rem;}
     }
   </style>
 </head>
 <body>
 
-<!-- ── NAVBAR ── -->
 <nav>
   <a href="index.html" class="nav-logo">
     <img src="images/LOGO.jpg" alt="MICA Supply LTD." onerror="this.style.display='none'">
@@ -384,355 +166,171 @@
   </ul>
 </nav>
 
-<!-- ── PAGE HERO ── -->
 <div class="page-hero">
   <div class="page-hero-inner">
     <div class="page-tag">Export Compliance Framework</div>
-    <h1 class="page-title">We Don't Move<br>Hardware We Can't <span>Justify.</span></h1>
-    <p class="page-subtitle">
-      MICA Supply LTD. operates a strict export compliance framework aligned with
-      U.S. Bureau of Industry and Security (BIS) regulations and the Export Administration
-      Regulations (EAR). Every transaction is screened before we commit.
-    </p>
+    <h1 class="page-title">We Don't Move Hardware<br>We Can't <span>Justify.</span></h1>
+    <p class="page-subtitle">MICA Supply LTD. operates a strict export compliance framework aligned with U.S. Bureau of Industry and Security (BIS) regulations and the Export Administration Regulations (EAR). Every transaction is screened before we commit.</p>
   </div>
 </div>
 
-<!-- ── STATUS BAR ── -->
+<!-- TOC BAR -->
+<div class="toc-bar">
+  <span class="toc-bar-label">// Jump to section</span>
+  <a href="#s1">Our Position</a>
+  <a href="#s2">Screening Process</a>
+  <a href="#s3">Product Classification</a>
+  <a href="#s4">Prohibited Transactions</a>
+  <a href="#s5">End-User Statement</a>
+  <a href="#s6">Official References</a>
+</div>
+
+<!-- STATUS BAR -->
 <div class="status-bar">
-  <div class="status-item">
-    <div class="status-dot green"></div>
-    <div class="status-label">BIS Screening</div>
-    <div class="status-value">Active — All Orders</div>
-  </div>
-  <div class="status-item">
-    <div class="status-dot green"></div>
-    <div class="status-label">Entity List Check</div>
-    <div class="status-value">Pre-Transaction</div>
-  </div>
-  <div class="status-item">
-    <div class="status-dot amber"></div>
-    <div class="status-label">EUS Requirement</div>
-    <div class="status-value">Controlled Items</div>
-  </div>
-  <div class="status-item">
-    <div class="status-dot blue"></div>
-    <div class="status-label">Policy Version</div>
-    <div class="status-value">2026 — Current</div>
-  </div>
+  <div class="status-item"><div class="status-dot green"></div><div class="status-label">BIS Screening</div><div class="status-value">Active — All Orders</div></div>
+  <div class="status-item"><div class="status-dot green"></div><div class="status-label">Entity List Check</div><div class="status-value">Pre-Transaction</div></div>
+  <div class="status-item"><div class="status-dot amber"></div><div class="status-label">EUS Requirement</div><div class="status-value">Controlled Items</div></div>
+  <div class="status-item"><div class="status-dot blue"></div><div class="status-label">Policy Version</div><div class="status-value">2026 — Current</div></div>
 </div>
 
-<!-- ── BODY LAYOUT ── -->
-<div class="compliance-body">
+<div class="doc-body">
 
-  <!-- MAIN CONTENT -->
-  <div class="main-content">
-
-    <!-- Section 1: Position -->
-    <div class="policy-section" id="sec-position">
-      <div class="policy-header">
-        <span class="policy-num">01</span>
-        <h2 class="policy-title">Our Compliance Position</h2>
-      </div>
-      <p class="policy-text">
-        MICA Supply LTD. is incorporated in British Columbia, Canada and operates as an
-        independent hardware broker. As a broker handling U.S.-origin technology —
-        including semiconductors, AI accelerators, and server components — we are subject to
-        the <strong>Export Administration Regulations (EAR)</strong> administered by the
-        U.S. Department of Commerce, Bureau of Industry and Security (<strong>BIS</strong>).
-      </p>
-      <p class="policy-text">
-        Our compliance position is simple: <strong>we will not facilitate any transaction
-        that cannot be fully documented, screened, and justified under applicable export law.</strong>
-        This is not a legal formality — it is an operational principle embedded in every deal we work.
-      </p>
-      <div class="highlight-box">
-        <p><strong>⚠ Non-Negotiable:</strong> Any party that requests MICA Supply to obscure
-        end-user identity, mis-declare product classifications, or route shipments through
-        third countries to circumvent controls will be immediately declined and reported
-        to the appropriate authorities.</p>
-      </div>
-    </div>
-
-    <!-- Section 2: Screening -->
-    <div class="policy-section" id="sec-screening">
-      <div class="policy-header">
-        <span class="policy-num">02</span>
-        <h2 class="policy-title">Transaction Screening Process</h2>
-      </div>
-      <p class="policy-text">
-        Before confirming any order, MICA Supply conducts the following screening steps
-        against official U.S. government databases and internal risk criteria:
-      </p>
-      <div class="check-list">
-        <div class="check-item">
-          <div class="check-icon green">✓</div>
-          <span><strong style="color:var(--white)">BIS Entity List Check</strong> — All buyers, end-users, and freight forwarders are screened against the U.S. BIS Entity List, Denied Persons List, and Unverified List.</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon green">✓</div>
-          <span><strong style="color:var(--white)">OFAC SDN Screening</strong> — Parties are cross-referenced against the U.S. Treasury OFAC Specially Designated Nationals list.</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon green">✓</div>
-          <span><strong style="color:var(--white)">ECCN Classification Review</strong> — Each product line is assessed for Export Control Classification Number (ECCN) and applicable license requirements.</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon green">✓</div>
-          <span><strong style="color:var(--white)">End-User Statement (EUS)</strong> — Required for all export-controlled items. The buyer must confirm final end-use and agree not to re-export without authorization.</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon green">✓</div>
-          <span><strong style="color:var(--white)">Destination Country Review</strong> — Shipments to embargoed, restricted, or high-risk destinations are subject to enhanced due diligence or declined outright.</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 3: Product Classification -->
-    <div class="policy-section" id="sec-classification">
-      <div class="policy-header">
-        <span class="policy-num">03</span>
-        <h2 class="policy-title">Product Classification Overview</h2>
-      </div>
-      <p class="policy-text">
-        The following table summarizes the export control status of our primary product categories.
-        This is a general reference — actual classification depends on specific part numbers,
-        technical parameters, and current BIS guidance.
-      </p>
-
-      <table class="eccn-table">
-        <thead>
-          <tr>
-            <th>Product Category</th>
-            <th>Typical ECCN</th>
-            <th>License Req.</th>
-            <th>EUS Required</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Consumer GPUs (RTX 5090, 5080)</td>
-            <td>EAR99</td>
-            <td><span class="badge-sm green">NLR</span></td>
-            <td><span class="badge-sm blue">Recommended</span></td>
-          </tr>
-          <tr>
-            <td>NVIDIA H100 / H200 (Data Center)</td>
-            <td>3E001 / 3A090</td>
-            <td><span class="badge-sm red">Review Required</span></td>
-            <td><span class="badge-sm amber">Mandatory</span></td>
-          </tr>
-          <tr>
-            <td>NVIDIA A100 / A40 (Ampere DC)</td>
-            <td>3A090 / 4A003</td>
-            <td><span class="badge-sm amber">Case-by-Case</span></td>
-            <td><span class="badge-sm amber">Mandatory</span></td>
-          </tr>
-          <tr>
-            <td>Intel Xeon / AMD EPYC (Server CPU)</td>
-            <td>EAR99 / 3A991</td>
-            <td><span class="badge-sm green">NLR</span></td>
-            <td><span class="badge-sm blue">Recommended</span></td>
-          </tr>
-          <tr>
-            <td>Server DRAM / ECC Memory</td>
-            <td>EAR99</td>
-            <td><span class="badge-sm green">NLR</span></td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Mellanox / ConnectX NICs</td>
-            <td>EAR99 / 5A991</td>
-            <td><span class="badge-sm green">NLR</span></td>
-            <td><span class="badge-sm blue">Recommended</span></td>
-          </tr>
-          <tr>
-            <td>Enterprise NVMe / SSD</td>
-            <td>EAR99</td>
-            <td><span class="badge-sm green">NLR</span></td>
-            <td>—</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="info-box">
-        <p><strong>Note:</strong> NLR = No License Required under current regulations.
-        Classification is subject to change. MICA Supply reserves the right to request
-        additional documentation or decline any order at its sole discretion.
-        Buyers are responsible for compliance with their own national import regulations.</p>
-      </div>
-    </div>
-
-    <!-- Section 4: What We Won't Do -->
-    <div class="policy-section" id="sec-prohibited">
-      <div class="policy-header">
-        <span class="policy-num">04</span>
-        <h2 class="policy-title">Prohibited Transactions</h2>
-      </div>
-      <p class="policy-text">
-        Regardless of profit opportunity or client pressure, MICA Supply will not engage in
-        the following:
-      </p>
-      <div class="check-list">
-        <div class="check-item">
-          <div class="check-icon red">✕</div>
-          <span>Shipments to entities on the BIS Entity List, Denied Persons List, or OFAC SDN List</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon red">✕</div>
-          <span>Transactions where the stated end-use is inconsistent with the buyer's industry or location</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon red">✕</div>
-          <span>Re-exports to embargoed destinations including Cuba, Iran, North Korea, Russia, Syria, and Belarus</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon red">✕</div>
-          <span>Mis-declaration of product value, description, or ECCN on export/shipping documentation</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon red">✕</div>
-          <span>Transactions structured to obscure the true end-user or circumvent license requirements</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon red">✕</div>
-          <span>Facilitation of diversion of controlled technology to military or WMD end-uses</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 5: EUS -->
-    <div class="policy-section" id="sec-eus">
-      <div class="policy-header">
-        <span class="policy-num">05</span>
-        <h2 class="policy-title">End-User Statement (EUS) Requirement</h2>
-      </div>
-      <p class="policy-text">
-        For all transactions involving export-controlled hardware, MICA Supply requires the
-        buyer to execute an <strong>End-User Statement (EUS)</strong> prior to order confirmation.
-        By signing the EUS, the buyer confirms:
-      </p>
-      <div class="check-list">
-        <div class="check-item">
-          <div class="check-icon amber">→</div>
-          <span>The hardware will be used solely for the declared end-use and will not be re-exported without prior authorization</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon amber">→</div>
-          <span>The buyer is not acting as an agent for any entity on a restricted party list</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon amber">→</div>
-          <span>The buyer understands and accepts responsibility for compliance with all applicable import laws in their jurisdiction</span>
-        </div>
-        <div class="check-item">
-          <div class="check-icon amber">→</div>
-          <span>False statements in the EUS may constitute a violation of U.S. federal law (18 U.S.C. § 1001)</span>
-        </div>
-      </div>
-      <div class="highlight-box">
-        <p><strong>Acknowledgement on RFQ Form:</strong> The EUS acknowledgement checkbox on our
-        <a href="contact.html" style="color:var(--amber);">Request for Quote page</a> constitutes
-        a preliminary declaration. A formal written EUS will be provided during order processing
-        for all controlled-item transactions.</p>
-      </div>
-    </div>
-
-  </div><!-- /main-content -->
-
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-
-    <!-- Quick Navigation -->
-    <div class="sidebar-block">
-      <div class="sidebar-block-title">// Section Index</div>
-      <nav class="quick-nav">
-        <a class="quick-nav-item" href="#sec-position">Compliance Position</a>
-        <a class="quick-nav-item" href="#sec-screening">Screening Process</a>
-        <a class="quick-nav-item" href="#sec-classification">Product Classification</a>
-        <a class="quick-nav-item" href="#sec-prohibited">Prohibited Transactions</a>
-        <a class="quick-nav-item" href="#sec-eus">End-User Statement</a>
-      </nav>
-    </div>
-
-    <!-- Key Regulations -->
-    <div class="sidebar-block">
-      <div class="sidebar-block-title">// Key Regulations</div>
-      <div class="reg-card">
-        <div class="reg-item">
-          <div class="reg-name">EAR — Export Administration Regulations</div>
-          <div class="reg-desc">15 C.F.R. Parts 730–774. Governs dual-use goods and technology exported from the U.S.</div>
-        </div>
-        <div class="reg-item">
-          <div class="reg-name">BIS Entity List</div>
-          <div class="reg-desc">U.S. Commerce Dept. list of foreign parties subject to specific license requirements.</div>
-        </div>
-        <div class="reg-item">
-          <div class="reg-name">OFAC SDN List</div>
-          <div class="reg-desc">U.S. Treasury list of sanctioned individuals and entities. Zero-tolerance policy.</div>
-        </div>
-        <div class="reg-item">
-          <div class="reg-name">ECCN Classification</div>
-          <div class="reg-desc">Export Control Classification Number — determines license requirements per product.</div>
-        </div>
-        <div class="reg-item">
-          <div class="reg-name">PIPEDA (Canada)</div>
-          <div class="reg-desc">Personal Information Protection and Electronic Documents Act — governs data handling.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Compliance Inquiries -->
-    <div class="sidebar-block">
-      <div class="sidebar-block-title">// Compliance Inquiries</div>
-      <div class="contact-card">
-        <p class="contact-card-intro">
-          Questions about a specific transaction, product classification, or our
-          compliance procedures? Contact us directly.
-        </p>
-        <a href="mailto:sales@micasupply.ca" class="contact-card-email">
-          sales@micasupply.ca
-        </a>
-      </div>
-    </div>
-
-    <!-- Legal Disclaimer -->
-    <div class="sidebar-block">
-      <div class="sidebar-block-title">// Legal Notice</div>
-      <div class="disclaimer">
-        <strong>⚠ Disclaimer:</strong> This page is for informational purposes only and does not
-        constitute legal advice. Export control regulations change frequently.
-        MICA Supply LTD. makes no warranty regarding the completeness or current accuracy
-        of the classification information provided. Buyers are solely responsible for
-        ensuring their own compliance with applicable laws.
-      </div>
-    </div>
-
+  <div class="doc-section" id="s1">
+    <div class="doc-section-header"><span class="doc-num">01</span><h2 class="doc-section-title">Our Compliance Position</h2></div>
+    <p class="doc-text">MICA Supply LTD. is incorporated in British Columbia, Canada and operates as an independent hardware broker. As a broker handling U.S.-origin technology — including semiconductors, AI accelerators, and server components — we are subject to the <strong>Export Administration Regulations (EAR)</strong> administered by the U.S. Department of Commerce, Bureau of Industry and Security (<strong>BIS</strong>).</p>
+    <p class="doc-text">Our compliance position is simple: <strong>we will not facilitate any transaction that cannot be fully documented, screened, and justified under applicable export law.</strong> This is not a legal formality — it is an operational principle embedded in every deal we work.</p>
+    <div class="highlight-box"><strong>⚠ Non-Negotiable:</strong> Any party that requests MICA Supply to obscure end-user identity, mis-declare product classifications, or route shipments through third countries to circumvent controls will be immediately declined and reported to the appropriate authorities.</div>
   </div>
-</div><!-- /compliance-body -->
 
-<!-- ── CTA ── -->
+  <div class="doc-section" id="s2">
+    <div class="doc-section-header"><span class="doc-num">02</span><h2 class="doc-section-title">Transaction Screening Process</h2></div>
+    <p class="doc-text">Before confirming any order, MICA Supply conducts the following screening steps:</p>
+    <div class="check-list">
+      <div class="check-item"><div class="check-icon green">✓</div><span><strong style="color:var(--white)">BIS Entity List Check</strong> — All buyers, end-users, and freight forwarders are screened against the U.S. BIS Entity List, Denied Persons List, and Unverified List.</span></div>
+      <div class="check-item"><div class="check-icon green">✓</div><span><strong style="color:var(--white)">OFAC SDN Screening</strong> — Parties are cross-referenced against the U.S. Treasury OFAC Specially Designated Nationals list.</span></div>
+      <div class="check-item"><div class="check-icon green">✓</div><span><strong style="color:var(--white)">ECCN Classification Review</strong> — Each product is assessed for Export Control Classification Number (ECCN) and applicable license requirements.</span></div>
+      <div class="check-item"><div class="check-icon green">✓</div><span><strong style="color:var(--white)">End-User Statement (EUS)</strong> — Required for all export-controlled items. The buyer must confirm final end-use and agree not to re-export without authorization.</span></div>
+      <div class="check-item"><div class="check-icon green">✓</div><span><strong style="color:var(--white)">Destination Country Review</strong> — Shipments to embargoed, restricted, or high-risk destinations are subject to enhanced due diligence or declined outright.</span></div>
+    </div>
+  </div>
+
+  <div class="doc-section" id="s3">
+    <div class="doc-section-header"><span class="doc-num">03</span><h2 class="doc-section-title">Product Classification Overview</h2></div>
+    <p class="doc-text">General export control status of our primary product categories. Actual classification depends on specific part numbers, technical parameters, and current BIS guidance.</p>
+    <table class="eccn-table">
+      <thead>
+        <tr><th>Product Category</th><th>Typical ECCN</th><th>License Req.</th><th>EUS Required</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Consumer GPUs (RTX 5090, 5080)</td><td>EAR99</td><td><span class="badge-sm green">NLR</span></td><td><span class="badge-sm blue">Recommended</span></td></tr>
+        <tr><td>NVIDIA H100 / H200 (Data Center)</td><td>3E001 / 3A090</td><td><span class="badge-sm red">Review Required</span></td><td><span class="badge-sm amber">Mandatory</span></td></tr>
+        <tr><td>NVIDIA A100 / A40 (Ampere DC)</td><td>3A090 / 4A003</td><td><span class="badge-sm amber">Case-by-Case</span></td><td><span class="badge-sm amber">Mandatory</span></td></tr>
+        <tr><td>Intel Xeon / AMD EPYC (Server CPU)</td><td>EAR99 / 3A991</td><td><span class="badge-sm green">NLR</span></td><td><span class="badge-sm blue">Recommended</span></td></tr>
+        <tr><td>Server DRAM / ECC Memory</td><td>EAR99</td><td><span class="badge-sm green">NLR</span></td><td>—</td></tr>
+        <tr><td>Mellanox / ConnectX NICs</td><td>EAR99 / 5A991</td><td><span class="badge-sm green">NLR</span></td><td><span class="badge-sm blue">Recommended</span></td></tr>
+        <tr><td>Enterprise NVMe / SSD</td><td>EAR99</td><td><span class="badge-sm green">NLR</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="info-box"><strong>Note:</strong> NLR = No License Required under current regulations. Classification is subject to change. MICA Supply reserves the right to request additional documentation or decline any order at its sole discretion.</div>
+  </div>
+
+  <div class="doc-section" id="s4">
+    <div class="doc-section-header"><span class="doc-num">04</span><h2 class="doc-section-title">Prohibited Transactions</h2></div>
+    <p class="doc-text">Regardless of profit opportunity or client pressure, MICA Supply will not engage in:</p>
+    <div class="check-list">
+      <div class="check-item"><div class="check-icon red">✕</div><span>Shipments to entities on the BIS Entity List, Denied Persons List, or OFAC SDN List</span></div>
+      <div class="check-item"><div class="check-icon red">✕</div><span>Transactions where the stated end-use is inconsistent with the buyer's industry or location</span></div>
+      <div class="check-item"><div class="check-icon red">✕</div><span>Re-exports to embargoed destinations including Cuba, Iran, North Korea, Russia, Syria, and Belarus</span></div>
+      <div class="check-item"><div class="check-icon red">✕</div><span>Mis-declaration of product value, description, or ECCN on export/shipping documentation</span></div>
+      <div class="check-item"><div class="check-icon red">✕</div><span>Transactions structured to obscure the true end-user or circumvent license requirements</span></div>
+      <div class="check-item"><div class="check-icon red">✕</div><span>Facilitation of diversion of controlled technology to military or WMD end-uses</span></div>
+    </div>
+  </div>
+
+  <div class="doc-section" id="s5">
+    <div class="doc-section-header"><span class="doc-num">05</span><h2 class="doc-section-title">End-User Statement (EUS) Requirement</h2></div>
+    <p class="doc-text">For all transactions involving export-controlled hardware, MICA Supply requires the buyer to execute an <strong>End-User Statement (EUS)</strong> prior to order confirmation. By signing, the buyer confirms:</p>
+    <div class="check-list">
+      <div class="check-item"><div class="check-icon amber">→</div><span>The hardware will be used solely for the declared end-use and will not be re-exported without prior authorization</span></div>
+      <div class="check-item"><div class="check-icon amber">→</div><span>The buyer is not acting as an agent for any entity on a restricted party list</span></div>
+      <div class="check-item"><div class="check-icon amber">→</div><span>The buyer accepts responsibility for compliance with all applicable import laws in their jurisdiction</span></div>
+      <div class="check-item"><div class="check-icon amber">→</div><span>False statements in the EUS may constitute a violation of U.S. federal law (18 U.S.C. § 1001)</span></div>
+    </div>
+    <div class="highlight-box"><strong>RFQ Acknowledgement:</strong> The EUS checkbox on our <a href="contact.html" style="color:var(--amber)">Request for Quote page</a> is a preliminary declaration. A formal written EUS will be provided during order processing for all controlled-item transactions.</div>
+  </div>
+
+  <!-- OFFICIAL REFERENCES — NEW SECTION -->
+  <div class="doc-section" id="s6">
+    <div class="doc-section-header"><span class="doc-num">06</span><h2 class="doc-section-title">Official U.S. Government References</h2></div>
+    <p class="doc-text">All compliance decisions at MICA Supply are referenced against official U.S. government databases and regulatory frameworks. The following are the primary authoritative sources we consult — we encourage our clients to review them directly.</p>
+
+    <div class="gov-links-grid">
+
+      <a href="https://www.bis.doc.gov" target="_blank" rel="noopener" class="gov-link-card">
+        <span class="gov-link-badge">U.S. Dept. of Commerce</span>
+        <div class="gov-link-title">Bureau of Industry and Security (BIS)</div>
+        <div class="gov-link-desc">Primary U.S. authority administering export controls on dual-use items and technology.</div>
+        <div class="gov-link-url">bis.doc.gov →</div>
+      </a>
+
+      <a href="https://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list" target="_blank" rel="noopener" class="gov-link-card">
+        <span class="gov-link-badge">BIS / EAR</span>
+        <div class="gov-link-title">BIS Entity List</div>
+        <div class="gov-link-desc">Foreign parties subject to specific license requirements. All MICA Supply counterparties are screened against this list before transaction confirmation.</div>
+        <div class="gov-link-url">bis.doc.gov → Entity List →</div>
+      </a>
+
+      <a href="https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C" target="_blank" rel="noopener" class="gov-link-card">
+        <span class="gov-link-badge">15 C.F.R. Parts 730–774</span>
+        <div class="gov-link-title">Export Administration Regulations (EAR)</div>
+        <div class="gov-link-desc">The full regulatory text governing dual-use goods exported from or involving U.S.-origin technology.</div>
+        <div class="gov-link-url">ecfr.gov → EAR →</div>
+      </a>
+
+      <a href="https://ofac.treasury.gov/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists" target="_blank" rel="noopener" class="gov-link-card">
+        <span class="gov-link-badge">U.S. Treasury / OFAC</span>
+        <div class="gov-link-title">OFAC SDN List</div>
+        <div class="gov-link-desc">Specially Designated Nationals and Blocked Persons. Zero-tolerance policy — no transactions with listed parties under any circumstances.</div>
+        <div class="gov-link-url">ofac.treasury.gov → SDN List →</div>
+      </a>
+
+      <a href="https://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list" target="_blank" rel="noopener" class="gov-link-card">
+        <span class="gov-link-badge">BIS</span>
+        <div class="gov-link-title">Denied Persons List</div>
+        <div class="gov-link-desc">Individuals and entities that have been denied export privileges by BIS. Export to any listed party is strictly prohibited.</div>
+        <div class="gov-link-url">bis.doc.gov → Denied Persons →</div>
+      </a>
+
+      <a href="https://www.trade.gov/consolidated-screening-list" target="_blank" rel="noopener" class="gov-link-card">
+        <span class="gov-link-badge">U.S. Dept. of Commerce</span>
+        <div class="gov-link-title">Consolidated Screening List (CSL)</div>
+        <div class="gov-link-desc">Consolidated tool combining multiple U.S. government restricted party lists into a single searchable database.</div>
+        <div class="gov-link-url">trade.gov → Screening List →</div>
+      </a>
+
+    </div>
+
+    <div class="info-box"><strong>Disclaimer:</strong> These links are provided for reference only. Export control regulations change frequently. MICA Supply makes no warranty regarding the completeness or current accuracy of the classification information on this page. Buyers are solely responsible for ensuring their own compliance with applicable laws.</div>
+  </div>
+
+</div>
+
+<!-- CTA -->
 <section class="cta-section">
   <div class="cta-inner">
     <div class="section-tag">// Proceed With Confidence</div>
-    <h2 class="section-title">Ready to Submit<br>Your RFQ?</h2>
-    <p class="cta-subtitle">
-      Every quote from MICA Supply comes with a compliance pre-check included.
-      You don't need to navigate export law alone — we do it for every transaction.
-    </p>
+    <h2 class="cta-title">Ready to Submit Your RFQ?</h2>
+    <p class="cta-sub">Every quote from MICA Supply comes with a compliance pre-check included. You don't need to navigate export law alone.</p>
     <div class="cta-actions">
       <a href="contact.html" class="btn-primary">
         Request a Quote
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="products.html" class="btn-ghost">
-        Browse Products
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <a href="products.html" class="btn-ghost">Browse Products</a>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-brand">MICA <span>Supply</span> LTD.</div>
   <div class="footer-copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
@@ -742,6 +340,5 @@
     <li><a href="terms.html">Terms of Service</a></li>
   </ul>
 </footer>
-
 </body>
 </html>
