@@ -158,20 +158,21 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
     <span class="logo-text">MICA <span>Supply</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="compliance.html">Compliance</a></li>
-    <li><a href="contact.html" class="nav-cta">Request Quote</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+    <li><a href="compliance.html" data-i18n="nav.compliance">Compliance</a></li>
+    <li><a href="faq.html" class="active" data-i18n="nav.faq">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta" data-i18n="nav.rfq">Request Quote</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="page-tag">// Frequently Asked Questions</div>
-    <h1>Got <span>Questions?</span></h1>
-    <p>Everything you need to know about sourcing hardware through MICA Supply — from submitting your first RFQ to receiving your shipment.</p>
+    <div class="page-tag" data-i18n="faq.tag">// Frequently Asked Questions</div>
+    <h1><span data-i18n="faq.h1">Got</span> <span data-i18n="faq.h1.span">Questions?</span></h1>
+    <p data-i18n="faq.sub">Everything you need to know about sourcing hardware through MICA Supply — from submitting your first RFQ to receiving your shipment.</p>
   </div>
 </div>
 
@@ -447,7 +448,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
       <div class="faq-a">
-        <p>Payment details are confirmed at the time of quotation and vary by order size and customer relationship. Please include payment preference in your RFQ or contact us at <a href="mailto:sales@micasupply.ca">sales@micasupply.ca</a> to discuss terms.</p>
+        <p>Payment details are confirmed at the time of quotation and vary by order size and customer relationship. Please include payment preference in your RFQ or contact us at <a href="/cdn-cgi/l/email-protection#aad9cbc6cfd9eac7c3c9cbd9dfdadac6d384c9cb"><span class="__cf_email__" data-cfemail="64170508011724090d070517111414081d4a0705">[email&#160;protected]</span></a> to discuss terms.</p>
       </div>
     </div>
 
@@ -486,7 +487,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
         Submit RFQ
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <div style="margin-top:.8rem;font-size:.75rem;color:var(--muted);text-align:center">or email <a href="mailto:sales@micasupply.ca" style="color:var(--blue);text-decoration:none">sales@micasupply.ca</a></div>
+      <div style="margin-top:.8rem;font-size:.75rem;color:var(--muted);text-align:center">or email <a href="/cdn-cgi/l/email-protection#91e2f0fdf4e2d1fcf8f2f0e2e4e1e1fde8bff2f0" style="color:var(--blue);text-decoration:none"><span class="__cf_email__" data-cfemail="82f1e3eee7f1c2efebe1e3f1f7f2f2eefbace1e3">[email&#160;protected]</span></a></div>
     </div>
   </div>
 
@@ -517,7 +518,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
 <footer>
   <div class="foot-brand">MICA <span>Supply</span> LTD.</div>
-  <div class="foot-copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
+  <div class="foot-copy" data-i18n="footer.copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
   <ul class="foot-links">
     <li><a href="compliance.html">Export Compliance</a></li>
     <li><a href="privacy.html">Privacy Policy</a></li>
@@ -525,7 +526,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   </ul>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleFaq(btn) {
   var answer = btn.nextElementSibling;
   var isOpen = btn.classList.contains('open');
@@ -547,7 +548,7 @@ var navBtns = document.querySelectorAll('.cat-nav-btn');
 window.addEventListener('scroll', function() {
   var scrollY = window.scrollY + 200;
   sections.forEach(function(sec) {
-    if (sec.offsetTop <= scrollY && sec.offsetTop + sec.offsetHeight > scrollY) {
+    if (sec.offsetTop < scrollY && sec.offsetTop + sec.offsetHeight > scrollY) {
       navBtns.forEach(function(b){ b.classList.remove('active'); });
       var id = sec.getAttribute('id');
       var match = document.querySelector('.cat-nav-btn[href="#' + id + '"]');
@@ -557,6 +558,7 @@ window.addEventListener('scroll', function() {
 });
 </script>
 
+<script src="lang.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>
