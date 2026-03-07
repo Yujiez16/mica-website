@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | MICA Supply LTD. — Common Questions About Hardware Sourcing</title>
+<meta name="description" content="Answers to common questions about ordering from MICA Supply — RFQ process, MOQ, NIB vs Working Pull, export compliance, logistics, and payment.">
+<link rel="canonical" href="https://www.micasupply.ca/faq.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.micasupply.ca/faq.html">
+<meta property="og:title" content="FAQ | MICA Supply LTD.">
+<meta property="og:description" content="Common questions about hardware sourcing, RFQ process, compliance, and logistics.">
+<meta property="og:image" content="https://www.micasupply.ca/images/LOGO2.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95048H8LK1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-95048H8LK1');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#050a0f;--surface:#0a1520;--surface2:#0f1e2e;
+  --blue:#0ea5e9;--teal:#14b8a6;--amber:#f59e0b;--red:#ef4444;--green:#22c55e;
+  --white:#f0f6ff;--muted:#64748b;--muted2:#94a3b8;
+  --border:rgba(14,165,233,0.15);--bs:rgba(14,165,233,0.07)
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--white);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 5rem;height:96px;background:rgba(5,10,15,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:1.2rem;text-decoration:none}
+.nav-logo img{height:62px;object-fit:contain}
+.logo-text{font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:800;color:var(--white)}
+.logo-text span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--blue)!important;color:#fff!important;padding:.5rem 1.3rem;border-radius:4px}
+.nav-cta:hover{background:#38bdf8!important}
+
+/* HERO */
+.hero{padding:172px 3rem 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--bs)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 75% 50%,rgba(14,165,233,.06) 0%,transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--bs) 1px,transparent 1px),linear-gradient(90deg,var(--bs) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 100% at 75% 50%,black 10%,transparent 70%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:700px}
+.page-tag{display:inline-flex;align-items:center;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--blue);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;padding:.4rem .9rem;border:1px solid rgba(14,165,233,.3);border-radius:2px;animation:fadeUp .5s ease both}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:1rem;animation:fadeUp .5s .1s ease both}
+.hero h1 span{color:var(--blue)}
+.hero p{font-size:.95rem;color:rgba(240,246,255,.45);line-height:1.75;max-width:520px;font-weight:300;animation:fadeUp .5s .2s ease both}
+
+/* CATEGORY NAV */
+.cat-nav{background:var(--surface);border-bottom:1px solid var(--bs);display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:96px;z-index:100}
+.cat-nav::-webkit-scrollbar{display:none}
+.cat-nav-label{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;padding:0 1.5rem;display:flex;align-items:center;border-right:1px solid var(--bs);white-space:nowrap;flex-shrink:0}
+.cat-nav-btn{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);background:none;border:none;border-right:1px solid var(--bs);padding:.9rem 1.3rem;cursor:pointer;white-space:nowrap;transition:color .2s,background .2s;text-decoration:none;display:flex;align-items:center;gap:.4rem}
+.cat-nav-btn:hover{color:var(--white);background:rgba(14,165,233,.04)}
+.cat-nav-btn.active{color:var(--blue);background:rgba(14,165,233,.06)}
+
+/* MAIN LAYOUT */
+.faq-layout{display:grid;grid-template-columns:1fr 340px;gap:0;border-bottom:1px solid var(--bs)}
+
+/* FAQ CONTENT */
+.faq-main{border-right:1px solid var(--bs)}
+
+.faq-section{border-bottom:1px solid var(--bs)}
+.faq-section-header{padding:3rem 3rem 1.5rem}
+.section-tag{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--blue);text-transform:uppercase;letter-spacing:.15em;margin-bottom:.6rem}
+.section-title{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;letter-spacing:-.02em}
+
+/* ACCORDION */
+.faq-item{border-top:1px solid var(--bs)}
+.faq-q{width:100%;background:none;border:none;padding:1.4rem 3rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;cursor:pointer;text-align:left;transition:background .2s}
+.faq-q:hover{background:rgba(14,165,233,.025)}
+.faq-q.open{background:rgba(14,165,233,.03)}
+.faq-q-text{font-size:.92rem;font-weight:500;color:var(--white);line-height:1.45;flex:1}
+.faq-icon{width:22px;height:22px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:background .2s,border-color .2s}
+.faq-q.open .faq-icon{background:rgba(14,165,233,.12);border-color:rgba(14,165,233,.4)}
+.faq-icon svg{transition:transform .25s}
+.faq-q.open .faq-icon svg{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 3rem 1.6rem;animation:fadeDown .2s ease}
+.faq-a.show{display:block}
+.faq-a p{font-size:.85rem;color:var(--muted2);line-height:1.8;margin-bottom:.8rem}
+.faq-a p:last-child{margin-bottom:0}
+.faq-a strong{color:var(--white);font-weight:500}
+.faq-a a{color:var(--blue);text-decoration:none}
+.faq-a a:hover{text-decoration:underline}
+.faq-a .tag-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.faq-tag{font-family:'DM Mono',monospace;font-size:.65rem;padding:.25rem .65rem;border-radius:2px;text-transform:uppercase;letter-spacing:.06em}
+.faq-tag.blue{background:rgba(14,165,233,.1);color:var(--blue);border:1px solid rgba(14,165,233,.2)}
+.faq-tag.teal{background:rgba(20,184,166,.1);color:var(--teal);border:1px solid rgba(20,184,166,.2)}
+.faq-tag.amber{background:rgba(245,158,11,.1);color:var(--amber);border:1px solid rgba(245,158,11,.2)}
+.faq-tag.green{background:rgba(34,197,94,.1);color:var(--green);border:1px solid rgba(34,197,94,.2)}
+
+/* SIDEBAR */
+.faq-sidebar{padding:3rem 2.5rem;display:flex;flex-direction:column;gap:2.5rem;background:var(--surface)}
+.sidebar-block{display:flex;flex-direction:column;gap:1rem}
+.sidebar-tag{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--blue);text-transform:uppercase;letter-spacing:.12em;padding-bottom:.7rem;border-bottom:1px solid var(--bs)}
+
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bs);border-radius:4px;overflow:hidden}
+.stat-cell{background:var(--bg);padding:.9rem 1rem}
+.stat-val{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--blue);margin-bottom:.2rem}
+.stat-key{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+.still-q{background:var(--bg);border:1px solid var(--bs);border-radius:6px;padding:1.4rem}
+.still-q-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;margin-bottom:.4rem}
+.still-q-sub{font-size:.78rem;color:var(--muted2);line-height:1.6;margin-bottom:1rem}
+.btn-rfq{display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--blue);color:#fff;padding:.75rem 1.2rem;border-radius:4px;font-size:.82rem;font-weight:600;text-decoration:none;transition:background .2s}
+.btn-rfq:hover{background:#38bdf8}
+
+.compliance-box{background:rgba(14,165,233,.04);border:1px solid var(--border);border-radius:6px;padding:1rem;font-size:.75rem;color:var(--muted2);line-height:1.7}
+.compliance-box strong{color:var(--blue)}
+.compliance-box a{color:var(--blue);text-decoration:none}
+
+/* BOTTOM CTA */
+.bottom-cta{padding:4rem 3rem;background:var(--surface);border-bottom:1px solid var(--bs);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.bottom-cta-tag{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--teal);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.4rem}
+.bottom-cta-title{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:.3rem}
+.bottom-cta-sub{font-size:.83rem;color:var(--muted2)}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--blue);color:#fff;padding:.85rem 1.8rem;border-radius:4px;font-size:.88rem;font-weight:600;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
+.btn-primary:hover{background:#38bdf8;transform:translateY(-1px)}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.foot-brand{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--muted)}
+.foot-brand span{color:var(--blue)}
+.foot-copy{font-size:.78rem;color:var(--muted);font-family:'DM Mono',monospace}
+.foot-links{display:flex;gap:1.8rem;list-style:none}
+.foot-links a{font-size:.75rem;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;transition:color .2s}
+.foot-links a:hover{color:var(--blue)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:1024px){
+  .faq-layout{grid-template-columns:1fr}
+  .faq-main{border-right:none;border-bottom:1px solid var(--bs)}
+  .faq-sidebar{padding:3rem}
+}
+@media(max-width:768px){
+  nav{padding:0 1.5rem}.nav-links{display:none}
+  .hero{padding:130px 1.5rem 60px}
+  .cat-nav-label{display:none}
+  .faq-section-header{padding:2.5rem 1.5rem 1.2rem}
+  .faq-q{padding:1.2rem 1.5rem}
+  .faq-a{padding:0 1.5rem 1.4rem}
+  .faq-sidebar{padding:2rem 1.5rem}
+  .bottom-cta{padding:3rem 1.5rem;flex-direction:column;align-items:flex-start}
+  footer{flex-direction:column;align-items:flex-start;padding:2rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/LOGO2.png" alt="MICA Supply LTD." onerror="this.style.display='none'">
+    <span class="logo-text">MICA <span>Supply</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="compliance.html">Compliance</a></li>
+    <li><a href="contact.html" class="nav-cta">Request Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="page-tag">// Frequently Asked Questions</div>
+    <h1>Got <span>Questions?</span></h1>
+    <p>Everything you need to know about sourcing hardware through MICA Supply — from submitting your first RFQ to receiving your shipment.</p>
+  </div>
+</div>
+
+<!-- CATEGORY NAV -->
+<div class="cat-nav">
+  <span class="cat-nav-label">// Jump to</span>
+  <a href="#rfq" class="cat-nav-btn">Quoting & Ordering</a>
+  <a href="#moq" class="cat-nav-btn">Min. Order Qty</a>
+  <a href="#product-condition" class="cat-nav-btn">NIB vs Pulls</a>
+  <a href="#logistics" class="cat-nav-btn">Logistics & Lead Time</a>
+  <a href="#compliance" class="cat-nav-btn">Export Compliance</a>
+  <a href="#payment" class="cat-nav-btn">Payment</a>
+</div>
+
+<div class="faq-layout">
+<div class="faq-main">
+
+  <!-- SECTION 1: RFQ -->
+  <div class="faq-section" id="rfq">
+    <div class="faq-section-header">
+      <div class="section-tag">// 01 — Quoting & Ordering</div>
+      <div class="section-title">How does the RFQ process work?</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">How do I get a quote?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Submit a <a href="contact.html">Request for Quote (RFQ)</a> with your part number(s), required quantity, and delivery destination. You can also upload a BOM file in Excel or PDF format directly from the form.</p>
+        <p>We review every submission and respond with <strong>pricing, availability, and estimated lead time within 24 hours</strong> on business days.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What information should I include in my RFQ?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>The more detail you provide, the faster we can respond. Ideally include:</p>
+        <p><strong>Part number(s) or model names</strong> — exact OEM P/N preferred<br>
+        <strong>Quantity</strong> — exact units or estimated range<br>
+        <strong>Condition preference</strong> — Factory New (NIB) or Working Pull<br>
+        <strong>Delivery destination</strong> — country and city<br>
+        <strong>Target price</strong> — if you have a budget in mind<br>
+        <strong>Timeline</strong> — required delivery date or lead time constraints</p>
+        <p>For large orders or full BOM lists, upload your file directly via the RFQ form.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">How long does the full order process take?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>A typical order follows this timeline:</p>
+        <p><strong>Quote response:</strong> Within 24 hours of RFQ submission<br>
+        <strong>Compliance screening:</strong> 1 business day (BIS/Entity List check)<br>
+        <strong>Order confirmation:</strong> Upon receipt of signed PO and payment<br>
+        <strong>Sourcing & preparation:</strong> 2–7 business days depending on item<br>
+        <strong>Shipping:</strong> 3–10 business days depending on destination</p>
+        <p>Allocated or hard-to-find items may require additional sourcing time. We will communicate any delays proactively.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Can you source items not listed on your products page?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p><strong>Yes.</strong> The products page shows commonly requested items, but our sourcing network covers a much broader range. We regularly handle:</p>
+        <div class="tag-row">
+          <span class="faq-tag blue">EOL / Discontinued Parts</span>
+          <span class="faq-tag blue">Allocated Silicon</span>
+          <span class="faq-tag blue">Full BOM Fulfillment</span>
+          <span class="faq-tag blue">Custom Configurations</span>
+        </div>
+        <p style="margin-top:.8rem">Submit an RFQ with your P/N or BOM file — if it exists in the market, we will find it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: MOQ -->
+  <div class="faq-section" id="moq">
+    <div class="faq-section-header">
+      <div class="section-tag">// 02 — Minimum Order Quantity</div>
+      <div class="section-title">What are your order minimums?</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Is there a minimum order quantity (MOQ)?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p><strong>Minimum order is 1 unit.</strong> We work with buyers ranging from single-unit procurement to bulk pallet orders. There is no formal MOQ.</p>
+        <p>That said, unit pricing is more competitive for larger quantities. If you are purchasing a single high-value item (AI accelerators, for example), that is fully supported. If you are evaluating a bulk purchase, mention your total target volume in the RFQ and we will provide tiered pricing.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Do you offer volume discounts?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Yes. Pricing scales with volume. For large or recurring orders, we can offer structured pricing agreements. Include your estimated annual or quarterly volume in the RFQ notes and we will factor that into the quote.</p>
+        <p>Repeat customers and established partners receive priority sourcing and expedited response times.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: PRODUCT CONDITION -->
+  <div class="faq-section" id="product-condition">
+    <div class="faq-section-header">
+      <div class="section-tag">// 03 — Product Condition</div>
+      <div class="section-title">What is the difference between NIB and Working Pulls?</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What does Factory New (NIB) mean?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p><strong>NIB (New In Box)</strong> refers to factory-sealed units sourced directly from authorized distribution channels or directly from manufacturer inventory. These units are:</p>
+        <div class="tag-row">
+          <span class="faq-tag blue">Sealed OEM Packaging</span>
+          <span class="faq-tag blue">Never Installed</span>
+          <span class="faq-tag blue">Full Manufacturer Warranty</span>
+          <span class="faq-tag blue">Current Production</span>
+        </div>
+        <p style="margin-top:.8rem">NIB is recommended for production deployments, data center builds, and any use case requiring full warranty coverage.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What does Working Pull mean?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p><strong>Working Pulls</strong> are enterprise-grade components removed from decommissioned hyperscaler or data center environments. Before shipment, all Working Pull items are:</p>
+        <div class="tag-row">
+          <span class="faq-tag teal">Tested & Verified Functional</span>
+          <span class="faq-tag teal">Graded by Condition</span>
+          <span class="faq-tag teal">Cleaned & Inspected</span>
+        </div>
+        <p style="margin-top:.8rem">Working Pulls offer significant cost savings over NIB — typically 30–60% lower — and are ideal for lab environments, development clusters, capacity expansion, or budget-conscious builds.</p>
+        <p>All Working Pull items ship with a <strong>MICA Supply functional guarantee</strong>. If a unit fails on arrival, we replace it.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">How do I know which condition to request?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>A general guide:</p>
+        <p><strong>Choose NIB if:</strong> You require full OEM warranty, the item will be in a production-critical environment, or your procurement policy mandates new hardware.</p>
+        <p><strong>Choose Working Pull if:</strong> You are building a dev/test cluster, expanding capacity, need a cost-effective solution, or the item is EOL and no longer in production.</p>
+        <p>Not sure? Mention both options in your RFQ and we will quote both for comparison.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: LOGISTICS -->
+  <div class="faq-section" id="logistics">
+    <div class="faq-section-header">
+      <div class="section-tag">// 04 — Logistics & Lead Time</div>
+      <div class="section-title">Shipping, delivery, and lead times</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Which regions do you ship to?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>We serve customers across four primary trade corridors:</p>
+        <div class="tag-row">
+          <span class="faq-tag blue">North America</span>
+          <span class="faq-tag blue">United Arab Emirates</span>
+          <span class="faq-tag blue">Hong Kong</span>
+          <span class="faq-tag blue">Southeast Asia</span>
+          <span class="faq-tag blue">Europe</span>
+        </div>
+        <p style="margin-top:.8rem">Shipments to destinations outside these corridors are evaluated on a case-by-case basis. All international shipments are subject to export compliance screening prior to booking.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What are typical lead times?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Lead times depend on item availability and destination:</p>
+        <p><strong>In-stock items:</strong> 2–5 business days after order confirmation<br>
+        <strong>Sourced items:</strong> 5–14 business days depending on supply chain<br>
+        <strong>Allocated/scarce items:</strong> Timeline quoted on a per-case basis</p>
+        <p>Express shipping is available for urgent requirements — mention your deadline in the RFQ and we will prioritize accordingly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Do you handle customs documentation?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Yes. We prepare full commercial documentation for all international shipments, including:</p>
+        <p><strong>Commercial Invoice</strong> — itemized with HS codes<br>
+        <strong>Packing List</strong> — unit count, weight, dimensions<br>
+        <strong>Certificate of Origin</strong> — where required<br>
+        <strong>Export License documentation</strong> — for controlled items</p>
+        <p>For items subject to EAR controls, we work with licensed freight forwarders experienced in dual-use goods compliance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: COMPLIANCE -->
+  <div class="faq-section" id="compliance">
+    <div class="faq-section-header">
+      <div class="section-tag">// 05 — Export Compliance</div>
+      <div class="section-title">BIS, EAR, and End-User requirements</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Why do you require an End-User Statement (EUS)?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Many of the products we handle — particularly AI accelerators and high-performance computing components — are controlled under <strong>U.S. Export Administration Regulations (EAR)</strong> administered by the Bureau of Industry and Security (BIS).</p>
+        <p>The End-User Statement is a legal declaration confirming that the hardware will not be re-exported, diverted, or used in violation of applicable export laws. This protects both parties and is a standard requirement in legitimate hardware brokerage.</p>
+        <p>View our full <a href="compliance.html">Export Compliance Policy</a> for details.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What is BIS/Entity List screening?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Before confirming any order, MICA Supply screens all parties — buyers, end-users, and intermediaries — against:</p>
+        <div class="tag-row">
+          <span class="faq-tag amber">BIS Entity List</span>
+          <span class="faq-tag amber">OFAC SDN List</span>
+          <span class="faq-tag amber">Denied Persons List</span>
+          <span class="faq-tag amber">Consolidated Screening List</span>
+        </div>
+        <p style="margin-top:.8rem">This screening is non-negotiable and applies to all transactions regardless of order size. We reserve the right to decline any order that raises compliance concerns.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Can you ship to China?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Shipments to mainland China of controlled items — including AI accelerators and advanced compute products under ECCN 3A090 — are subject to strict restrictions under current U.S. export regulations.</p>
+        <p><strong>We do not facilitate transactions that would violate EAR restrictions.</strong> All inquiries involving mainland China delivery of controlled items will be assessed for compliance eligibility before we can proceed.</p>
+        <p>Deliveries to <strong>Hong Kong</strong> are evaluated separately and may be supported depending on the specific item and end-user.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: PAYMENT -->
+  <div class="faq-section" id="payment">
+    <div class="faq-section-header">
+      <div class="section-tag">// 06 — Payment</div>
+      <div class="section-title">Payment methods and terms</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">What payment methods do you accept?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Payment details are confirmed at the time of quotation and vary by order size and customer relationship. Please include payment preference in your RFQ or contact us at <a href="mailto:sales@micasupply.ca">sales@micasupply.ca</a> to discuss terms.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-q-text">Do you offer credit terms or net payment?</span>
+        <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p>Extended payment terms may be available for established customers with a verified order history. First-time orders typically require payment prior to shipment. Contact us to discuss your requirements.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end faq-main -->
+
+<!-- SIDEBAR -->
+<div class="faq-sidebar">
+
+  <div class="sidebar-block">
+    <div class="sidebar-tag">// At a Glance</div>
+    <div class="stat-grid">
+      <div class="stat-cell"><div class="stat-val">&lt; 24h</div><div class="stat-key">Quote Response</div></div>
+      <div class="stat-cell"><div class="stat-val">1 unit</div><div class="stat-key">Min. Order</div></div>
+      <div class="stat-cell"><div class="stat-val">4+</div><div class="stat-key">Trade Regions</div></div>
+      <div class="stat-cell"><div class="stat-val">100%</div><div class="stat-key">Screened Orders</div></div>
+    </div>
+  </div>
+
+  <div class="sidebar-block">
+    <div class="sidebar-tag">// Still Have Questions?</div>
+    <div class="still-q">
+      <div class="still-q-title">Contact our team directly</div>
+      <div class="still-q-sub">Submit an RFQ or email us — we respond within one business day.</div>
+      <a href="contact.html" class="btn-rfq">
+        Submit RFQ
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div style="margin-top:.8rem;font-size:.75rem;color:var(--muted);text-align:center">or email <a href="mailto:sales@micasupply.ca" style="color:var(--blue);text-decoration:none">sales@micasupply.ca</a></div>
+    </div>
+  </div>
+
+  <div class="sidebar-block">
+    <div class="sidebar-tag">// Compliance Resources</div>
+    <div class="compliance-box">
+      <strong>Export Notice</strong><br>
+      All transactions involving U.S.-origin technology are subject to EAR review. MICA Supply will not process orders to sanctioned destinations.<br><br>
+      <a href="compliance.html">View full compliance policy →</a>
+    </div>
+  </div>
+
+</div>
+</div><!-- end faq-layout -->
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <div>
+    <div class="bottom-cta-tag">// Ready to Source?</div>
+    <div class="bottom-cta-title">Submit your RFQ today</div>
+    <div class="bottom-cta-sub">Part numbers, BOM files, or general inquiries — we respond within 24 hours.</div>
+  </div>
+  <a href="contact.html" class="btn-primary">
+    Request a Quote
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<footer>
+  <div class="foot-brand">MICA <span>Supply</span> LTD.</div>
+  <div class="foot-copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
+  <ul class="foot-links">
+    <li><a href="compliance.html">Export Compliance</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms of Service</a></li>
+  </ul>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = btn.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-q.open').forEach(function(b) {
+    b.classList.remove('open');
+    b.nextElementSibling.classList.remove('show');
+  });
+  // Open clicked if it was closed
+  if (!isOpen) {
+    btn.classList.add('open');
+    answer.classList.add('show');
+  }
+}
+
+// Highlight active category nav on scroll
+var sections = document.querySelectorAll('.faq-section');
+var navBtns = document.querySelectorAll('.cat-nav-btn');
+window.addEventListener('scroll', function() {
+  var scrollY = window.scrollY + 200;
+  sections.forEach(function(sec) {
+    if (sec.offsetTop <= scrollY && sec.offsetTop + sec.offsetHeight > scrollY) {
+      navBtns.forEach(function(b){ b.classList.remove('active'); });
+      var id = sec.getAttribute('id');
+      var match = document.querySelector('.cat-nav-btn[href="#' + id + '"]');
+      if (match) match.classList.add('active');
+    }
+  });
+});
+</script>
+
+<script src="cookie-consent.js"></script>
+</body>
+</html>
