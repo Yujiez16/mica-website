@@ -1,220 +1,647 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request a Quote | MICA Supply LTD.</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-95048H8LK1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Quote | MICA Supply LTD.</title>
+  <meta name="description" content="Submit an RFQ to MICA Supply LTD. Provide your Part Number or BOM and receive pricing, availability, and lead time within 24 hours." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-      gtag('config', 'G-95048H8LK1');
-    </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-95048H8LK1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-95048H8LK1');
+  </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0A192F; 
-            --accent: #0070F3;  
-            --bg: #F8FAFC;
-            --text: #334155;
-            --card-bg: #FFFFFF;
-            --border: #E2E8F0;
-        }
-        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
-        
-        .navbar { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
-        .nav-cta { background: var(--accent); color: white !important; padding: 0.5rem 1.2rem; border-radius: 6px; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        .page-header { background: var(--primary); color: white; padding: 50px 5%; text-align: center; }
-        .page-header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #050a0f;
+      --surface: #0a1520;
+      --surface2: #0f1e2e;
+      --blue: #0ea5e9;
+      --teal: #14b8a6;
+      --red: #ef4444;
+      --green: #22c55e;
+      --white: #f0f6ff;
+      --muted: #64748b;
+      --muted2: #94a3b8;
+      --border: rgba(14,165,233,0.15);
+      --border-subtle: rgba(14,165,233,0.07);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--white); overflow-x: hidden; }
 
-        .contact-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
-        @media (max-width: 768px) { .contact-container { grid-template-columns: 1fr; } }
+    /* ── NAVBAR ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 3rem; height: 64px;
+      background: rgba(5,10,15,0.88); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 32px; width: auto; object-fit: contain; }
+    .nav-logo-text { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800; letter-spacing: -0.02em; color: var(--white); }
+    .nav-logo-text span { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-cta { background: var(--blue) !important; color: #fff !important; padding: 0.5rem 1.3rem; border-radius: 4px; box-shadow: 0 0 20px rgba(14,165,233,0.2); transition: background 0.2s, box-shadow 0.2s !important; }
+    .nav-cta:hover { background: #38bdf8 !important; box-shadow: 0 0 30px rgba(14,165,233,0.35) !important; }
 
-        .contact-info { background: var(--card-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border); height: fit-content; }
-        .contact-info h2 { color: var(--primary); margin-top: 0; }
-        .process-step { margin-bottom: 20px; padding-left: 15px; border-left: 3px solid var(--accent); }
-        .process-step h4 { margin: 0 0 5px 0; color: var(--primary); }
-        .process-step p { margin: 0; font-size: 0.95rem; color: #64748B; }
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 140px 3rem 80px;
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 55% 80% at 75% 50%, rgba(14,165,233,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: linear-gradient(var(--border-subtle) 1px, transparent 1px), linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 100% at 75% 50%, black 10%, transparent 75%);
+      pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 2; max-width: 650px; }
+    .page-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'DM Mono', monospace; font-size: 0.7rem;
+      color: var(--blue); letter-spacing: 0.15em; text-transform: uppercase;
+      margin-bottom: 1.5rem; padding: 0.4rem 0.9rem;
+      border: 1px solid rgba(14,165,233,0.3); border-radius: 2px;
+      animation: fadeUp 0.5s ease both;
+    }
+    .page-title {
+      font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 4.5vw, 4rem);
+      font-weight: 800; line-height: 1.05; letter-spacing: -0.03em;
+      margin-bottom: 1.2rem; animation: fadeUp 0.5s 0.1s ease both;
+    }
+    .page-title span { color: var(--blue); }
+    .page-subtitle {
+      font-size: 1rem; line-height: 1.75; color: rgba(240,246,255,0.5);
+      max-width: 480px; font-weight: 300; animation: fadeUp 0.5s 0.2s ease both;
+    }
 
-        .form-panel { background: var(--card-bg); padding: 40px; border-radius: 8px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid var(--border); }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem; color: var(--primary); }
-        
-        input[type="text"], input[type="email"], input[type="number"], select, textarea {
-            width: 100%; padding: 12px 15px; border: 1px solid #CBD5E1; border-radius: 6px; box-sizing: border-box; font-family: inherit; font-size: 1rem; background-color: #F8FAFC; transition: all 0.3s;
-        }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); background-color: var(--card-bg); box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1); }
-        textarea { resize: vertical; min-height: 100px; }
-        
-        button { background-color: var(--accent); color: white; padding: 16px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 1.1rem; font-weight: 700; width: 100%; transition: all 0.3s; }
-        button:hover:not(:disabled) { background-color: #005bb5; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 112, 243, 0.3); }
-        
-        /* 按钮被禁用时的置灰状态样式表变量 */
-        button:disabled { background-color: #94A3B8; cursor: not-allowed; opacity: 0.7; }
-        
-        footer { text-align: center; padding: 40px 20px; color: #64748B; font-size: 0.9rem; margin-top: 40px; border-top: 1px solid var(--border); }
-    </style>
+    /* ── MAIN LAYOUT ── */
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 420px;
+      gap: 0; min-height: calc(100vh - 200px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* ── FORM SIDE ── */
+    .form-side {
+      padding: 5rem 3rem;
+      border-right: 1px solid var(--border-subtle);
+    }
+
+    .section-tag {
+      font-family: 'DM Mono', monospace; font-size: 0.68rem;
+      color: var(--blue); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.6rem;
+    }
+    .form-title {
+      font-family: 'Syne', sans-serif; font-size: 1.6rem;
+      font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.5rem;
+    }
+    .form-subtitle { font-size: 0.85rem; color: var(--muted2); margin-bottom: 2.5rem; line-height: 1.6; }
+
+    /* Form */
+    .rfq-form { display: flex; flex-direction: column; gap: 1.4rem; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+
+    .field { display: flex; flex-direction: column; gap: 0.45rem; }
+    .field label {
+      font-family: 'DM Mono', monospace; font-size: 0.68rem;
+      color: var(--muted2); text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .field label .req { color: var(--blue); margin-left: 2px; }
+
+    .field input,
+    .field select,
+    .field textarea {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+    }
+    .field input::placeholder,
+    .field textarea::placeholder { color: var(--muted); }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(14,165,233,0.1);
+    }
+    .field select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; }
+    .field select option { background: #0a1520; }
+    .field textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+
+    /* EUS Checkbox */
+    .eus-block {
+      background: var(--surface);
+      border: 2px solid var(--red);
+      border-radius: 6px;
+      padding: 1.2rem 1.4rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .eus-block.accepted {
+      border-color: var(--green);
+      background: rgba(34,197,94,0.04);
+    }
+    .eus-check-row {
+      display: flex; align-items: flex-start; gap: 0.9rem; cursor: pointer;
+    }
+    .eus-check-row input[type="checkbox"] {
+      width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px;
+      accent-color: var(--green); cursor: pointer;
+    }
+    .eus-text { font-size: 0.8rem; color: var(--muted2); line-height: 1.6; }
+    .eus-text strong { color: var(--white); font-weight: 600; }
+    .eus-text a { color: var(--blue); text-decoration: none; }
+    .eus-text a:hover { text-decoration: underline; }
+    .eus-status {
+      font-family: 'DM Mono', monospace; font-size: 0.66rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-top: 0.7rem; padding-top: 0.7rem;
+      border-top: 1px solid var(--border-subtle);
+      color: var(--red); transition: color 0.3s;
+    }
+    .eus-block.accepted .eus-status { color: var(--green); }
+
+    /* Submit Button */
+    .submit-btn {
+      display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+      background: var(--muted);
+      color: rgba(240,246,255,0.4);
+      padding: 1rem 2rem; border-radius: 4px;
+      font-size: 0.92rem; font-weight: 600; letter-spacing: 0.02em;
+      border: none; cursor: not-allowed;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.15s;
+      width: 100%;
+    }
+    .submit-btn.unlocked {
+      background: var(--blue); color: #fff; cursor: pointer;
+      box-shadow: 0 0 30px rgba(14,165,233,0.3);
+    }
+    .submit-btn.unlocked:hover {
+      background: #38bdf8; transform: translateY(-2px);
+      box-shadow: 0 0 45px rgba(14,165,233,0.45);
+    }
+    .submit-btn svg { transition: transform 0.2s; }
+    .submit-btn.unlocked:hover svg { transform: translateX(3px); }
+
+    /* ── INFO SIDE ── */
+    .info-side {
+      padding: 5rem 2.5rem;
+      background: var(--surface);
+      display: flex; flex-direction: column; gap: 2.5rem;
+    }
+
+    .info-block { display: flex; flex-direction: column; gap: 1rem; }
+    .info-block-title {
+      font-family: 'DM Mono', monospace; font-size: 0.68rem;
+      color: var(--blue); text-transform: uppercase; letter-spacing: 0.12em;
+      padding-bottom: 0.7rem; border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* Contact Methods */
+    .contact-method {
+      display: flex; align-items: flex-start; gap: 0.9rem;
+      padding: 1rem; border: 1px solid var(--border-subtle);
+      border-radius: 6px; background: var(--bg);
+      transition: border-color 0.2s;
+      text-decoration: none;
+    }
+    .contact-method:hover { border-color: rgba(14,165,233,0.3); }
+    .method-icon {
+      width: 36px; height: 36px; border-radius: 6px;
+      background: rgba(14,165,233,0.08); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .method-icon svg { color: var(--blue); }
+    .method-label {
+      font-family: 'DM Mono', monospace; font-size: 0.65rem;
+      color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.2rem;
+    }
+    .method-value { font-size: 0.85rem; color: var(--white); font-weight: 500; }
+    .method-note { font-size: 0.74rem; color: var(--muted); margin-top: 0.15rem; }
+
+    /* SLA Card */
+    .sla-card {
+      background: var(--bg); border: 1px solid var(--border-subtle);
+      border-radius: 6px; overflow: hidden;
+    }
+    .sla-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.8rem 1rem; border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+    }
+    .sla-row:last-child { border-bottom: none; }
+    .sla-key { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.7rem; }
+    .sla-val { color: var(--white); font-weight: 500; }
+    .sla-val.green { color: #4ade80; }
+    .sla-val.blue  { color: var(--blue); }
+
+    /* Process Steps */
+    .process-steps { display: flex; flex-direction: column; gap: 0; }
+    .process-step {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 0.9rem 0; border-bottom: 1px solid var(--border-subtle);
+    }
+    .process-step:last-child { border-bottom: none; }
+    .step-num {
+      font-family: 'DM Mono', monospace; font-size: 0.65rem;
+      color: var(--blue); background: rgba(14,165,233,0.1);
+      border: 1px solid rgba(14,165,233,0.2);
+      border-radius: 3px; padding: 0.2rem 0.45rem;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .step-text { font-size: 0.8rem; color: var(--muted2); line-height: 1.5; }
+    .step-text strong { color: var(--white); display: block; margin-bottom: 0.1rem; font-size: 0.82rem; }
+
+    /* Compliance note */
+    .compliance-note {
+      background: rgba(14,165,233,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px; padding: 1rem;
+      font-size: 0.77rem; color: var(--muted2); line-height: 1.6;
+    }
+    .compliance-note strong { color: var(--blue); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface); border-top: 1px solid var(--border);
+      padding: 3rem; display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-brand { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--muted); }
+    .footer-brand span { color: var(--blue); }
+    .footer-copy { font-size: 0.78rem; color: var(--muted); font-family: 'DM Mono', monospace; }
+    .footer-links { display: flex; gap: 1.8rem; list-style: none; }
+    .footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; font-family: 'DM Mono', monospace; letter-spacing: 0.05em; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--blue); }
+
+    /* ── SUCCESS STATE ── */
+    .success-overlay {
+      display: none;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 3rem 2rem; text-align: center;
+      margin-top: 2rem;
+    }
+    .success-overlay.show { display: block; }
+    .success-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .success-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .success-msg { font-size: 0.85rem; color: var(--muted2); line-height: 1.6; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .form-side { border-right: none; border-bottom: 1px solid var(--border-subtle); }
+      .info-side { padding: 4rem 3rem; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
+      .page-hero { padding: 110px 1.5rem 60px; }
+      .form-side, .info-side { padding: 4rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
+    }
+  </style>
 </head>
 <body>
 
-    <nav class="navbar">
-    <a href="index.html" class="logo" style="display: flex; align-items: center;">
-        <img src="images/LOGO.jpg" alt="MICA Supply LTD. Logo" style="height: 40px; width: auto;">
-    </a>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html" class="nav-cta">Request Quote</a>
-    </div>
+<!-- ── NAVBAR ── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/LOGO.jpg" alt="MICA Supply LTD." onerror="this.style.display='none'">
+    <span class="nav-logo-text">MICA <span>Supply</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="compliance.html">Compliance</a></li>
+    <li><a href="contact.html" class="nav-cta active">Request Quote</a></li>
+  </ul>
 </nav>
 
-    <header class="page-header">
-        <h1>Request a Quote (RFQ)</h1>
-    </header>
+<!-- ── PAGE HERO ── -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-tag">// Request for Quote</div>
+    <h1 class="page-title">Tell Us What<br>You <span>Need.</span></h1>
+    <p class="page-subtitle">
+      Submit your Part Number, BOM, or general hardware requirement.
+      We respond with pricing, availability, and lead time within 24 hours.
+    </p>
+  </div>
+</div>
 
-    <div class="contact-container">
-        <div class="contact-info">
-            <h2>Sourcing Process</h2>
-            <p style="margin-bottom: 30px; color: #64748B;">Submit your requirements below. Our team will verify inventory across our supply network and return with an accurate quote.</p>
-            
-            <div class="process-step">
-                <h4>1. Requirement Submission</h4>
-                <p>Provide exact Part Numbers (P/N), target condition, and volume.</p>
-            </div>
-            <div class="process-step">
-                <h4>2. Network Sourcing</h4>
-                <p>We leverage our channels in North America and Asia to locate the best pricing and lead time.</p>
-            </div>
-            <div class="process-step">
-                <h4>3. Quote & Fulfillment</h4>
-                <p>Receive a comprehensive quote including logistics to your destination.</p>
-            </div>
+<!-- ── MAIN LAYOUT ── -->
+<div class="contact-layout">
+
+  <!-- FORM SIDE -->
+  <div class="form-side">
+    <div class="section-tag">// RFQ Submission</div>
+    <h2 class="form-title">Request for Quotation</h2>
+    <p class="form-subtitle">All fields marked <span style="color:var(--blue)">*</span> are required. The End-User Statement must be acknowledged before submission.</p>
+
+    <form class="rfq-form" id="rfqForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+      <!-- Row 1: Name + Company -->
+      <div class="form-row">
+        <div class="field">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" name="name" placeholder="John Smith" required>
         </div>
-
-        <div class="form-panel">
-            <form action="https://formspree.io/f/xlgpeojz" method="POST">
-                
-                <div class="form-group">
-                    <label for="part_number">Part Number / Model / BOM :</label>
-                    <input type="text" id="part_number" name="part_number" required placeholder="e.g., Intel Xeon Platinum 8480+">
-                </div>
-                
-                <div class="form-group">
-                    <label for="condition">Condition Preference :</label>
-                    <select id="condition" name="condition" required>
-                        <option value="Any">Any Condition (Best Price) </option>
-                        <option value="Factory New">Factory New (NIB) </option>
-                        <option value="Refurbished / Used">Refurbished / Working Pulls </option>
-                    </select>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div class="form-group">
-                        <label for="quantity">Target Quantity :</label>
-                        <input type="number" id="quantity" name="quantity" required placeholder="e.g., 50">
-                    </div>
-                    <div class="form-group">
-                        <label for="target_price">Target Price :</label>
-                        <input type="text" id="target_price" name="target_price" placeholder="e.g., $500 USD">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Contact Email :</label>
-                    <input type="email" id="email" name="email" required placeholder="sales@yourcompany.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="notes">Additional Requirements :</label>
-                    <textarea id="notes" name="notes" placeholder="e.g., Lead time requirements, specific stepping, or destination country..."></textarea>
-                </div>
-
-                <div id="compliance_box" style="background: #FEF2F2; border: 1px solid #FCA5A5; padding: 20px; border-radius: 6px; margin-bottom: 25px;">
-                    <h4 id="compliance_title" style="margin: 0 0 10px 0; color: #991B1B; font-size: 0.95rem;">Export Control & EUS Acknowledgment</h4>
-                    <p id="compliance_text" style="margin: 0 0 15px 0; font-size: 0.85rem; color: #7F1D1D;">Quotes for high-performance AI hardware and restricted components are subject to BIS (Bureau of Industry and Security) regulations. A formal End-User Statement (EUS) detailing the final destination and application will be required prior to order fulfillment.</p>
-                    
-                    <label id="compliance_label" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; font-weight: 600; color: #991B1B; cursor: pointer;">
-                        <input type="checkbox" id="eus_check" onchange="toggleComplianceState()" style="width: auto; margin-top: 3px; cursor: pointer;">
-                        <span>I acknowledge the export control laws and agree to provide a valid End-User Statement (EUS) upon request.</span>
-                    </label>
-                </div>
-
-                <button type="submit" id="submit_btn" disabled>Submit Request</button>
-            </form>
+        <div class="field">
+          <label>Company / Organization <span class="req">*</span></label>
+          <input type="text" name="company" placeholder="Acme Corp Ltd." required>
         </div>
+      </div>
+
+      <!-- Row 2: Email + Phone -->
+      <div class="form-row">
+        <div class="field">
+          <label>Business Email <span class="req">*</span></label>
+          <input type="email" name="email" placeholder="you@company.com" required>
+        </div>
+        <div class="field">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" name="phone" placeholder="+1 604 000 0000">
+        </div>
+      </div>
+
+      <!-- Row 3: Country + Inquiry Type -->
+      <div class="form-row">
+        <div class="field">
+          <label>Country / Region <span class="req">*</span></label>
+          <select name="country" required>
+            <option value="" disabled selected>Select region…</option>
+            <option>Canada</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Netherlands</option>
+            <option>United Arab Emirates</option>
+            <option>Hong Kong</option>
+            <option>Singapore</option>
+            <option>Japan</option>
+            <option>South Korea</option>
+            <option>Taiwan</option>
+            <option>Australia</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Inquiry Type <span class="req">*</span></label>
+          <select name="inquiry_type" required>
+            <option value="" disabled selected>Select type…</option>
+            <option>Sourcing — Factory New (NIB)</option>
+            <option>Sourcing — Working Pulls</option>
+            <option>Full BOM Fulfillment</option>
+            <option>Asset Liquidation / Sell</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Part Numbers / BOM -->
+      <div class="field">
+        <label>Part Number(s) / BOM Description <span class="req">*</span></label>
+        <textarea name="part_numbers" placeholder="e.g. RTX 5090 × 10 units&#10;Intel Xeon Gold 6338 × 4 units&#10;Samsung 32GB DDR5 ECC RDIMM × 48 units" required></textarea>
+      </div>
+
+      <!-- Row 4: Quantity + Target Price -->
+      <div class="form-row">
+        <div class="field">
+          <label>Estimated Quantity</label>
+          <input type="text" name="quantity" placeholder="e.g. 10 units / 1 pallet">
+        </div>
+        <div class="field">
+          <label>Target Price (USD)</label>
+          <input type="text" name="target_price" placeholder="e.g. $2,500 / unit or Open">
+        </div>
+      </div>
+
+      <!-- Destination -->
+      <div class="field">
+        <label>Delivery Destination</label>
+        <input type="text" name="destination" placeholder="e.g. Vancouver, BC  /  Dubai, UAE  /  Hong Kong">
+      </div>
+
+      <!-- Additional Notes -->
+      <div class="field">
+        <label>Additional Notes</label>
+        <textarea name="notes" placeholder="Required lead time, condition preference (NIB / pulls), certifications needed, etc." style="min-height:80px;"></textarea>
+      </div>
+
+      <!-- EUS COMPLIANCE BLOCK -->
+      <div class="eus-block" id="eusBlock">
+        <label class="eus-check-row">
+          <input type="checkbox" id="eusCheckbox" name="eus_acknowledged" value="YES — End-User Statement Acknowledged">
+          <span class="eus-text">
+            <strong>End-User Statement (EUS) — Required</strong><br>
+            I confirm that the hardware requested will not be re-exported, transferred, or used in violation of
+            U.S. Export Administration Regulations (EAR) or any applicable export control laws. I understand that
+            MICA Supply LTD. conducts BIS/Entity List screening on all transactions and reserves the right to
+            decline any order. View our full <a href="compliance.html">Export Compliance Policy</a>.
+          </span>
+        </label>
+        <div class="eus-status" id="eusStatus">● EUS Not Acknowledged — Submit Locked</div>
+      </div>
+
+      <!-- HIDDEN FIELD -->
+      <input type="hidden" name="_subject" value="New RFQ — MICA Supply LTD.">
+      <input type="hidden" name="_next" value="https://www.micasupply.ca/contact.html?submitted=true">
+
+      <!-- SUBMIT -->
+      <button type="submit" class="submit-btn" id="submitBtn" disabled>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19l-7-7 7-7M19 12H5"/></svg>
+        Acknowledge EUS to Submit
+      </button>
+
+    </form>
+
+    <!-- SUCCESS MESSAGE -->
+    <div class="success-overlay" id="successMsg">
+      <div class="success-icon">✅</div>
+      <div class="success-title">RFQ Received</div>
+      <p class="success-msg">Thank you. Your request has been submitted to <strong>sales@micasupply.ca</strong>.<br>We will respond with pricing and availability within <strong>24 hours</strong>.</p>
+    </div>
+  </div>
+
+  <!-- INFO SIDE -->
+  <div class="info-side">
+
+    <!-- Contact Methods -->
+    <div class="info-block">
+      <div class="info-block-title">// Direct Contact</div>
+      <a href="mailto:sales@micasupply.ca" class="contact-method">
+        <div class="method-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="method-label">Email</div>
+          <div class="method-value">sales@micasupply.ca</div>
+          <div class="method-note">Primary inquiry channel</div>
+        </div>
+      </a>
+      <div class="contact-method" style="cursor:default;">
+        <div class="method-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="method-label">Registered Office</div>
+          <div class="method-value">Vancouver / Surrey, BC</div>
+          <div class="method-note">British Columbia, Canada</div>
+        </div>
+      </div>
     </div>
 
-    <footer>
-        &copy; 2026 MICA Supply LTD. All rights reserved. | Vancouver, BC, Canada <br>
-        <div style="margin-top: 15px;">
-            <a href="compliance.html" style="color: #0070F3; text-decoration: none; margin: 0 10px;">Export Compliance</a> | 
-            <a href="privacy.html" style="color: #0070F3; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
-            <a href="terms.html" style="color: #0070F3; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+    <!-- SLA -->
+    <div class="info-block">
+      <div class="info-block-title">// Response Commitment</div>
+      <div class="sla-card">
+        <div class="sla-row">
+          <span class="sla-key">Initial Response</span>
+          <span class="sla-val green">Within 24 Hours</span>
         </div>
-    </footer>
+        <div class="sla-row">
+          <span class="sla-key">Pricing Quote</span>
+          <span class="sla-val green">1–3 Business Days</span>
+        </div>
+        <div class="sla-row">
+          <span class="sla-key">Compliance Review</span>
+          <span class="sla-val blue">Concurrent with Quote</span>
+        </div>
+        <div class="sla-row">
+          <span class="sla-key">Min. Order Qty</span>
+          <span class="sla-val">1 Unit</span>
+        </div>
+        <div class="sla-row">
+          <span class="sla-key">Currency</span>
+          <span class="sla-val">USD (default) / CAD</span>
+        </div>
+      </div>
+    </div>
 
-    <script>
-        function toggleComplianceState() {
-            // 获取所有需要的 DOM 元素变量
-            const checkbox = document.getElementById('eus_check');
-            const submitBtn = document.getElementById('submit_btn');
-            const complianceBox = document.getElementById('compliance_box');
-            const complianceTitle = document.getElementById('compliance_title');
-            const complianceText = document.getElementById('compliance_text');
-            const complianceLabel = document.getElementById('compliance_label');
-            
-            // 绿色状态样式变量
-            const greenBg = '#DCFCE7'; // 浅绿
-            const greenBorder = '#86EFAC'; // 较深绿
-            const greenText = '#15803D'; // 文本绿
-            const greenTitleText = '#166534'; // 标题深绿
+    <!-- Process -->
+    <div class="info-block">
+      <div class="info-block-title">// How It Works</div>
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-num">01</span>
+          <div class="step-text">
+            <strong>Submit RFQ</strong>
+            Provide your P/N, quantity, and destination. BOM uploads welcome in notes.
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">02</span>
+          <div class="step-text">
+            <strong>Compliance Screening</strong>
+            We run BIS / Entity List checks before confirming availability.
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">03</span>
+          <div class="step-text">
+            <strong>Quote Delivered</strong>
+            Pricing, lead time, and logistics options sent to your email.
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">04</span>
+          <div class="step-text">
+            <strong>Fulfillment</strong>
+            Upon PO confirmation, we coordinate sourcing and cross-border shipment.
+          </div>
+        </div>
+      </div>
+    </div>
 
-            // 红色状态样式变量（还原用）
-            const redBg = '#FEF2F2';
-            const redBorder = '#FCA5A5';
-            const redText = '#7F1D1D';
-            const redTitleText = '#991B1B';
+    <!-- Compliance Note -->
+    <div class="compliance-note">
+      <strong>⚠ Export Control Notice</strong><br>
+      All transactions involving U.S.-origin technology are subject to EAR review. MICA Supply LTD. will not
+      facilitate transfers to sanctioned entities or embargoed destinations.
+      <a href="compliance.html" style="color:var(--blue); text-decoration:none;"> Full policy →</a>
+    </div>
 
-            // 变量判断：如果勾选
-            if (checkbox.checked) {
-                // 1. 激活提交按钮变量
-                submitBtn.disabled = false;
-                
-                // 2. 将合规框的内联样式变量从红变绿
-                complianceBox.style.backgroundColor = greenBg;
-                complianceBox.style.borderColor = greenBorder;
-                
-                // 3. 修改标题和文本颜色
-                complianceTitle.style.color = greenTitleText;
-                complianceText.style.color = greenText;
-                complianceLabel.style.color = greenText;
-            } else {
-                // 变量判断：如果不勾选
-                // 1. 禁用提交按钮变量
-                submitBtn.disabled = true;
-                
-                // 2. 将合规框的内联样式变量还原为红
-                complianceBox.style.backgroundColor = redBg;
-                complianceBox.style.borderColor = redBorder;
-                
-                // 3. 将标题和文本颜色还原
-                complianceTitle.style.color = redTitleText;
-                complianceText.style.color = redText;
-                complianceLabel.style.color = redTitleText;
-            }
-        }
-    </script>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand">MICA <span>Supply</span> LTD.</div>
+  <div class="footer-copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
+  <ul class="footer-links">
+    <li><a href="compliance.html">Export Compliance</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms of Service</a></li>
+  </ul>
+</footer>
+
+<script>
+  // ── EUS CHECKBOX LOGIC ──
+  const checkbox   = document.getElementById('eusCheckbox');
+  const eusBlock   = document.getElementById('eusBlock');
+  const eusStatus  = document.getElementById('eusStatus');
+  const submitBtn  = document.getElementById('submitBtn');
+
+  checkbox.addEventListener('change', function() {
+    if (this.checked) {
+      eusBlock.classList.add('accepted');
+      eusStatus.textContent = '● EUS Acknowledged — Submission Unlocked';
+      submitBtn.classList.add('unlocked');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `Submit RFQ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+    } else {
+      eusBlock.classList.remove('accepted');
+      eusStatus.textContent = '● EUS Not Acknowledged — Submit Locked';
+      submitBtn.classList.remove('unlocked');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19l-7-7 7-7M19 12H5"/></svg> Acknowledge EUS to Submit`;
+    }
+  });
+
+  // ── SUCCESS REDIRECT DETECTION ──
+  if (window.location.search.includes('submitted=true')) {
+    document.getElementById('rfqForm').style.display = 'none';
+    document.getElementById('successMsg').classList.add('show');
+  }
+</script>
 
 </body>
 </html>
