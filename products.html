@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://www.micasupply.ca/products.html">
 <meta property="og:title" content="Products | MICA Supply LTD.">
 <meta property="og:description" content="Factory New & Working Pull enterprise hardware. Submit RFQ for pricing.">
-<meta property="og:image" content="https://www.micasupply.ca/images/LOGO2.png">
+<meta property="og:image" content="https://www.micasupply.ca/images/LOGO.jpg">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-95048H8LK1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-95048H8LK1');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,10 +28,10 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--white);overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(5,10,15,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
-.nav-logo img{height:32px;object-fit:contain}
-.logo-text{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:var(--white)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 5rem;height:96px;background:rgba(5,10,15,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:1.2rem;text-decoration:none}
+.nav-logo img{height:62px;object-fit:contain}
+.logo-text{font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:800;color:var(--white)}
 .logo-text span{color:var(--blue)}
 .nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
@@ -40,7 +40,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta:hover{background:#38bdf8!important}
 
 /* HERO */
-.hero{padding:140px 3rem 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--bs)}
+.hero{padding:172px 3rem 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--bs)}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 80% 40%,rgba(14,165,233,.06) 0%,transparent 60%);pointer-events:none}
 .hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--bs) 1px,transparent 1px),linear-gradient(90deg,var(--bs) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 100% at 80% 40%,black 10%,transparent 70%);pointer-events:none}
 .hero-inner{position:relative;z-index:2;max-width:700px}
@@ -59,7 +59,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .mode-back:hover{color:var(--white);border-color:rgba(14,165,233,.3)}
 
 /* FILTER BAR */
-.filter-bar{position:sticky;top:64px;z-index:100;background:var(--surface);border-bottom:1px solid var(--bs);display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none}
+.filter-bar{position:sticky;top:96px;z-index:100;background:var(--surface);border-bottom:1px solid var(--bs);display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none}
 .filter-bar::-webkit-scrollbar{display:none}
 .fb-label{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;padding:0 1.5rem;display:flex;align-items:center;border-right:1px solid var(--bs);white-space:nowrap;flex-shrink:0}
 .fb-btn{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);background:none;border:none;border-right:1px solid var(--bs);padding:.9rem 1.2rem;cursor:pointer;white-space:nowrap;transition:color .2s,background .2s;display:flex;align-items:center;gap:.4rem}
@@ -150,7 +150,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
 @media(max-width:768px){
   nav{padding:0 1.5rem}.nav-links{display:none}
-  .hero{padding:110px 1.5rem 60px}
+  .hero{padding:130px 1.5rem 60px}
   .fb-label{display:none}
   .cat-header{padding:2.5rem 1.5rem 1.5rem}
   .view-all-row{padding:1.2rem 1.5rem}
@@ -169,20 +169,20 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
     <span class="logo-text">MICA <span>Supply</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html" class="active">Products</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="compliance.html">Compliance</a></li>
-    <li><a href="contact.html" class="nav-cta">Request Quote</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="products.html" class="active" data-i18n="nav.products">Products</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+    <li><a href="compliance.html" data-i18n="nav.compliance">Compliance</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta" data-i18n="nav.rfq">Request Quote</a></li>
   </ul>
 </nav>
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="page-tag" id="heroTag">// Current Inventory</div>
-    <h1 id="heroTitle">Hardware <span>Inventory</span></h1>
-    <p id="heroSub">Factory New (NIB) and Working Pull enterprise hardware. All items subject to BIS/EAR compliance review. Submit RFQ for current pricing and lead time.</p>
+    <div class="page-tag" id="heroTag" data-i18n="products.tag">// Current Inventory</div>
+    <h1 id="heroTitle"><span data-i18n="products.h1">Hardware</span> <span data-i18n="products.h1.span">Inventory</span></h1>
+    <p id="heroSub" data-i18n="products.sub">Factory New (NIB) and Working Pull enterprise hardware. All items subject to BIS/EAR compliance review. Submit RFQ for current pricing and lead time.</p>
   </div>
 </div>
 
@@ -199,7 +199,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 </div>
 
 <div class="filter-bar" id="filterBar">
-  <span class="fb-label">// Filter by category</span>
+  <span class="fb-label" data-i18n="products.filter">// Filter by category</span>
   <button class="fb-btn active" id="btnAll" onclick="filterCat('all',this)">All <span class="fb-count" id="cntAll">—</span></button>
 </div>
 
@@ -210,15 +210,15 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   </div>
   <div class="error-wrap" id="errState">
     <div style="font-size:2rem">⚠️</div>
-    <p>Unable to load inventory.<br>Please refresh or contact <a href="mailto:sales@micasupply.ca">sales@micasupply.ca</a></p>
+    <p>Unable to load inventory.<br>Please refresh or contact <a href="/cdn-cgi/l/email-protection#196a78757c6a5974707a786a6c69697560377a78"><span class="__cf_email__" data-cfemail="3744565b5244775a5e5456444247475b4e195456">[email&#160;protected]</span></a></p>
   </div>
 </div>
 
 <div class="bom-banner">
   <div>
-    <div class="bom-tag">// Full BOM Fulfillment</div>
-    <div class="bom-title">Don't see your part number?</div>
-    <div class="bom-sub">Submit your P/N list or full BOM — we source across global networks including EOL and allocated items.</div>
+    <div class="bom-tag" data-i18n="products.bom.tag">// Full BOM Fulfillment</div>
+    <div class="bom-title" data-i18n="products.bom.title">Don't see your part number?</div>
+    <div class="bom-sub" data-i18n="products.bom.sub">Submit your P/N list or full BOM — we source across global networks including EOL and allocated items.</div>
   </div>
   <a href="contact.html" class="btn-primary">
     Submit BOM / P/N
@@ -228,7 +228,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
 <footer>
   <div class="foot-brand">MICA <span>Supply</span> LTD.</div>
-  <div class="foot-copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
+  <div class="foot-copy" data-i18n="footer.copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
   <ul class="foot-links">
     <li><a href="compliance.html">Export Compliance</a></li>
     <li><a href="privacy.html">Privacy Policy</a></li>
@@ -236,7 +236,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   </ul>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 var SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTSoZI9IcCIFcmpdbm-SFEq0EuruwdyA6gow1DcYw05LCq3iv4Akps7DJ8ZSvRA0NHiYOKV8MGoFdDZ/pub?output=csv';
 
 var CAT_CONFIG = {
@@ -466,6 +466,7 @@ fetch(SHEET_URL)
   });
 </script>
 
+<script src="lang.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>
