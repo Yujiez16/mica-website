@@ -171,20 +171,20 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 <div class="hero">
   <div class="hero-inner">
     <div class="page-tag" data-i18n="faq.tag">// Frequently Asked Questions</div>
-    <h1><span data-i18n="faq.h1">Got</span> <span data-i18n="faq.h1.span">Questions?</span></h1>
+    <h1><span data-i18n="faq.h1">Got</span> <span data-i18n="faq.h1b">Questions?</span></h1>
     <p data-i18n="faq.sub">Everything you need to know about sourcing hardware through MICA Supply — from submitting your first RFQ to receiving your shipment.</p>
   </div>
 </div>
 
 <!-- CATEGORY NAV -->
 <div class="cat-nav">
-  <span class="cat-nav-label">// Jump to</span>
-  <a href="#rfq" class="cat-nav-btn">Quoting & Ordering</a>
-  <a href="#moq" class="cat-nav-btn">Min. Order Qty</a>
-  <a href="#product-condition" class="cat-nav-btn">NIB vs Pulls</a>
-  <a href="#logistics" class="cat-nav-btn">Logistics & Lead Time</a>
-  <a href="#compliance" class="cat-nav-btn">Export Compliance</a>
-  <a href="#payment" class="cat-nav-btn">Payment</a>
+  <span class="cat-nav-label" data-i18n="faq.nav.jump">// Jump to</span>
+  <a href="#rfq" class="cat-nav-btn" data-i18n="faq.nav.rfq">Quoting &amp; Ordering</a>
+  <a href="#moq" class="cat-nav-btn" data-i18n="faq.nav.moq">Min. Order Qty</a>
+  <a href="#product-condition" class="cat-nav-btn" data-i18n="faq.nav.nib">NIB vs Pulls</a>
+  <a href="#logistics" class="cat-nav-btn" data-i18n="faq.nav.log">Logistics &amp; Lead Time</a>
+  <a href="#compliance" class="cat-nav-btn" data-i18n="faq.nav.comp">Export Compliance</a>
+  <a href="#payment" class="cat-nav-btn" data-i18n="faq.nav.pay">Payment</a>
 </div>
 
 <div class="faq-layout">
@@ -193,16 +193,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   <!-- SECTION 1: RFQ -->
   <div class="faq-section" id="rfq">
     <div class="faq-section-header">
-      <div class="section-tag">// 01 — Quoting & Ordering</div>
-      <div class="section-title">How does the RFQ process work?</div>
+      <div class="section-tag" data-i18n="faq.s1.tag">// 01 — Quoting &amp; Ordering</div>
+      <div class="section-title" data-i18n="faq.s1.title">How does the RFQ process work?</div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">How do I get a quote?</span>
+        <span class="faq-q-text" data-i18n="faq.q1.1">How do I get a quote?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a1.1">
         <p>Submit a <a href="contact.html">Request for Quote (RFQ)</a> with your part number(s), required quantity, and delivery destination. You can also upload a BOM file in Excel or PDF format directly from the form.</p>
         <p>We review every submission and respond with <strong>pricing, availability, and estimated lead time within 24 hours</strong> on business days.</p>
       </div>
@@ -210,10 +210,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What information should I include in my RFQ?</span>
+        <span class="faq-q-text" data-i18n="faq.q1.2">What information should I include in my RFQ?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a1.2">
         <p>The more detail you provide, the faster we can respond. Ideally include:</p>
         <p><strong>Part number(s) or model names</strong> — exact OEM P/N preferred<br>
         <strong>Quantity</strong> — exact units or estimated range<br>
@@ -227,10 +227,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">How long does the full order process take?</span>
+        <span class="faq-q-text" data-i18n="faq.q1.3">How long does the full order process take?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a1.3">
         <p>A typical order follows this timeline:</p>
         <p><strong>Quote response:</strong> Within 24 hours of RFQ submission<br>
         <strong>Compliance screening:</strong> 1 business day (BIS/Entity List check)<br>
@@ -243,10 +243,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Can you source items not listed on your products page?</span>
+        <span class="faq-q-text" data-i18n="faq.q1.4">Can you source items not listed on your products page?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a1.4">
         <p><strong>Yes.</strong> The products page shows commonly requested items, but our sourcing network covers a much broader range. We regularly handle:</p>
         <div class="tag-row">
           <span class="faq-tag blue">EOL / Discontinued Parts</span>
@@ -262,16 +262,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   <!-- SECTION 2: MOQ -->
   <div class="faq-section" id="moq">
     <div class="faq-section-header">
-      <div class="section-tag">// 02 — Minimum Order Quantity</div>
-      <div class="section-title">What are your order minimums?</div>
+      <div class="section-tag" data-i18n="faq.s2.tag">// 02 — Minimum Order Quantity</div>
+      <div class="section-title" data-i18n="faq.s2.title">What are your order minimums?</div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Is there a minimum order quantity (MOQ)?</span>
+        <span class="faq-q-text" data-i18n="faq.q2.1">Is there a minimum order quantity (MOQ)?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a2.1">
         <p><strong>Minimum order is 1 unit.</strong> We work with buyers ranging from single-unit procurement to bulk pallet orders. There is no formal MOQ.</p>
         <p>That said, unit pricing is more competitive for larger quantities. If you are purchasing a single high-value item (AI accelerators, for example), that is fully supported. If you are evaluating a bulk purchase, mention your total target volume in the RFQ and we will provide tiered pricing.</p>
       </div>
@@ -279,10 +279,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Do you offer volume discounts?</span>
+        <span class="faq-q-text" data-i18n="faq.q2.2">Do you offer volume discounts?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a2.2">
         <p>Yes. Pricing scales with volume. For large or recurring orders, we can offer structured pricing agreements. Include your estimated annual or quarterly volume in the RFQ notes and we will factor that into the quote.</p>
         <p>Repeat customers and established partners receive priority sourcing and expedited response times.</p>
       </div>
@@ -292,16 +292,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   <!-- SECTION 3: PRODUCT CONDITION -->
   <div class="faq-section" id="product-condition">
     <div class="faq-section-header">
-      <div class="section-tag">// 03 — Product Condition</div>
-      <div class="section-title">What is the difference between NIB and Working Pulls?</div>
+      <div class="section-tag" data-i18n="faq.s3.tag">// 03 — Product Condition</div>
+      <div class="section-title" data-i18n="faq.s3.title">What is the difference between NIB and Working Pulls?</div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What does Factory New (NIB) mean?</span>
+        <span class="faq-q-text" data-i18n="faq.q3.1">What does Factory New (NIB) mean?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a3.1">
         <p><strong>NIB (New In Box)</strong> refers to factory-sealed units sourced directly from authorized distribution channels or directly from manufacturer inventory. These units are:</p>
         <div class="tag-row">
           <span class="faq-tag blue">Sealed OEM Packaging</span>
@@ -315,10 +315,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What does Working Pull mean?</span>
+        <span class="faq-q-text" data-i18n="faq.q3.2">What does Working Pull mean?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a3.2">
         <p><strong>Working Pulls</strong> are enterprise-grade components removed from decommissioned hyperscaler or data center environments. Before shipment, all Working Pull items are:</p>
         <div class="tag-row">
           <span class="faq-tag teal">Tested & Verified Functional</span>
@@ -332,10 +332,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">How do I know which condition to request?</span>
+        <span class="faq-q-text" data-i18n="faq.q3.3">How do I know which condition to request?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a3.3">
         <p>A general guide:</p>
         <p><strong>Choose NIB if:</strong> You require full OEM warranty, the item will be in a production-critical environment, or your procurement policy mandates new hardware.</p>
         <p><strong>Choose Working Pull if:</strong> You are building a dev/test cluster, expanding capacity, need a cost-effective solution, or the item is EOL and no longer in production.</p>
@@ -347,16 +347,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   <!-- SECTION 4: LOGISTICS -->
   <div class="faq-section" id="logistics">
     <div class="faq-section-header">
-      <div class="section-tag">// 04 — Logistics & Lead Time</div>
-      <div class="section-title">Shipping, delivery, and lead times</div>
+      <div class="section-tag" data-i18n="faq.s4.tag">// 04 — Logistics &amp; Lead Time</div>
+      <div class="section-title" data-i18n="faq.s4.title">Shipping, delivery, and lead times</div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Which regions do you ship to?</span>
+        <span class="faq-q-text" data-i18n="faq.q4.1">Which regions do you ship to?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a4.1">
         <p>We serve customers across four primary trade corridors:</p>
         <div class="tag-row">
           <span class="faq-tag blue">North America</span>
@@ -371,10 +371,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What are typical lead times?</span>
+        <span class="faq-q-text" data-i18n="faq.q4.2">What are typical lead times?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a4.2">
         <p>Lead times depend on item availability and destination:</p>
         <p><strong>In-stock items:</strong> 2–5 business days after order confirmation<br>
         <strong>Sourced items:</strong> 5–14 business days depending on supply chain<br>
@@ -385,10 +385,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Do you handle customs documentation?</span>
+        <span class="faq-q-text" data-i18n="faq.q4.3">Do you handle customs documentation?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a4.3">
         <p>Yes. We prepare full commercial documentation for all international shipments, including:</p>
         <p><strong>Commercial Invoice</strong> — itemized with HS codes<br>
         <strong>Packing List</strong> — unit count, weight, dimensions<br>
@@ -402,16 +402,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   <!-- SECTION 5: COMPLIANCE -->
   <div class="faq-section" id="compliance">
     <div class="faq-section-header">
-      <div class="section-tag">// 05 — Export Compliance</div>
-      <div class="section-title">BIS, EAR, and End-User requirements</div>
+      <div class="section-tag" data-i18n="faq.s5.tag">// 05 — Export Compliance</div>
+      <div class="section-title" data-i18n="faq.s5.title">BIS, EAR, and End-User requirements</div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Why do you require an End-User Statement (EUS)?</span>
+        <span class="faq-q-text" data-i18n="faq.q5.1">Why do you require an End-User Statement (EUS)?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a5.1">
         <p>Many of the products we handle — particularly AI accelerators and high-performance computing components — are controlled under <strong>U.S. Export Administration Regulations (EAR)</strong> administered by the Bureau of Industry and Security (BIS).</p>
         <p>The End-User Statement is a legal declaration confirming that the hardware will not be re-exported, diverted, or used in violation of applicable export laws. This protects both parties and is a standard requirement in legitimate hardware brokerage.</p>
         <p>View our full <a href="compliance.html">Export Compliance Policy</a> for details.</p>
@@ -420,10 +420,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What is BIS/Entity List screening?</span>
+        <span class="faq-q-text" data-i18n="faq.q5.2">What is BIS/Entity List screening?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a5.2">
         <p>Before confirming any order, MICA Supply screens all parties — buyers, end-users, and intermediaries — against:</p>
         <div class="tag-row">
           <span class="faq-tag amber">BIS Entity List</span>
@@ -438,26 +438,26 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   <!-- SECTION 6: PAYMENT -->
   <div class="faq-section" id="payment">
     <div class="faq-section-header">
-      <div class="section-tag">// 06 — Payment</div>
-      <div class="section-title">Payment methods and terms</div>
+      <div class="section-tag" data-i18n="faq.s6.tag">// 06 — Payment</div>
+      <div class="section-title" data-i18n="faq.s6.title">Payment methods and terms</div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What payment methods do you accept?</span>
+        <span class="faq-q-text" data-i18n="faq.q6.1">What payment methods do you accept?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a6.1">
         <p>Payment details are confirmed at the time of quotation and vary by order size and customer relationship. Please include payment preference in your RFQ or contact us at <a href="/cdn-cgi/l/email-protection#aad9cbc6cfd9eac7c3c9cbd9dfdadac6d384c9cb"><span class="__cf_email__" data-cfemail="64170508011724090d070517111414081d4a0705">[email&#160;protected]</span></a> to discuss terms.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Do you offer credit terms or net payment?</span>
+        <span class="faq-q-text" data-i18n="faq.q6.2">Do you offer credit terms or net payment?</span>
         <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></span>
       </button>
-      <div class="faq-a">
+      <div class="faq-a" data-i18n-html="faq.a6.2">
         <p>Extended payment terms may be available for established customers with a verified order history. First-time orders typically require payment prior to shipment. Contact us to discuss your requirements.</p>
       </div>
     </div>
@@ -469,20 +469,20 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 <div class="faq-sidebar">
 
   <div class="sidebar-block">
-    <div class="sidebar-tag">// At a Glance</div>
+    <div class="sidebar-tag" data-i18n="faq.sb.tag1">// At a Glance</div>
     <div class="stat-grid">
-      <div class="stat-cell"><div class="stat-val">&lt; 24h</div><div class="stat-key">Quote Response</div></div>
-      <div class="stat-cell"><div class="stat-val">1 unit</div><div class="stat-key">Min. Order</div></div>
-      <div class="stat-cell"><div class="stat-val">4+</div><div class="stat-key">Trade Regions</div></div>
-      <div class="stat-cell"><div class="stat-val">100%</div><div class="stat-key">Screened Orders</div></div>
+      <div class="stat-cell"><div class="stat-val">&lt; 24h</div><div class="stat-key" data-i18n="faq.stat.quote">Quote Response</div></div>
+      <div class="stat-cell"><div class="stat-val">1 unit</div><div class="stat-key" data-i18n="faq.stat.min">Min. Order</div></div>
+      <div class="stat-cell"><div class="stat-val">4+</div><div class="stat-key" data-i18n="faq.stat.reg">Trade Regions</div></div>
+      <div class="stat-cell"><div class="stat-val">100%</div><div class="stat-key" data-i18n="faq.stat.scr">Screened Orders</div></div>
     </div>
   </div>
 
   <div class="sidebar-block">
-    <div class="sidebar-tag">// Still Have Questions?</div>
+    <div class="sidebar-tag" data-i18n="faq.sb.tag2">// Still Have Questions?</div>
     <div class="still-q">
-      <div class="still-q-title">Contact our team directly</div>
-      <div class="still-q-sub">Submit an RFQ or email us — we respond within one business day.</div>
+      <div class="still-q-title" data-i18n="faq.sb.ctitle">Contact our team directly</div>
+      <div class="still-q-sub" data-i18n="faq.sb.csub">Submit an RFQ or email us — we respond within one business day.</div>
       <a href="contact.html" class="btn-rfq">
         Submit RFQ
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -492,7 +492,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   </div>
 
   <div class="sidebar-block">
-    <div class="sidebar-tag">// Compliance Resources</div>
+    <div class="sidebar-tag" data-i18n="faq.sb.tag3">// Compliance Resources</div>
     <div class="compliance-box">
       <strong>Export Notice</strong><br>
       All transactions involving U.S.-origin technology are subject to EAR review. MICA Supply will not process orders to sanctioned destinations.<br><br>
@@ -506,12 +506,12 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
 <!-- BOTTOM CTA -->
 <div class="bottom-cta">
   <div>
-    <div class="bottom-cta-tag">// Ready to Source?</div>
-    <div class="bottom-cta-title">Submit your RFQ today</div>
-    <div class="bottom-cta-sub">Part numbers, BOM files, or general inquiries — we respond within 24 hours.</div>
+    <div class="bottom-cta-tag" data-i18n="faq.cta.tag">// Ready to Source?</div>
+    <div class="bottom-cta-title" data-i18n="faq.cta.title">Submit your RFQ today</div>
+    <div class="bottom-cta-sub" data-i18n="faq.cta.sub">Part numbers, BOM files, or general inquiries — we respond within 24 hours.</div>
   </div>
   <a href="contact.html" class="btn-primary">
-    Request a Quote
+    <span data-i18n="faq.cta.btn">Request a Quote</span>
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
 </div>
