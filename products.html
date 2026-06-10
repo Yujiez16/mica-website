@@ -106,6 +106,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .cond-badge{font-family:'DM Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;padding:.2rem .55rem;border-radius:2px;flex-shrink:0}
 .cond-badge.nib{background:rgba(14,165,233,.1);color:var(--blue);border:1px solid rgba(14,165,233,.2)}
 .cond-badge.pulls{background:rgba(20,184,166,.1);color:var(--teal);border:1px solid rgba(20,184,166,.2)}
+.cond-badge.new{background:rgba(14,165,233,.1);color:#7dd3fc;border:1px solid rgba(14,165,233,.25)}
+.cond-badge.c14{background:rgba(20,184,166,.1);color:#5eead4;border:1px solid rgba(20,184,166,.25)}
+.cond-badge.cpo{background:rgba(168,85,247,.1);color:#d8b4fe;border:1px solid rgba(168,85,247,.25)}
+.cond-badge.aplus{background:rgba(34,197,94,.1);color:#86efac;border:1px solid rgba(34,197,94,.25)}
+.cond-badge.a{background:rgba(34,197,94,.07);color:#86efac;border:1px solid rgba(34,197,94,.18)}
+.cond-badge.b{background:rgba(245,158,11,.1);color:#fcd34d;border:1px solid rgba(245,158,11,.25)}
+.cond-badge.c{background:rgba(245,158,11,.07);color:#fcd34d;border:1px solid rgba(245,158,11,.18)}
+.cond-badge.parts{background:rgba(239,68,68,.1);color:#fca5a5;border:1px solid rgba(239,68,68,.25)} 
 .card-name{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;line-height:1.25;letter-spacing:-.01em}
 .card-desc{font-size:.8rem;color:rgba(240,246,255,.45);line-height:1.65;font-weight:300}
 
@@ -246,6 +254,8 @@ var CAT_CONFIG = {
   memory:     { label: 'Memory — ECC RDIMM & Server DRAM',  icon: '💾', sub: 'Registered ECC memory for server platforms' },
   storage:    { label: 'Storage — NVMe & Enterprise SSD',   icon: '🗄️', sub: 'U.2, M.2 and enterprise NVMe drives' },
   networking: { label: 'Networking — NICs & InfiniBand',    icon: '🔗', sub: 'Mellanox ConnectX and NVIDIA networking adapters' },
+  phone:      { label: 'Phones — iPhone, Galaxy & Pixel',   icon: '📱', sub: 'Graded, IMEI-verified smartphones — Apple, Samsung, Google' },
+  tablet:     { label: 'Tablets — iPad & Galaxy Tab',       icon: '🖥️', sub: 'Graded tablets, WiFi and cellular' },
   other:      { label: 'Other Hardware',                     icon: '📦', sub: 'Miscellaneous enterprise components' }
 };
 
@@ -307,10 +317,18 @@ function buildSpecs(specsStr) {
   return html;
 }
 
+var COND_MAP = {
+  'nib':{label:'Factory New — NIB',cls:'nib'}, 'pulls':{label:'Working Pull',cls:'pulls'},
+  'new':{label:'Sealed New',cls:'new'}, '14day':{label:'14-Day',cls:'c14'}, 'cpo':{label:'CPO',cls:'cpo'},
+  'a+':{label:'Grade A+',cls:'aplus'}, 'aplus':{label:'Grade A+',cls:'aplus'}, 'a':{label:'Grade A',cls:'a'},
+  'b':{label:'Grade B',cls:'b'}, 'c':{label:'Grade C',cls:'c'}, 'parts':{label:'For Parts / CRD',cls:'parts'}
+};
+  
 function buildCard(item, delay) {
   var cond = (item.condition||'nib').toLowerCase().trim();
-  var condLabel = cond === 'pulls' ? 'Working Pull' : 'Factory New — NIB';
-  var condClass = cond === 'pulls' ? 'pulls' : 'nib';
+  var cm = COND_MAP[cond] || {label:'Factory New — NIB',cls:'nib'};
+  var condLabel = cm.label;
+  var condClass = cm.cls;
   var avail = item.availability || 'Available';
   var dot = getDotColor(avail);
   var catTag = (item.category||'').toUpperCase();
