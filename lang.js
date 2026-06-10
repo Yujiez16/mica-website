@@ -116,28 +116,26 @@
     'index.cap3.link': { en:'Learn About Us →', fr:'En savoir plus →', zh:'了解我们 →', ar:'تعرف علينا →', de:'Über uns →' },
 
     /* ── INDEX — product lines ── */
-    'index.prods.tag':   { en:'// Inventory Categories', fr:'// Catégories d\'inventaire', zh:'// 库存分类',   ar:'// فئات المخزون',   de:'// Bestandskategorien' },
-    'index.prods.title': { en:'Two Core Product Lines',  fr:'Deux gammes principales',     zh:'两大核心产品线', ar:'خطّا منتجات أساسيان', de:'Zwei Kernproduktlinien' },
-    'index.nib.badge':   { en:'Factory New — NIB',       fr:'Neuf en boîte — NIB',         zh:'全新 — NIB',   ar:'جديد من المصنع',    de:'Fabrikneu — NIB' },
-    'index.nib.title':   { en:'New In Box Hardware',     fr:'Matériel neuf en boîte',      zh:'全新盒装硬件',  ar:'أجهزة جديدة في الصندوق', de:'Neue Hardware im Karton' },
-    'index.nib.desc': {
-      en: 'Latest generation consumer GPUs (RTX 5090), AI accelerators, and high-end desktop processors direct from distribution channels. Sealed, factory-fresh condition.',
-      fr: 'GPU grand public dernière génération (RTX 5090), accélérateurs IA et processeurs haut de gamme directement des circuits de distribution. État neuf d\'usine.',
-      zh: '最新一代消费级GPU（RTX 5090）、AI加速器及高端桌面处理器，直接来自分销渠道。原封未拆，全新出厂状态。',
-      ar: 'أحدث جيل من وحدات GPU (RTX 5090) ومسرّعات الذكاء الاصطناعي ومعالجات سطح المكتب عالية الأداء من قنوات التوزيع المباشر.',
-      de: 'Neueste Generation Consumer-GPUs (RTX 5090), KI-Beschleuniger und High-End-Desktop-Prozessoren direkt aus dem Vertrieb.'
+   'index.ent.badge': { en:'Vertical 01 — Enterprise', fr:'Segment 01 — Entreprise', zh:'板块01 — 企业级', ar:'القطاع 01 — المؤسسات', de:'Segment 01 — Enterprise' },
+    'index.ent.title': { en:'Enterprise Hardware', fr:'Matériel d\'entreprise', zh:'企业级硬件', ar:'أجهزة المؤسسات', de:'Enterprise-Hardware' },
+    'index.ent.desc': {
+      en: 'AI accelerators, server CPUs (Xeon / EPYC), ECC server memory, enterprise SSDs, and networking — factory-new and tested working pulls, with full BIS / EAR export compliance.',
+      fr: 'Accélérateurs IA, CPU serveurs (Xeon / EPYC), mémoire serveur ECC, SSD d\'entreprise et réseau — neufs et tirages testés, en pleine conformité d\'exportation BIS / EAR.',
+      zh: 'AI加速器、服务器CPU（Xeon / EPYC）、ECC服务器内存、企业级SSD与网络设备——全新及已测试的工作状态拆机件，全程BIS / EAR出口合规。',
+      ar: 'مسرّعات الذكاء الاصطناعي، معالجات الخوادم (Xeon / EPYC)، ذاكرة خوادم ECC، أقراص SSD للمؤسسات والشبكات — جديدة ومسحوبات مختبرة، مع امتثال تصدير كامل BIS / EAR.',
+      de: 'KI-Beschleuniger, Server-CPUs (Xeon / EPYC), ECC-Serverspeicher, Enterprise-SSDs und Netzwerk — fabrikneu und geprüfte Pulls, mit voller BIS / EAR-Exportkonformität.'
     },
-    'index.nib.link':    { en:'Explore New Hardware',  fr:'Explorer le neuf',        zh:'探索全新硬件',  ar:'استعرض الأجهزة الجديدة', de:'Neue Hardware erkunden' },
-    'index.pull.badge':  { en:'Working Pulls',         fr:'Tirages testés',           zh:'工作状态翻新',  ar:'مسحوب صالح للعمل',       de:'Geprüfte Pulls' },
-    'index.pull.title':  { en:'Refurbished & Tested',  fr:'Reconditionné & testé',    zh:'翻新已测试',   ar:'مُجدَّد ومُختبَر',         de:'Refurbished & Getestet' },
-    'index.pull.desc': {
-      en: 'Maximize your IT budget with strictly graded and tested working pulls from decommissioned enterprise environments. Every unit verified before shipment.',
-      fr: 'Optimisez votre budget IT avec des tirages strictement classés et testés issus d\'environnements entreprise mis hors service. Chaque unité vérifiée avant expédition.',
-      zh: '通过严格分级、经过测试的工作状态翻新件，最大化您的IT预算，来源于退役企业级环境。每台出货前均经过验证。',
-      ar: 'استثمر ميزانية تقنية المعلومات بأقصى كفاءة مع قطع مسحوبة مُصنَّفة ومُختبَرة من بيئات المؤسسات المسحوبة من الخدمة.',
-      de: 'Maximieren Sie Ihr IT-Budget mit streng klassierten und getesteten Pulls aus außer Betrieb genommenen Enterprise-Umgebungen.'
+    'index.ent.link': { en:'Explore Enterprise', fr:'Voir l\'entreprise', zh:'查看企业级', ar:'استكشف المؤسسات', de:'Enterprise ansehen' },
+    'index.mob.badge': { en:'Vertical 02 — Mobile', fr:'Segment 02 — Mobile', zh:'板块02 — 移动设备', ar:'القطاع 02 — المحمول', de:'Segment 02 — Mobil' },
+    'index.mob.title': { en:'Mobile Devices', fr:'Appareils mobiles', zh:'移动设备', ar:'الأجهزة المحمولة', de:'Mobilgeräte' },
+    'index.mob.desc': {
+      en: 'Graded, IMEI-verified phones and tablets — iPhone, Samsung Galaxy, Google Pixel, and iPad. Sealed New through Grade C, with IATA-compliant lithium battery packaging.',
+      fr: 'Téléphones et tablettes classés et vérifiés IMEI — iPhone, Samsung Galaxy, Google Pixel et iPad. Du neuf scellé au Grade C, avec emballage de batteries au lithium conforme IATA.',
+      zh: '分级、IMEI核验的手机与平板——iPhone、三星Galaxy、谷歌Pixel及iPad。从原封新机到C级，符合IATA锂电池运输包装。',
+      ar: 'هواتف وأجهزة لوحية مصنّفة ومُتحقّق من IMEI — iPhone وSamsung Galaxy وGoogle Pixel وiPad. من المُغلق الجديد حتى الفئة C، بتغليف بطاريات ليثيوم متوافق مع IATA.',
+      de: 'Geprüfte, IMEI-verifizierte Smartphones und Tablets — iPhone, Samsung Galaxy, Google Pixel und iPad. Von versiegelt-neu bis Grade C, mit IATA-konformer Lithium-Akku-Verpackung.'
     },
-    'index.pull.link':   { en:'Explore Pre-Owned',   fr:'Explorer l\'occasion',       zh:'探索二手硬件',  ar:'استعرض المستعمل',   de:'Gebrauchtware erkunden' },
+    'index.mob.link': { en:'Explore Mobile', fr:'Voir le mobile', zh:'查看移动设备', ar:'استكشف المحمول', de:'Mobil ansehen' },
 
     /* ── INDEX — CTA ── */
     'index.cta.tag':   { en:'// Ready to Source?',       fr:'// Prêt à sourcer ?',                zh:'// 准备好采购了吗？',  ar:'// مستعد للشراء؟',     de:'// Bereit zur Beschaffung?' },
