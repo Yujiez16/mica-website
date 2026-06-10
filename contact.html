@@ -619,6 +619,29 @@ function removeBomFile() {
 })();
 </script>
 
+<!-- ── INTENT ROUTING (buy / supply) ── -->
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var intent = (params.get('intent') || '').toLowerCase();
+  if (!intent) return;
+
+  var typeSel = document.querySelector('select[name="inquiry_type"]');
+  var subject = document.querySelector('input[name="_subject"]');
+  var pnField = document.getElementById('partNumbers');
+  var notes   = document.querySelector('textarea[name="notes"]');
+
+  if (intent === 'supply') {
+    if (typeSel) typeSel.value = 'Asset Liquidation / Sell';
+    if (subject) subject.value = 'SUPPLIER OFFER — MICA Supply LTD.';
+    if (pnField) pnField.placeholder = "Stock you're offering — e.g. iPhone 13 128GB Grade A x200 / Galaxy S22 Mixed x150 / DDR4 ECC 32GB x500 ...";
+    if (notes)   notes.placeholder = 'Location of stock, carrier-lock status, grading basis, asking price, available volume per month, etc.';
+  } else if (intent === 'buy') {
+    if (subject) subject.value = 'BUYER RFQ — MICA Supply LTD.';
+  }
+})();
+</script>
+
 <script src="lang.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
