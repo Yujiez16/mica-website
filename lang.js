@@ -38,23 +38,23 @@
       ar: 'مسجل في BC · متوافق مع BIS · وسيط أجهزة عالمي',
       de: 'BC-Registriert · BIS-Konform · Globaler Hardware-Broker'
     },
-    'index.h1a':     { en:'Enterprise Hardware',  fr:'Matériel d\'entreprise', zh:'企业级硬件',        ar:'أجهزة المؤسسات',  de:'Enterprise-Hardware' },
+    'index.h1a':     { en:'Enterprise & Mobile',  fr:'Entreprise & Mobile', zh:'企业级与移动设备',        ar:'مؤسسات وأجهزة محمولة',  de:'Enterprise & Mobil' },
     'index.h1b':     { en:'Sourced.',              fr:'Sourcé.',                zh:'精准采购，',        ar:'مُصدَّرة.',        de:'Beschafft.' },
     'index.h1c-mid': { en:'Verified.',             fr:'Vérifié.',               zh:'严格核验，',        ar:'مُوثَّقة.',        de:'Verifiziert.' },
     'index.h1c':     { en:'Delivered.',            fr:'Livré.',                 zh:'高效交付。',        ar:'مُسلَّمة.',        de:'Geliefert.' },
     'index.sub': {
-      en: 'Your strategic broker for AI accelerators, server components, and enterprise silicon. Connecting North America, the UAE, and Europe with Asia\'s supply chain — with full BIS export compliance.',
-      fr: 'Votre courtier stratégique en accélérateurs IA, composants serveurs et puces entreprise. Reliant l\'Amérique du Nord, les Émirats et l\'Europe à la chaîne d\'approvisionnement asiatique — en pleine conformité BIS.',
-      zh: '您的AI加速器、服务器组件及企业级芯片战略经纪商。连接北美、阿联酋、欧洲与亚洲供应链——全程BIS出口合规。',
-      ar: 'وسيطك الاستراتيجي لمسرّعات الذكاء الاصطناعي ومكونات الخوادم والرقائق المؤسسية. نربط أمريكا الشمالية والإمارات وأوروبا بسلسلة توريد آسيا مع الامتثال الكامل لتصدير BIS.',
-      de: 'Ihr strategischer Broker für KI-Beschleuniger, Serverkomponenten und Enterprise-Chips. Verbindung zwischen Nordamerika, den Emiraten, Europa und der asiatischen Lieferkette – mit voller BIS-Exportkonformität.'
+      en: 'Your cross-border hardware broker across two verticals — enterprise infrastructure (AI accelerators, server CPUs, memory) and mobile devices (graded, IMEI-verified phones and tablets from Apple, Samsung, and Google). Sourced in North America, delivered to Hong Kong, the UAE, and Southeast Asia.',
+      fr: 'Votre courtier matériel transfrontalier sur deux segments — infrastructure d\'entreprise (accélérateurs IA, CPU serveurs, mémoire) et appareils mobiles (téléphones et tablettes classés et vérifiés IMEI : Apple, Samsung, Google). Sourcés en Amérique du Nord, livrés à Hong Kong, aux Émirats et en Asie du Sud-Est.',
+      zh: '横跨两大品类的跨境硬件贸易商——企业级基础设施（AI加速器、服务器CPU、内存）与移动设备（分级、IMEI核验的Apple、三星、谷歌手机与平板）。北美寻源，交付香港、阿联酋及东南亚。',
+      ar: 'وسيطك للأجهزة عبر الحدود في قطاعين — البنية التحتية للمؤسسات (مسرّعات الذكاء الاصطناعي، معالجات الخوادم، الذاكرة) والأجهزة المحمولة (هواتف وأجهزة لوحية مصنّفة ومُتحقّق من IMEI من Apple وSamsung وGoogle). تُورَّد من أمريكا الشمالية وتُسلَّم إلى هونغ كونغ والإمارات وجنوب شرق آسيا.',
+      de: 'Ihr grenzüberschreitender Hardware-Broker über zwei Segmente — Enterprise-Infrastruktur (KI-Beschleuniger, Server-CPUs, Speicher) und Mobilgeräte (geprüfte, IMEI-verifizierte Smartphones und Tablets von Apple, Samsung und Google). Beschafft in Nordamerika, geliefert nach Hongkong, in die Emirate und nach Südostasien.'
     },
     'index.btn.rfq': { en:'Submit an RFQ',    fr:'Soumettre une demande', zh:'提交询价',   ar:'إرسال طلب عرض',  de:'Anfrage senden' },
     'index.btn.inv': { en:'Browse Inventory', fr:'Voir l\'inventaire',     zh:'浏览库存',   ar:'تصفح المخزون',   de:'Inventar ansehen' },
-    'index.trust1':  { en:'Factory New (NIB)',        fr:'Neuf en boîte (NIB)',          zh:'全新库存 (NIB)',      ar:'جديد في الصندوق (NIB)',  de:'Fabrikneu (NIB)' },
-    'index.trust2':  { en:'Working Pulls — Tested',   fr:'Tirages testés',               zh:'工作状态翻新 — 已测试', ar:'مسحوب صالح — مختبر',    de:'Geprüfte Pulls — Getestet' },
+    'index.trust1':  { en:'Enterprise Hardware',     fr:'Matériel d\'entreprise',   zh:'企业级硬件',        ar:'أجهزة المؤسسات',        de:'Enterprise-Hardware' },
+    'index.trust2':  { en:'Mobile — IMEI Verified',  fr:'Mobile — IMEI vérifié',    zh:'移动设备 — IMEI核验', ar:'محمول — تحقق IMEI',     de:'Mobil — IMEI-geprüft' },
     'index.trust3':  { en:'Cross-Border Logistics',   fr:'Logistique transfrontalière',  zh:'跨境物流',           ar:'لوجستيات عبر الحدود',   de:'Grenzüberschreitende Logistik' },
-    'index.trust4':  { en:'EAR / BIS Compliant',      fr:'Conforme EAR / BIS',           zh:'EAR / BIS 合规',    ar:'متوافق مع EAR / BIS',   de:'EAR / BIS-Konform' },
+    'index.trust4':  { en:'BIS / EAR · IATA Compliant', fr:'Conforme BIS / EAR · IATA', zh:'BIS / EAR · IATA 合规', ar:'متوافق BIS / EAR · IATA', de:'BIS / EAR · IATA-konform' },
 
     /* ── INDEX — spec card ── */
     'index.spec.title':  { en:'// Live Inventory Signal', fr:'// Signal d\'inventaire', zh:'// 实时库存信号',   ar:'// إشارة المخزون الحي',   de:'// Live-Bestandssignal' },
