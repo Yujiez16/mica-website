@@ -161,6 +161,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--blue);color:#fff;padding:.8rem 1.8rem;border-radius:4px;font-size:.88rem;font-weight:600;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
 .btn-primary:hover{background:#38bdf8;transform:translateY(-1px)}
 
+.dual{padding:3.5rem 3rem;border-top:1px solid var(--bs);border-bottom:1px solid var(--bs)}
+.dual-tag{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--blue);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem}
+.dual-title{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;letter-spacing:-.025em;margin-bottom:2rem}
+.dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.dual-card{border:1px solid var(--border);border-radius:8px;padding:2.2rem;background:var(--surface);transition:border-color .2s,transform .2s}
+.dual-card:hover{transform:translateY(-3px)}
+.dual-card.buy{border-color:rgba(14,165,233,.3)}.dual-card.buy:hover{border-color:rgba(14,165,233,.55)}
+.dual-card.sell{border-color:rgba(20,184,166,.3)}.dual-card.sell:hover{border-color:rgba(20,184,166,.55)}
+.dc-eyebrow{font-family:'DM Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.7rem}
+.dual-card.buy .dc-eyebrow{color:var(--blue)}.dual-card.sell .dc-eyebrow{color:var(--teal)}
+.dc-title{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:.7rem}
+.dc-desc{font-size:.84rem;color:var(--muted2);line-height:1.7;margin-bottom:1.3rem}
+.dc-list{list-style:none;margin-bottom:1.6rem}
+.dc-list li{font-size:.78rem;color:var(--muted2);line-height:1.5;padding-left:1.1rem;position:relative;margin-bottom:.5rem}
+.dc-list li::before{content:'';position:absolute;left:0;top:.5rem;width:5px;height:5px;border-radius:50%}
+.dual-card.buy .dc-list li::before{background:var(--blue)}.dual-card.sell .dc-list li::before{background:var(--teal)}
+.dc-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.6rem;border-radius:4px;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .2s}
+.dual-card.buy .dc-btn{background:var(--blue);color:#fff}.dual-card.buy .dc-btn:hover{background:#38bdf8}
+.dual-card.sell .dc-btn{background:transparent;color:var(--teal);border:1px solid rgba(20,184,166,.4)}.dual-card.sell .dc-btn:hover{background:rgba(20,184,166,.08)}
+@media(max-width:768px){.dual{padding:2.5rem 1.5rem}.dual-grid{grid-template-columns:1fr}}
+  
 /* FOOTER */
 footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
 .foot-brand{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--muted)}
@@ -248,6 +269,35 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
   </a>
 </div>
 
+<div class="dual">
+  <div class="dual-tag">// Two-Way Trade Desk</div>
+  <div class="dual-title" data-i18n="products.dual.title">Buy From Us — or Supply Us</div>
+  <div class="dual-grid">
+    <div class="dual-card buy">
+      <div class="dc-eyebrow" data-i18n="products.dual.buy.eyebrow">// You Buy</div>
+      <div class="dc-title" data-i18n="products.dual.buy.title">Source Stock From MICA</div>
+      <div class="dc-desc" data-i18n="products.dual.buy.desc">Buyers in Hong Kong, the UAE, and Southeast Asia — send us your target model, grade, and volume.</div>
+      <ul class="dc-list">
+        <li data-i18n="products.dual.buy.li1">Graded stock with IMEI verification & grading report</li>
+        <li data-i18n="products.dual.buy.li2">FCA Hong Kong · USD settlement (Airwallex / PingPong)</li>
+        <li data-i18n="products.dual.buy.li3">IATA-compliant lithium battery packaging</li>
+      </ul>
+      <a href="contact.html?intent=buy" class="dc-btn"><span data-i18n="products.dual.buy.btn">Request a Quote</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="dual-card sell">
+      <div class="dc-eyebrow" data-i18n="products.dual.sell.eyebrow">// You Supply</div>
+      <div class="dc-title" data-i18n="products.dual.sell.title">Sell Bulk Stock to MICA</div>
+      <div class="dc-desc" data-i18n="products.dual.sell.desc">Have volume to move? We buy carrier-clean lots from B-Stock sellers, trade-in channels, and repair shops.</div>
+      <ul class="dc-list">
+        <li data-i18n="products.dual.sell.li1">B-Stock lots, carrier trade-in volume, repair stock</li>
+        <li data-i18n="products.dual.sell.li2">North American pickup · we handle export logistics</li>
+        <li data-i18n="products.dual.sell.li3">Fast USD payout · clear grading expectations upfront</li>
+      </ul>
+      <a href="contact.html?intent=supply" class="dc-btn"><span data-i18n="products.dual.sell.btn">Offer Us Stock</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</div>
+  
 <footer>
   <div class="foot-brand">MICA <span>Supply</span> LTD.</div>
   <div class="foot-copy" data-i18n="footer.copy">© 2026 MICA Supply LTD. · Vancouver, BC, Canada</div>
