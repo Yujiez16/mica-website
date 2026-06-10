@@ -171,11 +171,11 @@
     'products.h1':        { en:'Hardware',               fr:'Matériel',                     zh:'硬件',        ar:'الأجهزة',            de:'Hardware' },
     'products.h1.span':   { en:'Inventory',              fr:'Inventaire',                   zh:'库存',        ar:'المخزون',            de:'Inventar' },
     'products.sub': {
-      en: 'Factory New (NIB) and Working Pull enterprise hardware. All items subject to BIS/EAR compliance review. Submit RFQ for current pricing and lead time.',
-      fr: 'Matériel entreprise neuf (NIB) et tirages testés. Tous les articles sont soumis à la revue de conformité BIS/EAR. Soumettez une demande pour les prix et délais actuels.',
-      zh: '全新库存（NIB）及工作状态翻新企业级硬件。所有商品须经BIS/EAR合规审核。提交询价获取最新报价及交货周期。',
-      ar: 'أجهزة المؤسسات جديدة في الصندوق ومسحوبة صالحة للعمل. جميع العناصر خاضعة لمراجعة الامتثال.',
-      de: 'Fabrikneue (NIB) und geprüfte Enterprise-Hardware. Alle Artikel unterliegen der BIS/EAR-Compliance-Prüfung.'
+      en: 'Enterprise hardware (factory-new & tested working pulls) and graded, IMEI-verified mobile devices — iPhone, Samsung, Pixel, iPad. All items subject to compliance review. Submit RFQ for current pricing and lead time.',
+      fr: 'Matériel d\'entreprise (neuf & tirages testés) et appareils mobiles classés, vérifiés IMEI — iPhone, Samsung, Pixel, iPad. Tous les articles soumis à un contrôle de conformité. Demandez un devis pour le prix et le délai.',
+      zh: '企业级硬件（全新及已测试拆机件）与分级、IMEI核验的移动设备——iPhone、三星、Pixel、iPad。所有商品均经合规审查。提交询价获取实时价格与交期。',
+      ar: 'أجهزة المؤسسات (جديدة ومسحوبات مختبرة) وأجهزة محمولة مصنّفة ومُتحقّق من IMEI — iPhone وSamsung وPixel وiPad. تخضع جميع العناصر لمراجعة الامتثال. أرسل طلب عرض سعر للسعر ومدة التسليم.',
+      de: 'Enterprise-Hardware (fabrikneu & geprüfte Pulls) und geprüfte, IMEI-verifizierte Mobilgeräte — iPhone, Samsung, Pixel, iPad. Alle Artikel unterliegen einer Compliance-Prüfung. Fordern Sie ein Angebot für Preis und Lieferzeit an.'
     },
     'products.filter':      { en:'// Filter by category',     fr:'// Filtrer par catégorie',       zh:'// 按类别筛选',    ar:'// التصفية حسب الفئة',  de:'// Nach Kategorie filtern' },
     'products.bom.tag':     { en:'// Full BOM Fulfillment',    fr:'// Réalisation de BOM complète', zh:'// 完整BOM满足',   ar:'// تلبية قائمة المواد',  de:'// BOM-Erfüllung' },
