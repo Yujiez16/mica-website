@@ -62,6 +62,7 @@
     'index.spec.cpu':    { en:'Server CPUs',              fr:'CPU serveurs',             zh:'服务器CPU',        ar:'معالجات الخوادم',          de:'Server-CPUs' },
     'index.spec.net':    { en:'Network Cards',            fr:'Cartes réseau',            zh:'网卡',            ar:'بطاقات الشبكة',            de:'Netzwerkkarten' },
     'index.spec.dram':   { en:'DRAM / Flash',             fr:'DRAM / Flash',             zh:'内存 / 闪存',      ar:'ذاكرة / فلاش',             de:'DRAM / Flash' },
+    'index.spec.mobile': { en:'Phones / Tablets', fr:'Téléphones / Tablettes', zh:'手机 / 平板', ar:'هواتف / أجهزة لوحية', de:'Telefone / Tablets' },
     'index.spec.lead':   { en:'Lead Time',                fr:'Délai de livraison',       zh:'交货周期',         ar:'وقت التسليم',              de:'Lieferzeit' },
     'index.spec.rfq':    { en:'RFQ Response',             fr:'Réponse au devis',         zh:'询价响应',         ar:'رد على الطلب',             de:'Angebotsantwort' },
     'index.spec.avail':  { en:'● Available', fr:'● Disponible', zh:'● 有货', ar:'● متاح', de:'● Verfügbar' },
@@ -152,7 +153,7 @@
 
     /* ── INDEX — P/N search ── */
     'index.pn.tag':         { en:'// Instant RFQ',          fr:'// Demande instantanée',   zh:'// 即时询价',    ar:'// طلب فوري',           de:'// Sofortanfrage' },
-    'index.pn.title':       { en:'Have a Part Number?',     fr:'Vous avez une référence ?', zh:'有料号吗？',     ar:'هل لديك رقم قطعة؟',   de:'Haben Sie eine Teilenummer?' },
+    'index.pn.title': { en:'Have a Part Number or Model?', fr:'Une référence ou un modèle ?', zh:'有料号或型号？', ar:'لديك رقم قطعة أو طراز؟', de:'Teilenummer oder Modell?' },
     'index.pn.sub': {
       en: 'Enter one or more part numbers and we\'ll prepare a quote within 24 hours.',
       fr: 'Saisissez une ou plusieurs références et nous préparerons un devis sous 24 heures.',
@@ -160,7 +161,8 @@
       ar: 'أدخل رقم قطعة أو أكثر وسنعدّ عرضًا خلال 24 ساعة.',
       de: 'Eine oder mehrere Teilenummern eingeben – wir erstellen innerhalb von 24 Stunden ein Angebot.'
     },
-    'index.pn.placeholder': { en:'e.g. H100 SXM5, RTX 5090, EPYC 9654 ...', fr:'ex. H100 SXM5, RTX 5090, EPYC 9654 ...', zh:'例如：H100 SXM5, RTX 5090, EPYC 9654 ...', ar:'مثال: H100 SXM5, RTX 5090', de:'z.B. H100 SXM5, RTX 5090, EPYC 9654 ...' },
+    'index.pn.placeholder': { en:'e.g. H100 SXM5, RTX 5090, iPhone 15 Pro, Galaxy S24 ...', fr:'ex. H100 SXM5, RTX 5090, iPhone 15 Pro, Galaxy S24 ...', zh:'例如 H100 SXM5、RTX 5090、iPhone 15 Pro、Galaxy S24 ...', 
+                              ar:'مثال: H100 SXM5، RTX 5090، iPhone 15 Pro، Galaxy S24 ...', de:'z. B. H100 SXM5, RTX 5090, iPhone 15 Pro, Galaxy S24 ...' },
     'index.pn.btn':         { en:'Get Quote',   fr:'Obtenir un devis', zh:'获取报价',  ar:'احصل على عرض',  de:'Angebot erhalten' },
     'index.pn.popular':     { en:'Popular:',    fr:'Populaires :',     zh:'热门:',     ar:'الأكثر طلبًا:', de:'Beliebt:' },
 
