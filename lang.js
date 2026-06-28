@@ -97,15 +97,15 @@
       de: 'P/N oder BOM einreichen. Wir finden schwer zu beschaffende, EOL- oder stark allozierte Halbleiterkomponenten weltweit.'
     },
     'index.cap1.link': { en:'Send Requirements →', fr:'Envoyer les besoins →', zh:'发送需求 →', ar:'أرسل المتطلبات →', de:'Anforderungen senden →' },
-    'index.cap2.title': { en:'Asset Liquidation',  fr:'Liquidation d\'actifs',  zh:'资产变现',  ar:'تصفية الأصول',  de:'Asset-Liquidation' },
+    'index.cap2.title': { en:'Graded Mobile Wholesale', fr:'Mobile en gros, classé', zh:'分级手机批发', ar:'جملة الهواتف المصنّفة', de:'Geprüfter Mobil-Großhandel' },
     'index.cap2.desc': {
-      en: 'We supply high-volume, cost-effective pre-owned IT assets including server memory, Xeon/EPYC CPUs, and data center GPUs.',
-      fr: 'Nous fournissons des actifs IT reconditionnés en grande quantité : mémoire serveur, CPU Xeon/EPYC et GPU de datacenter.',
-      zh: '我们提供大批量、高性价比的二手IT资产，包括服务器内存、Xeon/EPYC CPU及数据中心GPU。',
-      ar: 'نوفر أصول تقنية مستعملة بكميات كبيرة وبأسعار تنافسية، تشمل ذاكرة الخوادم ووحدات المعالجة Xeon/EPYC ووحدات GPU.',
-      de: 'Wir liefern gebrauchte IT-Assets in großen Mengen — Serverspeicher, Xeon/EPYC-CPUs und Rechenzentrum-GPUs.'
+      en: 'Bulk iPhone, Samsung Galaxy, and Pixel lots — IMEI-verified and grade-sorted (Sealed New to Grade C), inspected on live video, shipped IATA-compliant.',
+      fr: 'Lots en gros d\'iPhone, Samsung Galaxy et Pixel — vérifiés IMEI et triés par grade (du neuf scellé au Grade C), inspectés en vidéo en direct, expédiés conformes IATA.',
+      zh: '批量 iPhone、三星 Galaxy、Pixel——IMEI 核验、按成色分级（原封新机到 C 级），视频实时验机，IATA 合规发运。',
+      ar: 'دفعات بالجملة من iPhone وSamsung Galaxy وPixel — مُتحقّق من IMEI ومصنّفة حسب الحالة (من المُغلق الجديد حتى الفئة C)، تُفحص بالفيديو المباشر وتُشحن وفق معايير IATA.',
+      de: 'Großmengen iPhone, Samsung Galaxy und Pixel — IMEI-verifiziert und nach Grade sortiert (versiegelt-neu bis Grade C), per Live-Video geprüft, IATA-konform versandt.'
     },
-    'index.cap2.link': { en:'View Categories →', fr:'Voir les catégories →', zh:'查看分类 →', ar:'عرض الفئات →', de:'Kategorien ansehen →' },
+    'index.cap2.link': { en:'Browse Mobile →', fr:'Voir le mobile →', zh:'查看手机 →', ar:'تصفّح المحمول →', de:'Mobil ansehen →' },
     'index.cap3.title': { en:'Global Fulfillment', fr:'Livraison mondiale',   zh:'全球履行',  ar:'التوصيل العالمي', de:'Globale Abwicklung' },
     'index.cap3.desc': {
       en: 'Seamless cross-border transactions between North America and Asia, backed by established freight channels and full customs compliance.',
