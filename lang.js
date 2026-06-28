@@ -225,14 +225,14 @@
     
     /* ── PRODUCTS page ── */
     'products.tag':       { en:'// Current Inventory',  fr:'// Inventaire actuel',         zh:'// 当前库存',  ar:'// المخزون الحالي',  de:'// Aktueller Bestand' },
-    'products.h1':        { en:'Hardware',               fr:'Matériel',                     zh:'硬件',        ar:'الأجهزة',            de:'Hardware' },
+    'products.h1':        { en:'Mobile & Hardware',      fr:'Mobile & Matériel',            zh:'移动设备与硬件', ar:'المحمول والأجهزة',   de:'Mobil & Hardware' },
     'products.h1.span':   { en:'Inventory',              fr:'Inventaire',                   zh:'库存',        ar:'المخزون',            de:'Inventar' },
     'products.sub': {
-      en: 'Enterprise hardware (factory-new & tested working pulls) and graded, IMEI-verified mobile devices — iPhone, Samsung, Pixel, iPad. All items subject to compliance review. Submit RFQ for current pricing and lead time.',
-      fr: 'Matériel d\'entreprise (neuf & tirages testés) et appareils mobiles classés, vérifiés IMEI — iPhone, Samsung, Pixel, iPad. Tous les articles soumis à un contrôle de conformité. Demandez un devis pour le prix et le délai.',
-      zh: '企业级硬件（全新及已测试拆机件）与分级、IMEI核验的移动设备——iPhone、三星、Pixel、iPad。所有商品均经合规审查。提交询价获取实时价格与交期。',
-      ar: 'أجهزة المؤسسات (جديدة ومسحوبات مختبرة) وأجهزة محمولة مصنّفة ومُتحقّق من IMEI — iPhone وSamsung وPixel وiPad. تخضع جميع العناصر لمراجعة الامتثال. أرسل طلب عرض سعر للسعر ومدة التسليم.',
-      de: 'Enterprise-Hardware (fabrikneu & geprüfte Pulls) und geprüfte, IMEI-verifizierte Mobilgeräte — iPhone, Samsung, Pixel, iPad. Alle Artikel unterliegen einer Compliance-Prüfung. Fordern Sie ein Angebot für Preis und Lieferzeit an.'
+      en: 'Graded, IMEI-verified mobile devices — iPhone, Samsung, Pixel, iPad — and enterprise hardware (factory-new & tested working pulls). All items subject to compliance review. Submit RFQ for current pricing and lead time.',
+      fr: 'Appareils mobiles classés et vérifiés IMEI — iPhone, Samsung, Pixel, iPad — et matériel d\'entreprise (neuf & tirages testés). Tous les articles soumis à un contrôle de conformité. Demandez un devis pour le prix et le délai.',
+      zh: '分级、IMEI核验的移动设备——iPhone、三星、Pixel、iPad——以及企业级硬件（全新及已测试拆机件）。所有商品均经合规审查。提交询价获取实时价格与交期。',
+      ar: 'أجهزة محمولة مصنّفة ومُتحقّق من IMEI — iPhone وSamsung وPixel وiPad — وأجهزة المؤسسات (جديدة ومسحوبات مختبرة). تخضع جميع العناصر لمراجعة الامتثال. أرسل طلب عرض سعر للسعر ومدة التسليم.',
+      de: 'Geprüfte, IMEI-verifizierte Mobilgeräte — iPhone, Samsung, Pixel, iPad — und Enterprise-Hardware (fabrikneu & geprüfte Pulls). Alle Artikel unterliegen einer Compliance-Prüfung. Fordern Sie ein Angebot für Preis und Lieferzeit an.'
       },
     'products.dual.title': { en:'Buy From Us — or Supply Us', fr:'Achetez chez nous — ou fournissez-nous', zh:'向我们采购 — 或向我们供货', ar:'اشترِ منّا — أو زوّدنا', de:'Bei uns kaufen — oder uns beliefern' },
     'products.dual.buy.eyebrow': { en:'// You Buy', fr:'// Vous achetez', zh:'// 您采购', ar:'// أنت تشتري', de:'// Sie kaufen' },
