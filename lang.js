@@ -166,6 +166,63 @@
     'index.pn.btn':         { en:'Get Quote',   fr:'Obtenir un devis', zh:'获取报价',  ar:'احصل على عرض',  de:'Angebot erhalten' },
     'index.pn.popular':     { en:'Popular:',    fr:'Populaires :',     zh:'热门:',     ar:'الأكثر طلبًا:', de:'Beliebt:' },
 
+/* ── INDEX — video inspection ── */
+    'index.vi.tag': {
+      en: '// Mobile Devices — See Before You Pay',
+      fr: '// Appareils mobiles — Voir avant de payer',
+      zh: '// 移动设备 — 付款前先验货',
+      ar: '// الأجهزة المحمولة — عاين قبل الدفع',
+      de: '// Mobilgeräte — Erst sehen, dann zahlen'
+    },
+    'index.vi.title': {
+      en: 'Inspect Your Phones on Live Video',
+      fr: 'Inspectez vos téléphones en vidéo en direct',
+      zh: '视频实时验机，满意再成交',
+      ar: 'افحص هواتفك عبر فيديو مباشر',
+      de: 'Prüfen Sie Ihre Telefone per Live-Video'
+    },
+    'index.vi.sub': {
+      en: 'For every mobile order, we walk your lot on a live video call — IMEI, screen, body, and function. Once you confirm and payment clears, we ship within 1 business day.',
+      fr: 'Pour chaque commande mobile, nous parcourons votre lot lors d\'un appel vidéo en direct — IMEI, écran, châssis et fonctionnement. Dès votre confirmation et le paiement reçu, nous expédions sous 1 jour ouvré.',
+      zh: '每一笔手机订单，我们都会通过实时视频带你逐台验货——IMEI、屏幕、机身、功能。你确认、付款到账后，1 个工作日内发货。',
+      ar: 'لكل طلب أجهزة محمولة، نستعرض شحنتك عبر مكالمة فيديو مباشرة — IMEI والشاشة والهيكل والأداء. بمجرد تأكيدك ووصول الدفعة، نشحن خلال يوم عمل واحد.',
+      de: 'Bei jeder Mobilbestellung zeigen wir Ihr Los in einem Live-Videoanruf — IMEI, Display, Gehäuse und Funktion. Nach Ihrer Bestätigung und Zahlungseingang versenden wir innerhalb von 1 Werktag.'
+    },
+    'index.vi.s1.title': { en:'Submit Your Request', fr:'Envoyez votre demande', zh:'提交需求', ar:'أرسل طلبك', de:'Anfrage senden' },
+    'index.vi.s1.desc': {
+      en: 'Send your target model, grade, and quantity. We confirm availability and pricing.',
+      fr: 'Indiquez le modèle, le grade et la quantité. Nous confirmons disponibilité et prix.',
+      zh: '发来目标型号、成色与数量，我们确认现货与报价。',
+      ar: 'أرسل الطراز والفئة والكمية. نؤكد التوفر والسعر.',
+      de: 'Modell, Grade und Menge angeben. Wir bestätigen Verfügbarkeit und Preis.'
+    },
+    'index.vi.s2.title': { en:'Live Video Inspection', fr:'Inspection vidéo en direct', zh:'视频实时看货', ar:'فحص بالفيديو المباشر', de:'Live-Video-Prüfung' },
+    'index.vi.s2.desc': {
+      en: 'We walk the actual lot on camera — IMEI, screen, body, power-on, and function.',
+      fr: 'Nous filmons le lot réel — IMEI, écran, châssis, démarrage et fonctionnement.',
+      zh: '镜头前逐台过货——IMEI、屏幕、机身、开机与功能。',
+      ar: 'نعرض الشحنة الفعلية أمام الكاميرا — IMEI والشاشة والهيكل والتشغيل والأداء.',
+      de: 'Wir zeigen das tatsächliche Los per Kamera — IMEI, Display, Gehäuse, Einschalten und Funktion.'
+    },
+    'index.vi.s3.title': { en:'You Confirm', fr:'Vous confirmez', zh:'你确认', ar:'أنت تؤكد', de:'Sie bestätigen' },
+    'index.vi.s3.desc': {
+      en: 'Happy with what you see? Confirm the order and settle via Airwallex or PingPong.',
+      fr: 'Satisfait ? Confirmez la commande et réglez via Airwallex ou PingPong.',
+      zh: '看着满意就确认下单，通过 Airwallex 或 PingPong 付款。',
+      ar: 'راضٍ عمّا تراه؟ أكِّد الطلب وادفع عبر Airwallex أو PingPong.',
+      de: 'Zufrieden? Bestellung bestätigen und per Airwallex oder PingPong bezahlen.'
+    },
+    'index.vi.s4.title': { en:'Ships in 1 Day', fr:'Expédié sous 1 jour', zh:'1 天内发货', ar:'الشحن خلال يوم', de:'Versand in 1 Tag' },
+    'index.vi.s4.desc': {
+      en: 'Once payment clears, your order ships within 1 business day with tracking.',
+      fr: 'Dès le paiement reçu, votre commande part sous 1 jour ouvré, avec suivi.',
+      zh: '付款到账后，订单 1 个工作日内发出，并提供物流追踪。',
+      ar: 'بمجرد وصول الدفعة، يُشحن طلبك خلال يوم عمل واحد مع التتبع.',
+      de: 'Nach Zahlungseingang wird Ihre Bestellung innerhalb von 1 Werktag mit Tracking versandt.'
+    },
+    'index.vi.btn': { en:'Request Phone Stock', fr:'Demander du stock mobile', zh:'索取手机库存', ar:'اطلب مخزون الهواتف', de:'Telefon-Bestand anfragen' },
+    'index.vi.wa': { en:'Chat on WhatsApp', fr:'Discuter sur WhatsApp', zh:'WhatsApp 联系', ar:'تواصل عبر واتساب', de:'WhatsApp-Chat' },
+    
     /* ── PRODUCTS page ── */
     'products.tag':       { en:'// Current Inventory',  fr:'// Inventaire actuel',         zh:'// 当前库存',  ar:'// المخزون الحالي',  de:'// Aktueller Bestand' },
     'products.h1':        { en:'Hardware',               fr:'Matériel',                     zh:'硬件',        ar:'الأجهزة',            de:'Hardware' },
