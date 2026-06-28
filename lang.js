@@ -49,7 +49,7 @@
       ar: 'وسيطك للأجهزة عبر الحدود في قطاعين — الأجهزة المحمولة (هواتف وأجهزة لوحية مصنّفة ومُتحقّق من IMEI من Apple وSamsung وGoogle) والبنية التحتية للمؤسسات (مسرّعات الذكاء الاصطناعي، معالجات الخوادم، الذاكرة). تُورَّد من أمريكا الشمالية وتُسلَّم إلى هونغ كونغ والإمارات وجنوب شرق آسيا.',
       de: 'Ihr grenzüberschreitender Hardware-Broker über zwei Segmente — Mobilgeräte (geprüfte, IMEI-verifizierte Smartphones und Tablets von Apple, Samsung und Google) und Enterprise-Infrastruktur (KI-Beschleuniger, Server-CPUs, Speicher). Beschafft in Nordamerika, geliefert nach Hongkong, in die Emirate und nach Südostasien.'
     },
-    'index.btn.rfq': { en:'Submit an RFQ',    fr:'Soumettre une demande', zh:'提交询价',   ar:'إرسال طلب عرض',  de:'Anfrage senden' },
+    'index.btn.rfq': { en:'Get a Quote',      fr:'Obtenir un devis',      zh:'获取报价',   ar:'احصل على عرض سعر',  de:'Angebot erhalten' },
     'index.btn.inv': { en:'Browse Inventory', fr:'Voir l\'inventaire',     zh:'浏览库存',   ar:'تصفح المخزون',   de:'Inventar ansehen' },
     'index.trust1':  { en:'Mobile — IMEI Verified',  fr:'Mobile — IMEI vérifié',    zh:'移动设备 — IMEI核验', ar:'محمول — تحقق IMEI',     de:'Mobil — IMEI-geprüft' },
     'index.trust2':  { en:'Enterprise Hardware',     fr:'Matériel d\'entreprise',   zh:'企业级硬件',        ar:'أجهزة المؤسسات',        de:'Enterprise-Hardware' },
