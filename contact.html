@@ -296,8 +296,13 @@
   <div class="form-side">
     <div class="section-tag" data-i18n="contact.form.tag">// RFQ Submission</div>
     <h2 class="form-title" data-i18n="contact.form.title">Request for Quotation</h2>
-    <p class="form-subtitle" data-i18n="contact.form.sub">All fields marked <span style="color:var(--blue)">*</span> are required. The End-User Statement must be acknowledged before submission.</p>
+    <p class="form-subtitle" data-i18n="contact.form.sub">All fields marked <span style="color:var(--blue)">*</span> are required. For U.S.-origin hardware orders, the End-User Statement must be acknowledged before submitting.</p>
 
+    <a href="https://wa.me/17788758392?text=Hi%20MICA%20Supply%2C%20I%27d%20like%20a%20quote%20for%20" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.7rem;background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.35);border-radius:8px;padding:.85rem 1.1rem;margin-bottom:1.4rem;text-decoration:none;color:#25D366;font-size:.9rem;font-weight:600">
+      <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.3.6 4.4 1.8 6.3L4 29l7.9-1.8A12 12 0 0 0 16 27c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.9c-1.1 0-2.2-.2-3.2-.6l-.4-.2-4.2 1.1 1.1-4.1-.2-.4a9.7 9.7 0 0 1-.8-3.6c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.7 9.8z"/></svg>
+      <span>Prefer to chat? Message us on WhatsApp — fastest for phone orders →</span>
+    </a>
+    
     <form class="rfq-form" id="rfqForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
       <div class="form-row">
@@ -347,6 +352,7 @@
           <label><span data-i18n="contact.field.type">Inquiry Type</span> <span class="req">*</span></label>
           <select name="inquiry_type" required>
             <option value="" disabled selected>Select type…</option>
+           <option>Mobile Devices — Phones / Tablets</option>
             <option>Sourcing — Factory New (NIB)</option>
             <option>Sourcing — Working Pulls</option>
             <option>Full BOM Fulfillment</option>
@@ -358,7 +364,7 @@
 
       <div class="field">
         <label><span data-i18n="contact.field.pn">Part Number(s) / BOM Description</span> <span class="req">*</span></label>
-        <textarea id="partNumbers" name="part_numbers" placeholder="e.g. RTX 5090 × 10 units&#10;Intel Xeon Gold 6338 × 4 units&#10;Samsung 32GB DDR5 ECC RDIMM × 48 units" required></textarea>
+        <textarea id="partNumbers" name="part_numbers" placeholder="e.g. iPhone 13 128GB × 500 units&#10;Galaxy S22 Grade A × 200 units&#10;RTX 5090 × 10 units" required></textarea>
       </div>
 
       <div class="form-row">
@@ -521,29 +527,56 @@
 
 <!-- ── EUS CHECKBOX LOGIC ── -->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const checkbox  = document.getElementById('eusCheckbox');
-  const eusBlock  = document.getElementById('eusBlock');
-  const eusStatus = document.getElementById('eusStatus');
-  const submitBtn = document.getElementById('submitBtn');
+  var checkbox  = document.getElementById('eusCheckbox');
+  var eusBlock  = document.getElementById('eusBlock');
+  var eusStatus = document.getElementById('eusStatus');
+  var submitBtn = document.getElementById('submitBtn');
+  var typeSel   = document.querySelector('select[name="inquiry_type"]');
 
-  checkbox.addEventListener('change', function() {
-    if (this.checked) {
-      eusBlock.classList.add('accepted');
-      eusStatus.textContent = '● EUS Acknowledged — Submission Unlocked';
+  // Only these (U.S.-origin hardware) inquiry types require the EUS
+  var EUS_REQUIRED = [
+    'Sourcing — Factory New (NIB)',
+    'Sourcing — Working Pulls',
+    'Full BOM Fulfillment'
+  ];
+  var SUBMIT_HTML = 'Submit RFQ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+  var LOCK_HTML   = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19l-7-7 7-7M19 12H5"/></svg> Acknowledge EUS to Submit';
+
+  function eusNeeded() {
+    return typeSel && EUS_REQUIRED.indexOf(typeSel.value) !== -1;
+  }
+
+  function refreshEus() {
+    if (eusNeeded()) {
+      eusBlock.style.display = '';
+      if (checkbox.checked) {
+        eusBlock.classList.add('accepted');
+        eusStatus.textContent = '● EUS Acknowledged — Submission Unlocked';
+        submitBtn.classList.add('unlocked');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = SUBMIT_HTML;
+      } else {
+        eusBlock.classList.remove('accepted');
+        eusStatus.textContent = '● EUS Not Acknowledged — Submit Locked';
+        submitBtn.classList.remove('unlocked');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = LOCK_HTML;
+      }
+    } else {
+      eusBlock.style.display = 'none';
+      checkbox.checked = false;
       submitBtn.classList.add('unlocked');
       submitBtn.disabled = false;
-      submitBtn.innerHTML = `Submit RFQ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
-    } else {
-      eusBlock.classList.remove('accepted');
-      eusStatus.textContent = '● EUS Not Acknowledged — Submit Locked';
-      submitBtn.classList.remove('unlocked');
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19l-7-7 7-7M19 12H5"/></svg> Acknowledge EUS to Submit`;
+      submitBtn.innerHTML = SUBMIT_HTML;
     }
-  });
+  }
+
+  if (typeSel) typeSel.addEventListener('change', refreshEus);
+  checkbox.addEventListener('change', refreshEus);
+  refreshEus();
 
   // Success redirect detection
-  if (window.location.search.includes('submitted=true')) {
+  if (window.location.search.indexOf('submitted=true') !== -1) {
     document.getElementById('rfqForm').style.display = 'none';
     document.getElementById('successMsg').classList.add('show');
   }
