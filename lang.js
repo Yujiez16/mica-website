@@ -38,21 +38,21 @@
       ar: 'مسجل في BC · متوافق مع BIS · وسيط أجهزة عالمي',
       de: 'BC-Registriert · BIS-Konform · Globaler Hardware-Broker'
     },
-    'index.h1a':     { en:'Enterprise & Mobile',  fr:'Entreprise & Mobile', zh:'企业级与移动设备',        ar:'مؤسسات وأجهزة محمولة',  de:'Enterprise & Mobil' },
+    'index.h1a':     { en:'Mobile & Enterprise',  fr:'Mobile & Entreprise', zh:'移动设备与企业级',        ar:'أجهزة محمولة ومؤسسات',  de:'Mobil & Enterprise' },
     'index.h1b':     { en:'Sourced.',              fr:'Sourcé.',                zh:'精准采购，',        ar:'مُصدَّرة.',        de:'Beschafft.' },
     'index.h1c-mid': { en:'Verified.',             fr:'Vérifié.',               zh:'严格核验，',        ar:'مُوثَّقة.',        de:'Verifiziert.' },
     'index.h1c':     { en:'Delivered.',            fr:'Livré.',                 zh:'高效交付。',        ar:'مُسلَّمة.',        de:'Geliefert.' },
     'index.sub': {
-      en: 'Your cross-border hardware broker across two verticals — enterprise infrastructure (AI accelerators, server CPUs, memory) and mobile devices (graded, IMEI-verified phones and tablets from Apple, Samsung, and Google). Sourced in North America, delivered to Hong Kong, the UAE, and Southeast Asia.',
-      fr: 'Votre courtier matériel transfrontalier sur deux segments — infrastructure d\'entreprise (accélérateurs IA, CPU serveurs, mémoire) et appareils mobiles (téléphones et tablettes classés et vérifiés IMEI : Apple, Samsung, Google). Sourcés en Amérique du Nord, livrés à Hong Kong, aux Émirats et en Asie du Sud-Est.',
-      zh: '横跨两大品类的跨境硬件贸易商——企业级基础设施（AI加速器、服务器CPU、内存）与移动设备（分级、IMEI核验的Apple、三星、谷歌手机与平板）。北美寻源，交付香港、阿联酋及东南亚。',
-      ar: 'وسيطك للأجهزة عبر الحدود في قطاعين — البنية التحتية للمؤسسات (مسرّعات الذكاء الاصطناعي، معالجات الخوادم، الذاكرة) والأجهزة المحمولة (هواتف وأجهزة لوحية مصنّفة ومُتحقّق من IMEI من Apple وSamsung وGoogle). تُورَّد من أمريكا الشمالية وتُسلَّم إلى هونغ كونغ والإمارات وجنوب شرق آسيا.',
-      de: 'Ihr grenzüberschreitender Hardware-Broker über zwei Segmente — Enterprise-Infrastruktur (KI-Beschleuniger, Server-CPUs, Speicher) und Mobilgeräte (geprüfte, IMEI-verifizierte Smartphones und Tablets von Apple, Samsung und Google). Beschafft in Nordamerika, geliefert nach Hongkong, in die Emirate und nach Südostasien.'
+      en: 'Your cross-border hardware broker across two verticals — mobile devices (graded, IMEI-verified phones and tablets from Apple, Samsung, and Google) and enterprise infrastructure (AI accelerators, server CPUs, memory). Sourced in North America, delivered to Hong Kong, the UAE, and Southeast Asia.',
+      fr: 'Votre courtier matériel transfrontalier sur deux segments — appareils mobiles (téléphones et tablettes classés et vérifiés IMEI : Apple, Samsung, Google) et infrastructure d\'entreprise (accélérateurs IA, CPU serveurs, mémoire). Sourcés en Amérique du Nord, livrés à Hong Kong, aux Émirats et en Asie du Sud-Est.',
+      zh: '横跨两大品类的跨境硬件贸易商——移动设备（分级、IMEI核验的Apple、三星、谷歌手机与平板）与企业级基础设施（AI加速器、服务器CPU、内存）。北美寻源，交付香港、阿联酋及东南亚。',
+      ar: 'وسيطك للأجهزة عبر الحدود في قطاعين — الأجهزة المحمولة (هواتف وأجهزة لوحية مصنّفة ومُتحقّق من IMEI من Apple وSamsung وGoogle) والبنية التحتية للمؤسسات (مسرّعات الذكاء الاصطناعي، معالجات الخوادم، الذاكرة). تُورَّد من أمريكا الشمالية وتُسلَّم إلى هونغ كونغ والإمارات وجنوب شرق آسيا.',
+      de: 'Ihr grenzüberschreitender Hardware-Broker über zwei Segmente — Mobilgeräte (geprüfte, IMEI-verifizierte Smartphones und Tablets von Apple, Samsung und Google) und Enterprise-Infrastruktur (KI-Beschleuniger, Server-CPUs, Speicher). Beschafft in Nordamerika, geliefert nach Hongkong, in die Emirate und nach Südostasien.'
     },
     'index.btn.rfq': { en:'Submit an RFQ',    fr:'Soumettre une demande', zh:'提交询价',   ar:'إرسال طلب عرض',  de:'Anfrage senden' },
     'index.btn.inv': { en:'Browse Inventory', fr:'Voir l\'inventaire',     zh:'浏览库存',   ar:'تصفح المخزون',   de:'Inventar ansehen' },
-    'index.trust1':  { en:'Enterprise Hardware',     fr:'Matériel d\'entreprise',   zh:'企业级硬件',        ar:'أجهزة المؤسسات',        de:'Enterprise-Hardware' },
-    'index.trust2':  { en:'Mobile — IMEI Verified',  fr:'Mobile — IMEI vérifié',    zh:'移动设备 — IMEI核验', ar:'محمول — تحقق IMEI',     de:'Mobil — IMEI-geprüft' },
+    'index.trust1':  { en:'Mobile — IMEI Verified',  fr:'Mobile — IMEI vérifié',    zh:'移动设备 — IMEI核验', ar:'محمول — تحقق IMEI',     de:'Mobil — IMEI-geprüft' },
+    'index.trust2':  { en:'Enterprise Hardware',     fr:'Matériel d\'entreprise',   zh:'企业级硬件',        ar:'أجهزة المؤسسات',        de:'Enterprise-Hardware' },
     'index.trust3':  { en:'Cross-Border Logistics',   fr:'Logistique transfrontalière',  zh:'跨境物流',           ar:'لوجستيات عبر الحدود',   de:'Grenzüberschreitende Logistik' },
     'index.trust4':  { en:'BIS / EAR · IATA Compliant', fr:'Conforme BIS / EAR · IATA', zh:'BIS / EAR · IATA 合规', ar:'متوافق BIS / EAR · IATA', de:'BIS / EAR · IATA-konform' },
 
@@ -117,7 +117,7 @@
     'index.cap3.link': { en:'Learn About Us →', fr:'En savoir plus →', zh:'了解我们 →', ar:'تعرف علينا →', de:'Über uns →' },
 
     /* ── INDEX — product lines ── */
-   'index.ent.badge': { en:'Vertical 01 — Enterprise', fr:'Segment 01 — Entreprise', zh:'板块01 — 企业级', ar:'القطاع 01 — المؤسسات', de:'Segment 01 — Enterprise' },
+    'index.ent.badge': { en:'Vertical 02 — Enterprise', fr:'Segment 02 — Entreprise', zh:'板块02 — 企业级', ar:'القطاع 02 — المؤسسات', de:'Segment 02 — Enterprise' },
     'index.ent.title': { en:'Enterprise Hardware', fr:'Matériel d\'entreprise', zh:'企业级硬件', ar:'أجهزة المؤسسات', de:'Enterprise-Hardware' },
     'index.ent.desc': {
       en: 'AI accelerators, server CPUs (Xeon / EPYC), ECC server memory, enterprise SSDs, and networking — factory-new and tested working pulls, with full BIS / EAR export compliance.',
@@ -127,7 +127,7 @@
       de: 'KI-Beschleuniger, Server-CPUs (Xeon / EPYC), ECC-Serverspeicher, Enterprise-SSDs und Netzwerk — fabrikneu und geprüfte Pulls, mit voller BIS / EAR-Exportkonformität.'
     },
     'index.ent.link': { en:'Explore Enterprise', fr:'Voir l\'entreprise', zh:'查看企业级', ar:'استكشف المؤسسات', de:'Enterprise ansehen' },
-    'index.mob.badge': { en:'Vertical 02 — Mobile', fr:'Segment 02 — Mobile', zh:'板块02 — 移动设备', ar:'القطاع 02 — المحمول', de:'Segment 02 — Mobil' },
+    'index.mob.badge': { en:'Vertical 01 — Mobile', fr:'Segment 01 — Mobile', zh:'板块01 — 移动设备', ar:'القطاع 01 — المحمول', de:'Segment 01 — Mobil' },
     'index.mob.title': { en:'Mobile Devices', fr:'Appareils mobiles', zh:'移动设备', ar:'الأجهزة المحمولة', de:'Mobilgeräte' },
     'index.mob.desc': {
       en: 'Graded, IMEI-verified phones and tablets — iPhone, Samsung Galaxy, Google Pixel, and iPad. Sealed New through Grade C, with IATA-compliant lithium battery packaging.',
@@ -161,8 +161,8 @@
       ar: 'أدخل رقم قطعة أو أكثر وسنعدّ عرضًا خلال 24 ساعة.',
       de: 'Eine oder mehrere Teilenummern eingeben – wir erstellen innerhalb von 24 Stunden ein Angebot.'
     },
-    'index.pn.placeholder': { en:'e.g. H100 SXM5, RTX 5090, iPhone 15 Pro, Galaxy S24 ...', fr:'ex. H100 SXM5, RTX 5090, iPhone 15 Pro, Galaxy S24 ...', zh:'例如 H100 SXM5、RTX 5090、iPhone 15 Pro、Galaxy S24 ...', 
-                              ar:'مثال: H100 SXM5، RTX 5090، iPhone 15 Pro، Galaxy S24 ...', de:'z. B. H100 SXM5, RTX 5090, iPhone 15 Pro, Galaxy S24 ...' },
+    'index.pn.placeholder': { en:'e.g. iPhone 15 Pro, Galaxy S24, H100 SXM5, RTX 5090 ...', fr:'ex. iPhone 15 Pro, Galaxy S24, H100 SXM5, RTX 5090 ...', zh:'例如 iPhone 15 Pro、Galaxy S24、H100 SXM5、RTX 5090 ...', 
+                              ar:'مثال: iPhone 15 Pro، Galaxy S24، H100 SXM5، RTX 5090 ...', de:'z. B. iPhone 15 Pro, Galaxy S24, H100 SXM5, RTX 5090 ...' },
     'index.pn.btn':         { en:'Get Quote',   fr:'Obtenir un devis', zh:'获取报价',  ar:'احصل على عرض',  de:'Angebot erhalten' },
     'index.pn.popular':     { en:'Popular:',    fr:'Populaires :',     zh:'热门:',     ar:'الأكثر طلبًا:', de:'Beliebt:' },
 
